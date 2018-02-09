@@ -1,0 +1,29 @@
+title: soroush safari
+description: soroush safari / Exploring python & Things.
+
+author: soroush safari
+email: soroush_safarii@yahoo.com
+timezone: +02:00
+
+url: https://3nzo.com/
+root: /
+static: /static
+imageurl: /static/images
+icon: /static/theme/sallar/img/iconn.ico
+
+post_num: all
+archive_post_num: all
+feed_output: atom.xml
+
+default_floor: en
+default_markup: mmd
+
+disqus_shortname: cocii
+
+template: sallar
+
+ 
+ 
+
+twitter: https://twitter.com/im_coci
+github: https://github.com/coci
