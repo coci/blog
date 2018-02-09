@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>soroush safari</title>
+
+  <link href="https://3nzo.com/blog/feed.xml" rel="self"/>
+  <link href="https://3nzo.com/blog"/>
+
+  <updated>2018-02-09T21:10:30+0200</updated>
+  <id>https://3nzo.com/blog</id>
+  
+  <author>
+    <name>soroush safari</name>
+  </author>
+    
+  <generator>Mira</generator>
+
+  
+  <entry>
+    <title>hello world</title>
+    <link href="https://3nzo.com/blog/promise-arrays/"/>
+    <id>https://3nzo.com/blog/promise-arrays/</id>
+
+    <published>2018-01-22T17:58:51+0200</published>
+    <updated>2018-01-22T17:58:51+0200</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+<p>I like Javascript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> a lot, so I’m trying to fit them everywhere in my apps. If you haven’t heard about Promises, or haven’t used them yet, I suggest you check out <a href="https://davidwalsh.name/promises">this great guide</a> on them.</p>
+
+<p>I also like ES5 array functions and in my opinion they’re a few of the best additions to the language. My favorites are <code>filter</code> and <code>map</code>. The problem with these functions is they are synchronous, and I find myself trying to do something like this:</p>
+]]></content>
+
+    <summary>
+    &lt;p&gt;I like Javascript Promises a lot, so I’m trying to fit them everywhere in my apps. If you haven’t heard about Promises, or haven’t used them yet, I suggest you check out this great guide on them.
+
+I also like ES5 array functions and in my opinion they’re a few of the best additions to the language. My favorites are filter and map. The problem with these functions is they are synchronous, and I find myself trying to do something like this:
+&lt;/p&gt;
+    </summary>
+  </entry>
+  
+</feed>
