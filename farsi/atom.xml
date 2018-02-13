@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>سروش صفری</title>
 
-  <link href="https://3nzo.com/farsi/feed.xml" rel="self"/>
-  <link href="https://3nzo.com/farsi"/>
+  <link href="https://thecoci.me/farsi/feed.xml" rel="self"/>
+  <link href="https://thecoci.me/farsi"/>
 
-  <updated>2018-02-13T19:07:38+0200</updated>
-  <id>https://3nzo.com/farsi</id>
+  <updated>2018-02-13T19:12:11+0200</updated>
+  <id>https://thecoci.me/farsi</id>
   
   <author>
     <name>سروش صفری</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>میرا</title>
-    <link href="https://3nzo.com/farsi/میرا/"/>
-    <id>https://3nzo.com/farsi/میرا/</id>
+    <link href="https://thecoci.me/farsi/میرا/"/>
+    <id>https://thecoci.me/farsi/میرا/</id>
 
     <published>2018-02-11T17:43:32+0200</published>
     <updated>2018-02-11T17:43:32+0200</updated>
@@ -73,8 +73,8 @@
   
   <entry>
     <title>منجلاب مجازی</title>
-    <link href="https://3nzo.com/farsi/منجلاب-مجازی/"/>
-    <id>https://3nzo.com/farsi/منجلاب-مجازی/</id>
+    <link href="https://thecoci.me/farsi/منجلاب-مجازی/"/>
+    <id>https://thecoci.me/farsi/منجلاب-مجازی/</id>
 
     <published>2018-02-09T11:44:24+0200</published>
     <updated>2018-02-09T11:44:24+0200</updated>
@@ -112,8 +112,8 @@
   
   <entry>
     <title>اصول استاد فو</title>
-    <link href="https://3nzo.com/farsi/اصول-استاد-فو/"/>
-    <id>https://3nzo.com/farsi/اصول-استاد-فو/</id>
+    <link href="https://thecoci.me/farsi/اصول-استاد-فو/"/>
+    <id>https://thecoci.me/farsi/اصول-استاد-فو/</id>
 
     <published>2018-01-26T02:39:48+0200</published>
     <updated>2018-01-26T02:39:48+0200</updated>
@@ -218,8 +218,8 @@ php , javaScript , python ,.......
   
   <entry>
     <title>سلام دنیا</title>
-    <link href="https://3nzo.com/farsi/سلام-دنیا/"/>
-    <id>https://3nzo.com/farsi/سلام-دنیا/</id>
+    <link href="https://thecoci.me/farsi/سلام-دنیا/"/>
+    <id>https://thecoci.me/farsi/سلام-دنیا/</id>
 
     <published>2018-01-23T19:00:52+0200</published>
     <updated>2018-01-23T19:00:52+0200</updated>

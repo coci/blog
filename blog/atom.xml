@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>soroush safari</title>
 
-  <link href="https://3nzo.com/blog/feed.xml" rel="self"/>
-  <link href="https://3nzo.com/blog"/>
+  <link href="https://thecoci.me/blog/feed.xml" rel="self"/>
+  <link href="https://thecoci.me/blog"/>
 
-  <updated>2018-02-13T19:07:38+0200</updated>
-  <id>https://3nzo.com/blog</id>
+  <updated>2018-02-13T19:12:11+0200</updated>
+  <id>https://thecoci.me/blog</id>
   
   <author>
     <name>soroush safari</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>hello world</title>
-    <link href="https://3nzo.com/blog/promise-arrays/"/>
-    <id>https://3nzo.com/blog/promise-arrays/</id>
+    <link href="https://thecoci.me/blog/promise-arrays/"/>
+    <id>https://thecoci.me/blog/promise-arrays/</id>
 
     <published>2018-01-22T17:58:51+0200</published>
     <updated>2018-01-22T17:58:51+0200</updated>
