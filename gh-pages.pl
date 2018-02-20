@@ -20,8 +20,8 @@ my %opts= (
 GetOptions(
     \%opts,
         "init",
-        "push",
-	"worktree|w=s",
+				"push",
+				"worktree|w=s",
     );
 
 $opts{worktree} = "public$opts{worktree}" if $opts{worktree} =~ m:^/:;
@@ -79,18 +79,26 @@ if ($opts{init})
 
 if ($opts{push})
 {
-    my $worktree = File::Spec->catdir($source, $opts{worktree});
+	print "commit message(master): "; my $comm_master = <STDIN>;
+	print "commit message(gh-pages): "; my $comm_gh = <STDIN>;
+	chomp $comm_master;
+	chomp $comm_gh;
+	$comm_gh = $comm_gh ? $comm_gh : ($comm_master ? $comm_master : 'publish');
+	$comm_master = 'add content' if not $comm_master;
+	say $comm_master;
+	say $comm_gh;
+	my $worktree = File::Spec->catdir($source, $opts{worktree});
 
-    say "add contents to master...";
-    say qx{git add --all};
-    say qx{git commit -m 'add content'};
+	say "add contents to master...";
+	say qx{git add --all};
+	say qx{git commit -m '$comm_master'};
 
-    say "Initializing publish...";
-    chdir $worktree;
-    say qx{git add --all};
-    say qx{git commit -m 'publish'};
-    chdir $source;
+	say "Initializing publish...";
+	chdir $worktree;
+	say qx{git add --all};
+	say qx{git commit -m '$comm_gh'};
+	chdir $source;
 
-    say "push master and gh-pages to Remote(origin)...";
-    say qx{git push origin master gh-pages};
+	say "push master and gh-pages to Remote(origin)...";
+	say qx{git push origin master gh-pages};
 }
