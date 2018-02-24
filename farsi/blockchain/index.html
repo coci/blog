@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="Farsi">
+<head>
+  <title>سروش صفری | بلاکچین</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="سلام ، این وبلاگ منه">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="بلاکچین">
+  <meta property="og:url" content="https://thecoci.me/farsi">
+  <meta property="og:site_name" content="سروش صفری">
+  <meta property="og:description" content="&lt;p&gt;یادگیری بلاکچین با ساختن یک بلاکچین
+
+پرسرعت ترین راه برای یادگرفتن اینکه بلاکچین ها چگونه کار میکنند ساختن یکی از آنهاست (خودم-سروش) .
+
+ااگه شما در حال خوندن این مقاله هستین دلیلش این که مثل من از پیدایش این همه رمز ارز دچار سردرگمی شدین و میخواین بدونین که بلاکچین ها چطوری کار میکنند ( پایه و اساس تکنولوژی بکار رفته در بلاکچین) .
+
+اما فهمیدن بلاکچین راحت نیست ( حداقل برای من نبوده ) و خیلی تحقیق کردم تا تونستم به یه حدی از دانش بلاکچین دست پیدا کنم .
+
+من یادگیری با انجام دادن رو خیلی دوست دارم و اگه شما هم اینطوری باشین اخر این مطلب یه بلاکچین شخصی میتونین برای خودتون درست کنین .
+
+قبل از شروع&lt;/p&gt;">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="بلاکچین">
+  <meta name="twitter:description" content="&lt;p&gt;یادگیری بلاکچین با ساختن یک بلاکچین
+
+پ...">
+
+  <link rel="alternative" href="/farsi/atom.xml" title="سروش صفری" type="application/atom+xml">
+  <link rel="short icon" href="/static/theme/sallar/img/iconn.ico">
+  <link rel="stylesheet" href="/static/theme/sallar/css/style.css" type="text/css">
+
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <section class="container">
+    <nav>
+      <h1>
+        <a href="/farsi" class="logo">سروش صفری</a>
+      </h1>
+      <ul>
+        
+          <li><a href="/farsi">فهرست</a></li>
+          <li><a href="https://github.com/coci" target="_blank">گیت‌هاب</a></li>
+          <li><a href="/blog">English</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+</header>
+<!-- /Header -->
+
+<section id="content" class="container">
+
+  <article id="blockChain" class="article article-type-post" itemscope itemprop="blogPost">
+    <h2 class="title" itemprop="name">بلاکچین</h2>
+
+    
+      <h4 class="time">
+    <time datetime="2018-02-24 18:38:25" itemprop="datePublished">شنبه، ۰۵ اسفند ۱۳۹۶</time>
+  </h4>
+    
+
+    <section class="content">
+    <a name="more"></a>
+<h3>یادگیری بلاکچین با ساختن یک بلاکچین</h3>
+
+<h5>پرسرعت ترین راه برای یادگرفتن اینکه بلاکچین ها چگونه کار میکنند ساختن یکی از آنهاست (خودم-سروش) .</h5>
+
+<p>ااگه شما در حال خوندن این مقاله هستین دلیلش این که مثل من از پیدایش این همه رمز ارز دچار سردرگمی شدین و میخواین بدونین که بلاکچین ها چطوری کار میکنند ( پایه و اساس تکنولوژی بکار رفته در بلاکچین) .</p>
+
+<p>اما فهمیدن بلاکچین راحت نیست ( حداقل برای من نبوده ) و خیلی تحقیق کردم تا تونستم به یه حدی از دانش بلاکچین دست پیدا کنم .</p>
+
+<p>من یادگیری با انجام دادن رو خیلی دوست دارم و اگه شما هم اینطوری باشین اخر این مطلب یه بلاکچین شخصی میتونین برای خودتون درست کنین .</p>
+
+<h3>قبل از شروع</h3>
+
+<p>یادتون باشه بلاکچین تغییر ناپذیر، به اطلاعات ثبت شده در زنجیره یک بلاک ( Block) گفته میشه . که بلاک ها میتونن شامل تراکنش ها ، فایل ها و اطلاعات باشند . اما نکته مهم اینکه اونها به صورت زنجیر بهم متصل میشن با استفاده از هش (Hash) .</p>
+
+<p>در اصل به زبان ساده اگه بخوام بگم اینطوری میشه :</p>
+
+<p>ببنید در نظر بگیرین ما یه سری تراکنش  قرار انجام بدیم که اینها باید ثبت بشن ، پس یک برگه کاغذ برمیداریم و شروع میکنیم تراکنش های انجام شده رو داخلش ثبت مکنیم اما به یه جایی میرسیم که این کاغذ پر میشه و نیاز داریم تا یه برگه جدید برداریم ، حال به همین منوال (ترتیب) برگه های پر شده رو بهم منگنه می کنیم تا مثلا یه دفتری تشکیل بشه از تمام تراکنش های اول تا اخر ، حالا اینجا اون برگه ها رو بهشون block (بلاک) میگیم و این منگنه که این برگه ها رو بهم وصل میکنه از جنس هش (hash ) است و این دفتر میشه بلاکچین ( زنجیره ی بلاک های متصل شده بهم ) خدایی واضح تر دیگه نمیتونم توضیح بدم .</p>
+
+<h5>این راهنما برای چه کسانی است ؟</h5>
+
+<p>شما باید با پایه و اساس زبان برنامه نوسی پایتون (python ) اشنا باشین و بتونین به راحتی کدهاش رو بخونین و بنویسین و بهتر میشه اگه کمی اطلاعات در مورد " HTTP request " ها چگونه کار میکنن داشته باشین .</p>
+
+<h5>چی لازم داریم ؟</h5>
+
+<p>مطمئن باشین ورژن پایتون (python) نصب شده 3.6 باشه و پکیج منیجر pip بروی ماشین شما نصب باشد و همچنین با استفاده از دستور زیر کتابخانه های flask و request  رو نصب کنید :</p>
+
+<pre><code class="language-shell">pip install Flask==0.12.2 requests==2.18.4
+</code></pre>
+
+<p>ای بابا داشت یادم میرفت به یه کلاینت HTTP نیاز دارین(مثل postMan یا paw و یا cUrl)  .</p>
+
+<h3>قسمت ۱ : ساخت بلاکچین</h3>
+
+<p>ادیتور مورد علاقه تون رو بازکنید و یه فایل جدید بسازید ( من اسم فایل رو گزاشتم : blockChain.py ) و اینکه ما در کل از یک فایل استفاده میکنیم .</p>
+
+<h4>معرفی کردن بلاکچین</h4>
+
+<p>ما میخواهیم کلاس بلاکچین رو بسازیم که یه لیست خالی برای ما می سازه تا بلاکچین خودمون رو توش ذخیره کنیم و اینکه بتونیم تراکنش ها رو هم ذخیره کنیم :</p>
+
+<pre><code class="language-python">class BlockChain(object):
+    def __init__(self):
+        self.chain = []
+        self.current_transactions = []
+
+    def new_block(self):
+        #create a new block and adds it to the chain
+        pass
+
+    def new_transactions(self):
+        #adds a new transaction to the list of transactions
+
+    @staticmethod
+    def hash(block):
+        # hashes a block
+        pass
+
+    @property
+    def last_block(self):
+        # return the last block in the chain
+        pass
+</code></pre>
+
+<p>کلاس بلاکچین ما مسئول مدیریت کردن زنجیره هست و تراکنش ها رو ذخیره میکنه و چندین متد (method) کمک کننده برای اضافه کردن بلاک جدید به زنجیره دارد .</p>
+
+<h3>هر بلاک چه شکلی است ؟</h3>
+
+<p>هر بلاک دارای شاخص (index ) ، لیست تراکنش ها ، برچسب زمان ( timestamp) این برچسب زمانی داخل سیستم های unix قابل استفاده است ، یک گواهی ( a proof ) و هش بلاک قبلی میباشد که میتونین مثالی در این مورد ببنید :</p>
+
+<pre><code class="language-python">block = {
+    'index': 1,
+    'timestamp': 1506057125.900785,
+    'transactions': [
+        {
+            'sender': "8527147fe1f5426f9dd545de4b27ee00",
+            'recipient': "a77f5cdfa2934df3954a5c7c7da5df1f",
+            'amount': 5,
+        }
+    ],
+    'proof': 324984774000,
+    'previous_hash': "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+}
+</code></pre>
+
+<p>در این نقطه ، ایده کلی بلاکچین مشخص شد ، هر بلاک دارای محتوا خودش و hash بلاک قبلی است . این قضیه خیلی محکم و استوار و بخاطر همین بالاتر هم بهش اشاره کردم که بلاکچین تغییر ناپذیر چون : اگه حمله کننده (attacker) بلاک رو دستکاری کنه تمام  hash بلاک های بعدی هم اشتباه میشه در نتیجه کلا هرگونه دستکاری امکان پذیر نیست .</p>
+
+<p>حس نمیکنی این قضیه چقدر جالبه ؟ اگه که نه باید بشینی ساعت ها درموردش فکر کنی ، این هسته اصلی تفکر پشت بلاکچین است .</p>
+
+<h4>اضافه کردن تراکنش به بلاک</h4>
+
+<p>ما یه راهی نیاز داریم تا تراکنش ها رو به بلاک اضافه کنیم . تابع new_transaction مسئولیت اینکار رو داره (کدهای تابع new_transactin رو به سورس اضافه کنید ) . اجازه بدین یکم بریم جلوتر :</p>
+
+<pre><code class="language-python">class Blockchain(object):
+    ...
+
+    def new_transaction(self, sender, recipient, amount):
+        """
+        Creates a new transaction to go into the next mined Block
+        :param sender: &lt;str&gt; Address of the Sender
+        :param recipient: &lt;str&gt; Address of the Recipient
+        :param amount: &lt;int&gt; Amount
+        :return: &lt;int&gt; The index of the Block that will hold this transaction
+        """
+
+        self.current_transactions.append({
+            'sender': sender,
+            'recipient': recipient,
+            'amount': amount,
+        })
+
+        return self.last_block['index'] + 1
+</code></pre>
+
+<p>بعد از اینکه تابع new_trancation تراکنش رو به بلاک اضافه کرد ، عدد بلاک بعدی رو برمیگردونه (return) .</p>
+
+<p>این در اینده خیلی موثر ، برای اینکه کاربر چندین تراکنش انجام میده .</p>
+
+<h4>ساخت بلاک جدید</h4>
+
+<p>وقتی یک بلاک کامل شد ما نیاز داریم یک بلاک بدون پیشنه به بلاکچین اضافه کنیم ، همچنین باید یک گواهی (proof) به بلاک جدید اضافه کنیم که این گواهی همان ماین کردن (mining) می باشد که بهش حسن انجام کار یا proof of work نیز گفته میشود که بعدا در موردش صحبت میکنیم به علاوه اینکه برای ساخت بلاک جدید باید توابع new_block , new_transaction و hash رو هم اماده کنیم :</p>
+
+<pre><code class="language-python">import hashlib
+import json
+from time import time
+
+
+class Blockchain(object):
+    def __init__(self):
+        self.current_transactions = []
+        self.chain = []
+
+        # Create the genesis block
+        self.new_block(previous_hash=1, proof=100)
+
+    def new_block(self, proof, previous_hash=None):
+        """
+        Create a new Block in the Blockchain
+
+        :param proof: &lt;int&gt; The proof given by the Proof of Work algorithm
+        :param previous_hash: (Optional) &lt;str&gt; Hash of previous Block
+        :return: &lt;dict&gt; New Block
+        """
+
+        block = {
+            'index': len(self.chain) + 1,
+            'timestamp': time(),
+            'transactions': self.current_transactions,
+            'proof': proof,
+            'previous_hash': previous_hash or self.hash(self.chain[-1]),
+        }
+
+        # Reset the current list of transactions
+        self.current_transactions = []
+
+        self.chain.append(block)
+        return block
+
+    def new_transaction(self, sender, recipient, amount):
+        """
+        Creates a new transaction to go into the next mined Block
+
+        :param sender: &lt;str&gt; Address of the Sender
+        :param recipient: &lt;str&gt; Address of the Recipient
+        :param amount: &lt;int&gt; Amount
+        :return: &lt;int&gt; The index of the Block that will hold this transaction
+        """
+        self.current_transactions.append({
+            'sender': sender,
+            'recipient': recipient,
+            'amount': amount,
+        })
+
+        return self.last_block['index'] + 1
+
+    @property
+    def last_block(self):
+        return self.chain[-1]
+
+    @staticmethod
+    def hash(block):
+        """
+        Creates a SHA-256 hash of a Block
+
+        :param block: &lt;dict&gt; Block
+        :return: &lt;str&gt;
+        """
+
+        # We must make sure that the Dictionary is Ordered, or we'll have inconsistent hashes
+        block_string = json.dumps(block, sort_keys=True).encode()
+        return hashlib.sha256(block_string).hexdigest()
+
+</code></pre>
+
+<p>من یک سری کامنت به کد اضافه کردم برای اینکه مراحل مختلف و بفهمین ، کار ما با تعریف بلاکچین تمام شد ولی باید تعجب کرده باشین که چطوری بلاک جدید ساخته میشه و ماین میشه .</p>
+
+<h4 id="proofofwork">در مورد proof of work</h4>
+
+<p>proof of work یا به اختصار pow اگوریتمی هست که میگه بلاک جدید چطوری ساخته و ماین میشه . هدف pow این است که عددی که مسئله رو حل میکنه مشخص کنه ، در اصل این کار کمک میکنه بلاک قبلی رو با بلاک جدید جوری مهر (sign) کنیم که هیچکس نتونه بلاکچین رو دستکاری کنه ، اگه متوجه نشدین به مثال توجه کنین :</p>
+
+<p>تصمیم داریم حاصل hash یه عددی ضرب در hash یک عدد دیگه به صفر تموم بشه یعنی :</p>
+
+<pre><code>hash(x*y) = ac23dc...0
+</code></pre>
+
+<p>و برای این مثال x رو ۵ در نظر میگیریم :</p>
+
+<pre><code>from hashlib import sha256
+x = 5
+y = 0  # We don't know what y should be yet...
+while sha256(f'{x*y}'.encode()).hexdigest()[-1] != "0":
+    y += 1
+print(f'The solution is y = {y}')
+</code></pre>
+
+<p>که جواب میشه y مساوی ۲۱ یعنی اگه x رو برابر با ۵ و y رو برابر با ۲۱ قرار بدیم حاصل ضرب hash این ۲ عدد با صفر تموم میشه :</p>
+
+<pre><code>hash(5 * 21) = 1253e9373e...5e3600155e860
+</code></pre>
+
+<p>که این الگوریتم مسابقه ای رو برپا میکنه بین کاربران که حاصلش کمک میکنه به ساخت بلاک جدید .</p>
+
+<h4 id="proofofwork">پیاده سازی پایه و اساس proof of work</h4>
+
+<p>اجازه بدین این رو تو پروژه اضافه کنیم :</p>
+
+<blockquote>
+  <p>الگوریتم ما اینه که عدد p رو طوری مشخص کنید که حاصل hash عدد p با hash بلاک قبلی به ما hash جدیدی رو برگردونه که ۴ عدد اخر صفر بشه.</p>
+</blockquote>
+
+<pre><code class="language-python">import hashlib
+import json
+
+from time import time
+from uuid import uuid4
+
+
+class Blockchain(object):
+    ...
+
+    def proof_of_work(self, last_proof):
+        """
+        Simple Proof of Work Algorithm:
+         - Find a number p' such that hash(pp') contains leading 4 zeroes, where p is the previous p'
+         - p is the previous proof, and p' is the new proof
+
+        :param last_proof: &lt;int&gt;
+        :return: &lt;int&gt;
+        """
+
+        proof = 0
+        while self.valid_proof(last_proof, proof) is False:
+            proof += 1
+
+        return proof
+
+    @staticmethod
+    def valid_proof(last_proof, proof):
+        """
+        Validates the Proof: Does hash(last_proof, proof) contain 4 leading zeroes?
+
+        :param last_proof: &lt;int&gt; Previous Proof
+        :param proof: &lt;int&gt; Current Proof
+        :return: &lt;bool&gt; True if correct, False if not.
+        """
+
+        guess = f'{last_proof}{proof}'.encode()
+        guess_hash = hashlib.sha256(guess).hexdigest()
+        return guess_hash[:4] == "0000"
+</code></pre>
+
+<p>الان کلاس بلاکچین ما کامل شد .</p>
+
+<h3 id="api">قسمت ۲ : کار با بلاکچین با استفاده از API</h3>
+
+<p>برای اینکار من از فریمورک Flash در python استفاده میکنم . این فریمورک به ما این امکان رو میده که از بلاکچین خودمون با استفاده از تکنولوژی HTTP request استفاده کنیم .</p>
+
+<p>ما این متد ها رو می سازیم :</p>
+
+<pre><code>/transaction/new  #to create a new transaction to a blockchain
+/mine   # to tell our server to mine a new block
+/chain   # to return the full blockchain
+</code></pre>
+
+<h4 id="flask">نصب Flask</h4>
+
+<p>اجازه بدین قطعه کدی رو به پروژه اضافه کنیم :</p>
+
+<p>```python
+import hashlib
+import json
+from textwrap import dedent
+from time import time
+from uuid import uuid4</p>
+
+<p>from flask import Flask</p>
+
+<p>class Blockchain(object):
+    ...</p>
+
+<h1 id="instantiateournode">Instantiate our Node</h1>
+
+<p>app = Flask(<strong>name</strong>)</p>
+
+<h1 id="generateagloballyuniqueaddressforthisnode">Generate a globally unique address for this node</h1>
+
+<p>node_identifier = str(uuid4()).replace('-', '')</p>
+
+<h1 id="instantiatetheblockchain">Instantiate the Blockchain</h1>
+
+<p>blockchain = Blockchain()</p>
+
+<p>@app.route('/mine', methods=['GET'])
+def mine():
+    return "We'll mine a new Block"</p>
+
+<p>@app.route('/transactions/new', methods=['POST'])
+def new_transaction():
+    return "We'll add a new transaction"</p>
+
+<p>@app.route('/chain', methods=['GET'])
+def full_chain():
+    response = {
+        'chain': blockchain.chain,
+        'length': len(blockchain.chain),
+    }
+    return jsonify(response), 200</p>
+
+<p>if <strong>name</strong> == '<strong>main</strong>':
+    app.run(host='0.0.0.0', port=5000)
+```</p>
+
+  </section>
+
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_twitter"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+    
+      <script>
+var idcomments_acct = 'fe0e59c5d710febd7774428cee9eb164';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+    
+  </article>
+
+</section>
+
+<!-- Paging -->
+<section class="pagination">
+  <nav class="container">
+    
+      <a></a>
+    
+      <a class="extend next" rel="next" href="/farsi/کتابی-که-هر-برنامه-نویسی-باید-بخونه/">
+        <i>-></i>
+        <span>کتابی که هر برنامه نویسی باید بخونه</span>
+      </a>
+  </nav>
+</section>
+<!-- /Paging -->
+
+<!-- /Content -->
+<!-- Footer -->
+<footer>
+    <!--<section class="copyright">
+
+    </section>-->
+    <section class="container">
+      <div class="delimiter">
+        <a href="/" class="logo">
+          <img src="/static/theme/sallar/img/logo.svg">
+        </a>
+      </div>
+      <p>
+        
+          ۱۳۹۶<br>
+          مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+        
+      </p>
+    </section>
+</footer>
+<!-- /Footer -->
+
+<!-- Scripts -->
+<script src="/static/theme/sallar/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
