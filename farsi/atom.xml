@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/farsi/feed.xml" rel="self"/>
   <link href="https://thecoci.me/farsi"/>
 
-  <updated>2018-02-25T23:12:13+0200</updated>
+  <updated>2018-02-25T23:16:08+0200</updated>
   <id>https://thecoci.me/farsi</id>
   
   <author>
@@ -487,7 +487,7 @@ def mine():
 
 <p>بدنه(body) رو مطابق شکل زیر قرار بدین :</p>
 
-<p><img src="/farsi/images/transac.jpg" alt="transac" id="transac" /></p>
+<p><img src="/farsi/images/tansac.jpg" alt="transac" id="transac" /></p>
 
 <p>البته اگه شما از برنامه POSTMAN استفاده نمیکنید میتونید از cURL استفاده کنید :</p>
 
