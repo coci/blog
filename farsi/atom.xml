@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/farsi/feed.xml" rel="self"/>
   <link href="https://thecoci.me/farsi"/>
 
-  <updated>2018-02-25T18:31:48+0200</updated>
+  <updated>2018-02-25T18:34:30+0200</updated>
   <id>https://thecoci.me/farsi</id>
   
   <author>
@@ -24,6 +24,8 @@
     <updated>2018-02-24T18:38:25+0200</updated>
 
     <content type="html"><![CDATA[<a name="more"></a>
+<p><img src="/farsi/images/blockchain.jpg" alt="blockchain" id="blockchain" /></p>
+
 <h3>یادگیری بلاکچین با ساختن یک بلاکچین</h3>
 
 <h5>پرسرعت ترین راه برای یادگرفتن اینکه بلاکچین ها چگونه کار میکنند ساختن یکی از آنهاست (خودم-سروش) .</h5>
@@ -835,7 +837,8 @@ if __name__ == '__main__':
 ]]></content>
 
     <summary>
-    &lt;p&gt;یادگیری بلاکچین با ساختن یک بلاکچین
+    &lt;p&gt;
+یادگیری بلاکچین با ساختن یک بلاکچین
 
 پرسرعت ترین راه برای یادگرفتن اینکه بلاکچین ها چگونه کار میکنند ساختن یکی از آنهاست (خودم-سروش) .
 
@@ -845,7 +848,7 @@ if __name__ == '__main__':
 
 من یادگیری با انجام دادن رو خیلی دوست دارم و اگه شما هم اینطوری باشین اخر این مطلب یه بلاکچین شخصی میتونین برای خودتون درست کنین .
 
-قبل از شروع&lt;/p&gt;
+قبل از شرو&lt;/p&gt;
     </summary>
   </entry>
   
