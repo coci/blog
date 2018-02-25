@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/farsi/feed.xml" rel="self"/>
   <link href="https://thecoci.me/farsi"/>
 
-  <updated>2018-02-25T19:34:24+0200</updated>
+  <updated>2018-02-25T23:12:13+0200</updated>
   <id>https://thecoci.me/farsi</id>
   
   <author>
@@ -56,7 +56,7 @@
 
 <p>مطمئن باشین ورژن پایتون (python) نصب شده 3.6 باشه و پکیج منیجر pip بروی ماشین شما نصب باشد و همچنین با استفاده از دستور زیر کتابخانه های flask و request  رو نصب کنید :</p>
 
-<pre><code class="language-shell">pip3 install Flask==0.12.2 requests==2.18.4
+<pre><code>pip3 install Flask==0.12.2 requests==2.18.4
 </code></pre>
 
 <p>ای بابا داشت یادم میرفت به یه کلاینت HTTP نیاز دارین(مثل postMan یا paw و یا cUrl)  .</p>
@@ -69,7 +69,7 @@
 
 <p>ما میخواهیم کلاس بلاکچین رو بسازیم که یه لیست خالی برای ما می سازه تا بلاکچین خودمون رو توش ذخیره کنیم و اینکه بتونیم تراکنش ها رو هم ذخیره کنیم :</p>
 
-<pre><code class="language-python">class BlockChain(object):
+<pre><code>class BlockChain(object):
     def __init__(self):
         self.chain = []
         self.current_transactions = []
@@ -98,7 +98,7 @@
 
 <p>هر بلاک دارای شاخص (index ) ، لیست تراکنش ها ، برچسب زمان ( timestamp) ، یک گواهی ( a proof ) و هش (hash) بلاک قبلی میباشد که میتونین مثالی در این مورد ببنید :</p>
 
-<pre><code class="language-python">block = {
+<pre><code>block = {
     'index': 1,
     'timestamp': 1506057125.900785,
     'transactions': [
@@ -121,7 +121,7 @@
 
 <p>ما یه راهی نیاز داریم تا تراکنش ها رو به بلاک اضافه کنیم . تابع new_transaction مسئولیت اینکار رو داره (کدهای تابع new_transactin رو به سورس اضافه کنید ) . اجازه بدین یکم بریم جلوتر :</p>
 
-<pre><code class="language-python">class Blockchain(object):
+<pre><code>class Blockchain(object):
     ...
 
     def new_transaction(self, sender, recipient, amount):
@@ -150,7 +150,7 @@
 
 <p>وقتی یک بلاک کامل شد ما نیاز داریم یک بلاک بدون پیشنه به بلاکچین اضافه کنیم ، همچنین باید یک گواهی (proof) به بلاک جدید اضافه کنیم که این گواهی همان ماین کردن (mining) می باشد که بهش حسن انجام کار یا proof of work نیز گفته میشود که بعدا در موردش صحبت میکنیم به علاوه اینکه برای ساخت بلاک جدید باید توابع new_block , new_transaction و hash رو هم اماده کنیم :</p>
 
-<pre><code class="language-python">import hashlib
+<pre><code>import hashlib
 import json
 from time import time
 
@@ -268,7 +268,7 @@ x + y = 1253e9373e...5e3600155e860  # we don't have "y"
   <p>الگوریتم ما اینه که عدد p رو طوری مشخص کنید که حاصل hash عدد p با hash بلاک قبلی به ما hash جدیدی رو برگردونه که ۴ عدد اخر صفر بشه.</p>
 </blockquote>
 
-<pre><code class="language-python">import hashlib
+<pre><code>import hashlib
 import json
 
 from time import time
@@ -326,7 +326,7 @@ class Blockchain(object):
 
 <p>اجازه بدین قطعه کدی رو به پروژه اضافه کنیم :</p>
 
-<pre><code class="language-python">import hashlib
+<pre><code>import hashlib
 import json
 from textwrap import dedent
 from time import time
@@ -382,7 +382,7 @@ if __name__ == '__main__':
 
 <p>اجازه بدین تابع اضافه کردن تراکنش رو به کد اضافه کنیم :</p>
 
-<pre><code class="language-python">import hashlib
+<pre><code>import hashlib
 import json
 from textwrap import dedent
 from time import time
@@ -418,7 +418,7 @@ def new_transaction():
 <li><p>بلاک جدید رو میسازه و به زنجیره اضافه میکنه</p></li>
 </ol>
 
-<pre><code class="language-python">import hashlib
+<pre><code>import hashlib
 import json
 
 from time import time
@@ -554,7 +554,7 @@ def mine():
 <li><p>کد نهایی شما باید این شکلی شده باشه :</p></li>
 </ol>
 
-<pre><code class="language-python">import hashlib
+<pre><code>import hashlib
 import json
 from time import time
 from urllib.parse import urlparse
