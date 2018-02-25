@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/blog/feed.xml" rel="self"/>
   <link href="https://thecoci.me/blog"/>
 
-  <updated>2018-02-25T19:22:28+0200</updated>
+  <updated>2018-02-25T19:34:24+0200</updated>
   <id>https://thecoci.me/blog</id>
   
   <author>
@@ -24,7 +24,7 @@
     <updated>2018-01-22T17:58:51+0200</updated>
 
     <content type="html"><![CDATA[<a name="more"></a>
-<p>I like Javascript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> a lot, so I’m trying to fit them everywhere in my apps. If you haven’t heard about Promises, or haven’t used them yet, I suggest you check out <a href="https://davidwalsh.name/promises">this great guide</a> on them.</p>
+<h4 id="ilikejavascriptpromiseshttps:developer.mozilla.orgen-usdocswebjavascriptreferenceglobal_objectspromisealotsoimtryingtofitthemeverywhereinmyapps.ifyouhaventheardaboutpromisesorhaventusedthemyetisuggestyoucheckoutthisgreatguidehttps:davidwalsh.namepromisesonthem.">I like Javascript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> a lot, so I’m trying to fit them everywhere in my apps. If you haven’t heard about Promises, or haven’t used them yet, I suggest you check out <a href="https://davidwalsh.name/promises">this great guide</a> on them.</h4>
 
 <p>I also like ES5 array functions and in my opinion they’re a few of the best additions to the language. My favorites are <code>filter</code> and <code>map</code>. The problem with these functions is they are synchronous, and I find myself trying to do something like this:</p>
 ]]></content>
