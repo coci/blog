@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/farsi/feed.xml" rel="self"/>
   <link href="https://thecoci.me/farsi"/>
 
-  <updated>2018-02-25T23:31:49+0200</updated>
+  <updated>2018-02-26T18:14:50+0200</updated>
   <id>https://thecoci.me/farsi</id>
   
   <author>
@@ -16,7 +16,7 @@
 
   
   <entry>
-    <title>بلاکچین</title>
+    <title>ساخت یک بلاکچین</title>
     <link href="https://thecoci.me/farsi/blockchain/"/>
     <id>https://thecoci.me/farsi/blockchain/</id>
 
@@ -69,7 +69,7 @@
 
 <p>ما میخواهیم کلاس بلاکچین رو بسازیم که یه لیست خالی برای ما می سازه تا بلاکچین خودمون رو توش ذخیره کنیم و اینکه بتونیم تراکنش ها رو هم ذخیره کنیم :</p>
 
-<pre><code>class BlockChain(object):
+<pre><code class="language-python">class BlockChain(object):
     def __init__(self):
         self.chain = []
         self.current_transactions = []
