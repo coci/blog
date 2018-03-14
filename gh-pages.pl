@@ -91,12 +91,12 @@ if ($opts{push})
 
 	say "add contents to master...";
 	say qx{git add --all};
-	say qx{git commit -m '$comm_master'};
+	say qx{git commit -S -m '$comm_master'};
 
 	say "Initializing publish...";
 	chdir $worktree;
 	say qx{git add --all};
-	say qx{git commit -m '$comm_gh'};
+	say qx{git commit -S -m '$comm_gh'};
 	chdir $source;
 
 	say "push master and gh-pages to Remote(origin)...";
