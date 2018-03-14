@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/blog/feed.xml" rel="self"/>
   <link href="https://thecoci.me/blog"/>
 
-  <updated>2018-02-26T18:15:14+0200</updated>
+  <updated>2018-03-14T23:23:24+0200</updated>
   <id>https://thecoci.me/blog</id>
   
   <author>
@@ -17,22 +17,26 @@
   
   <entry>
     <title>hello world</title>
-    <link href="https://thecoci.me/blog/promise-arrays/"/>
-    <id>https://thecoci.me/blog/promise-arrays/</id>
+    <link href="https://thecoci.me/blog/helloworld/"/>
+    <id>https://thecoci.me/blog/helloworld/</id>
 
     <published>2018-01-22T17:58:51+0200</published>
     <updated>2018-01-22T17:58:51+0200</updated>
 
     <content type="html"><![CDATA[<a name="more"></a>
-<h4 id="ilikejavascriptpromiseshttps:developer.mozilla.orgen-usdocswebjavascriptreferenceglobal_objectspromisealotsoimtryingtofitthemeverywhereinmyapps.ifyouhaventheardaboutpromisesorhaventusedthemyetisuggestyoucheckoutthisgreatguidehttps:davidwalsh.namepromisesonthem.">I like Javascript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promises</a> a lot, so I’m trying to fit them everywhere in my apps. If you haven’t heard about Promises, or haven’t used them yet, I suggest you check out <a href="https://davidwalsh.name/promises">this great guide</a> on them.</h4>
+<h4 id="helloworld">Hello World !</h4>
 
-<p>I also like ES5 array functions and in my opinion they’re a few of the best additions to the language. My favorites are <code>filter</code> and <code>map</code>. The problem with these functions is they are synchronous, and I find myself trying to do something like this:</p>
+<p>hello guy , how's it going ?</p>
+
+<p>I'm very excited because This is my first english post and we can communicate toghter through this blog and share our experiance , please feel  free to comment out your idea about that .</p>
 ]]></content>
 
     <summary>
-    &lt;p&gt;I like Javascript Promises a lot, so I’m trying to fit them everywhere in my apps. If you haven’t heard about Promises, or haven’t used them yet, I suggest you check out this great guide on them.
+    &lt;p&gt;Hello World !
 
-I also like ES5 array functions and in my opinion they’re a few of the best additions to the language. My favorites are filter and map. The problem with these functions is they are synchronous, and I find myself trying to do something like this:
+hello guy , how's it going ?
+
+I'm very excited because This is my first english post and we can communicate toghter through this blog and share our experiance , please feel  free to comment out your idea about that .
 &lt;/p&gt;
     </summary>
   </entry>
