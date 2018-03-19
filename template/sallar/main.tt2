@@ -11,8 +11,20 @@
 
 	<!-- Sheet Style -->
 	<link rel="stylesheet" href="{{ MainSTATIC }}/theme/sallar/css/main_style.css" />
-	
+
 	<meta name="description" content="برنامه نویسی">
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115996537-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-115996537-1');
+	</script>
+
 
 </head>
 <body>
