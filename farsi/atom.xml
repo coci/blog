@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/farsi/feed.xml" rel="self"/>
   <link href="https://thecoci.me/farsi"/>
 
-  <updated>2018-05-26T08:06:41+0200</updated>
+  <updated>2018-05-26T08:12:24+0200</updated>
   <id>https://thecoci.me/farsi</id>
   
   <author>
@@ -98,6 +98,8 @@ var str = "Hello, playground”
 <p>این قسمت بندی خیلی مهمه چون یک قسمت مربوط به کد و قسمت دیگه نتیجه کد و سمت چپ شما میتونین روی کد تغییرات ایجاد کنید و سمت راست که قسمت نتیجه است ٬ نتیجه رو ببینین .</p>
 
 <p><img src="/farsi/images/2-swift.jpg" alt="xcode" id="xcode" /> </p>
+
+<p>در حالی که شما تایپ میکنید ٬ playground به صورت اتوماتیک کد جدید رو اجرا میکنه و نتیجه رو update میکنه . برای مثال اگه شما فقط بنویسید str شما در قسمت نتیجه خواهید دید که دوباره نوشته شده "hello playground " چون یکبار که شما اونو ساختین و دفعه دوم برای اینکه شما اون رو به اصطلاح call کردین (زیاد درگیر نشین ٬ اگه جایی متوجه نمیشین اصلا نگران نباشین چون در اینده عمیق تر در موردش توضیح میدم ) .</p>
 ]]></content>
 
     <summary>
