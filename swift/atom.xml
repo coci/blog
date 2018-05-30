@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>سروش صفری</title>
+
+  <link href="https://thecoci.me/swift/feed.xml" rel="self"/>
+  <link href="https://thecoci.me/swift"/>
+
+  <updated>2018-05-30T08:46:25+0200</updated>
+  <id>https://thecoci.me/swift</id>
+  
+  <author>
+    <name>سروش صفری</name>
+  </author>
+    
+  <generator>Mira</generator>
+
+  
+  <entry>
+    <title>s</title>
+    <link href="https://thecoci.me/swift/bb/"/>
+    <id>https://thecoci.me/swift/bb/</id>
+
+    <published>2018-05-30T08:45:49+0200</published>
+    <updated>2018-05-30T08:45:49+0200</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+<p>sdsd</p>
+]]></content>
+
+    <summary>
+    &lt;p&gt;sdsd
+&lt;/p&gt;
+    </summary>
+  </entry>
+  
+</feed>
