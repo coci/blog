@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/blog/feed.xml" rel="self"/>
   <link href="https://thecoci.me/blog"/>
 
-  <updated>2018-05-31T01:11:59+0200</updated>
+  <updated>2018-05-31T01:16:19+0330</updated>
   <id>https://thecoci.me/blog</id>
   
   <author>
@@ -20,24 +20,22 @@
     <link href="https://thecoci.me/blog/helloworld/"/>
     <id>https://thecoci.me/blog/helloworld/</id>
 
-    <published>2018-01-22T17:58:51+0200</published>
-    <updated>2018-01-22T17:58:51+0200</updated>
+    <published>2018-01-22T17:58:51+0330</published>
+    <updated>2018-01-22T17:58:51+0330</updated>
 
     <content type="html"><![CDATA[<a name="more"></a>
-<h4 id="helloworld">Hello World !</h4>
-
-<p>hello guy , how's it going ?</p>
-
-<p>I'm very excited because This is my first english post and we can communicate toghter through this blog and share our experiance , please feel  free to comment out your idea about that .</p>
-]]></content>
-
-    <summary>
-    &lt;p&gt;Hello World !
+#### Hello World !
 
 hello guy , how's it going ?
 
-I'm very excited because This is my first english post and we can communicate toghter through this blog and share our experiance , please feel  free to comment out your idea about that .
-&lt;/p&gt;
+I'm very excited because This is my first english post and we can communicate toghter through this blog and share our experiance , please feel  free to comment out your idea about that .]]></content>
+
+    <summary>
+    &lt;p&gt;#### Hello World !
+
+hello guy , how's it going ?
+
+I'm very excited because This is my first english post and we can communicate toghter through this blog and share our experiance , please feel  free to comment out your idea about that .&lt;/p&gt;
     </summary>
   </entry>
   
