@@ -6,14 +6,10 @@ language: English
 url: https://thecoci.me/blog
 root: /blog
 
-static: /static/
-imageurl: /img/
-
 default_extension: md
 
 permalink: :title/
 
 template: sallar
-disqus_shortname: cocii
 
 lists:
