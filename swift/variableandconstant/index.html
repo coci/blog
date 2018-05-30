@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="Farsi">
+<head>
+  <title>سروش صفری | آموزش سوئیفت قسمت ۲ - متغییر و ثابت ها</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="سلام ، این وبلاگ منه">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="آموزش سوئیفت قسمت ۲ - متغییر و ثابت ها">
+  <meta property="og:url" content="https://thecoci.me/swift">
+  <meta property="og:site_name" content="سروش صفری">
+  <meta property="og:description" content="&lt;p&gt;ثابت ها و متغییر ها (Variables and constants ) :
+
+هر برنامه ای نیاز داره تا اطلاعاتش رو تو یه جایی ذخیره کنه ٬ و توی Swift ما ۲ تا راه برای این کار داریم :
+
+متغیرها و ثابت ها 
+
+متغیر محلی برای ذخیره اطلاعات که میشه مقدارش رو هروقت که خواستیم تغییر بدیم و ثابت محلی برای ذخیره اطلاعات که شما یه بار توش اطلاعاتی رو ذخیره میکنید و دیگه هیچ وقت نمیشه تغییرش داد . پس متغیر دارای اطلاعاتی که قابل تغییر و ثابت دارای اطلاعاتی که نمیشه تغییرش داد می باشد - آسون بود ٬ درسته ؟
+
+داشتن هر ۲ روش ممکنه بیهوده به نظر برسه و شما با خودتون بگین یه متغییر میسازم و هیچ وقت اطلاعاتش و تغییر نمیدم ٬ چه نیازی به ثابت&lt;/p&gt;">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="آموزش سوئیفت قسمت ۲ - متغییر و ثابت ها">
+  <meta name="twitter:description" content="&lt;p&gt;ثابت ها و متغییر ها (Variables and con...">
+
+  <link rel="alternative" href="/swift/atom.xml" title="سروش صفری" type="application/atom+xml">
+  <link rel="short icon" href="/static/theme/sallar/img/iconn.ico">
+  <link rel="stylesheet" href="/static/theme/sallar/css/style.css" type="text/css">
+
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <section class="container">
+    <nav>
+      <h1>
+        <a href="/swift" class="logo">سروش صفری</a>
+      </h1>
+      <ul>
+        
+          <li><a href="/swift">فهرست</a></li>
+          <li><a href="https://github.com/coci" target="_blank">گیت‌هاب</a></li>
+          <li><a href="/blog">English</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+</header>
+<!-- /Header -->
+
+<section id="content" class="container">
+
+  <article id="variableAndConstant" class="article article-type-post" itemscope itemprop="blogPost">
+    <h2 class="title" itemprop="name">آموزش سوئیفت قسمت ۲ - متغییر و ثابت ها</h2>
+
+    
+      <h4 class="time">
+    <time datetime="2018-05-30 08:52:58" itemprop="datePublished">چهارشنبه، ۰۹ خرداد ۱۳۹۷</time>
+  </h4>
+    
+
+    <section class="content">
+    <a name="more"></a>
+<h2 id="variablesandconstants:">ثابت ها و متغییر ها (Variables and constants ) :</h2>
+
+<p>هر برنامه ای نیاز داره تا اطلاعاتش رو تو یه جایی ذخیره کنه ٬ و توی Swift ما ۲ تا راه برای این کار داریم :</p>
+
+<p>متغیرها و ثابت ها </p>
+
+<p>متغیر محلی برای ذخیره اطلاعات که میشه مقدارش رو هروقت که خواستیم تغییر بدیم و ثابت محلی برای ذخیره اطلاعات که شما یه بار توش اطلاعاتی رو ذخیره میکنید و دیگه هیچ وقت نمیشه تغییرش داد . پس متغیر دارای اطلاعاتی که قابل تغییر و ثابت دارای اطلاعاتی که نمیشه تغییرش داد می باشد - آسون بود ٬ درسته ؟</p>
+
+<p>داشتن هر ۲ روش ممکنه بیهوده به نظر برسه و شما با خودتون بگین یه متغییر میسازم و هیچ وقت اطلاعاتش و تغییر نمیدم ٬ چه نیازی به ثابت هست ؟ اما ممکنه اشتباه کنیم .</p>
+
+<p>یکی از فایده های جدا سازی متغییر و ثابت اینه که Xcode به ما میگه اگه اشتباه کنیم مثلا : اگه من بگم این اطلاعات  ثابت هست و هیچ وقت تغییر نمیکنه چون همون لحظه میدونم این قرار نیست تغییر کنه اما بعدش ۱۰ خط پایین تر ممکنه فراموش کنم و بخوام اطلاعات داخل constant رو عوض کنم اینجاست که این قابلیت به کمک ما میاد و میگه داری اشتباه میزنی این تغییر ناپذیره :))</p>
+
+<p>و در اخر اینکه برنامه وقتی میدونه این اطلاعات ثابت هست میتونه راحتتر و سریع تر اجرا بشه ٬ پس ثابت ها چیز مهمی هستند .</p>
+
+<p>توی Swift ما میتونیم یه متغیر با دستور Var بسازیم مثل این :</p>
+
+<pre><code>var name = "Soroush safari"
+</code></pre>
+
+<p>اجازه بدین اینو داخل playground قرار بدیم و نتیجه رو ببنیم . همه چیز رو به جز خط import UIkit پاک کنید و متغییر و زیرش اضافه کنید و شما باید چیزی شبیه این رو ببینید :</p>
+
+<p><img src="/swift/images/3-swift.jpg" alt="xcode" id="xcode" /> </p>
+
+<p>اما نیاز نیست هر بار از var استفاده کنید این فقط برای زمانی که شما دارین یه متغیر رو میسازین ٬ این کد رو توی playground تست کنید :</p>
+
+<pre><code>var name = "soroush safari"
+name = "Romeo"
+</code></pre>
+
+<p>پس اولین خط یه متغیر به اسم name میسازه که با "soroush safari" مقدار دهی اولیه شده و بعد در خط دوم ما اطلاعات داخل متغیر name رو update کردیم به "Romeo" و حالا مقدار متغیر name دیگه "soroush safari" نیست و به "Romeo" تبدیل شده . </p>
+
+<p>حالا چی میشه اگه ما یه ثابت بسازیم به جای متغیر ؟ جالبه ٬ برای ساخت ثابت یا همون constant از کلمه let به جای var استفاده میکنیم ٬ پس شما میتونین خط اول کدتون رو تغییر بدین به let name به جای var name  :</p>
+
+<pre><code>import UIkit
+
+let name = "soroush safari"
+name = "Romeo"
+</code></pre>
+
+<p>اما یه مشکلی اینجا هست : xcode یه علامت قرمز رنگ به عنوان Error به شما نشون داده ( سمت چپ name ) و اگه شما روی اون علامت کلیک کنید متن خطا به شما میگه :  <em>*“   'Cannot assign to 'let' value 'name  ” *</em></p>
+
+<p>در اصل میگه شما سعی کردین مقدار ثابت توی خط دوم رو تغییر بدین که این امکان پذیر نیست ٬ فوق العاده نیست ؟</p>
+
+<p><img src="/swift/images/4-swift.jpg" alt="xcode" id="xcode" /> </p>
+
+<p>پس ثابت ها بهترین راه هستند که به خودمون و Xcode قول بدیم این مقدار عوض نخواهد شد ٬ به این خاطر که اگه شما اشتباه بکنین Swift از اجرا شدن برنامه جلوگیری میکنه .</p>
+
+<p><em>نکته مهم</em> :</p>
+
+<p>اسم متغیر و ثابت باید تک باشه (unique) ٬ اگه مثل زیر متغیر و ثابت با یک اسم بسازین Xcode از کد شما ایراد میگیره :</p>
+
+<pre><code>import UIkit
+
+let name = "soroush safari"
+var name = "Romeo"
+</code></pre>
+
+<p>منتظر قسمت بعد باشید :))</p>
+
+  </section>
+
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_twitter"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+    
+      <script>
+var idcomments_acct = 'fe0e59c5d710febd7774428cee9eb164';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+    
+  </article>
+
+</section>
+
+<!-- Paging -->
+<section class="pagination">
+  <nav class="container">
+    
+      <a class="extend prev" rel="prev" href="/swift/datatype/">
+        <i><-</i>
+        <span>آموزش سوئیفت قسمت ۳ - انواع دیتا</span>
+      </a>
+    
+    
+      <a class="extend next" rel="next" href="/swift/howtoinstallxcode/">
+        <i>-></i>
+        <span>آموزش سویفت قسمت ۱ - نصب ایکس کد</span>
+      </a>
+  </nav>
+</section>
+<!-- /Paging -->
+
+<!-- /Content -->
+<!-- Footer -->
+<footer>
+    <!--<section class="copyright">
+
+    </section>-->
+    <section class="container">
+      <div class="delimiter">
+        <a href="/" class="logo">
+          <img src="/static/theme/sallar/img/logo.svg">
+        </a>
+      </div>
+      <p>
+        
+          ۱۳۹۷<br>
+          مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+        
+      </p>
+    </section>
+</footer>
+<!-- /Footer -->
+
+<!-- Scripts -->
+<script src="/static/theme/sallar/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
