@@ -6,15 +6,11 @@ language: Farsi
 url: https://thecoci.me/swift/
 root: /swift/
 
-static: /swift/static/
-imageurl: /swift/img/
-
 default_extension: md
 
 permalink: :title/
 
 template: sallar
-disqus_shortname: cocii
 
 lists:
 
