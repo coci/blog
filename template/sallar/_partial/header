@@ -9,14 +9,9 @@
         {{ IF SITE.language == 'Farsi' }}
           <li><a href="{{ SITE.root }}">فهرست</a></li>
           <li><a href="{{ MAIN.github }}" target="_blank">گیت‌هاب</a></li>
-<<<<<<< HEAD
-          <li><a href="{{ MainROOT }}" target="_blank">آموزش سویفت</a></li>
-          <li><a href="{{ MainROOT }}blog">English</a></li>
-=======
           <li><a href="{{ FLOORS.swift.root }}" target="_blank">آموزش سویفت</a></li>
           <li><a href="{{ FLOORS.fa.root }}">وبلاگ</a></li>
           <li><a href="{{ FLOORS.en.root }}">English</a></li>
->>>>>>> 9a25747bfdc6760f747f38800d81bda2cdc1528f
         {{ ELSE }}
           <li><a href="{{ FLOORS.en.root }}">Index</a></li>
           <li><a href="{{ MAIN.github }}" target="_blank">github</a></li>
