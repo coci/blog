@@ -16,7 +16,7 @@ archive_post_num: all
 feed_output: atom.xml
 
 default_floor: fa
-default_markup: markmod
+default_markup: mmd
 
 disqus_shortname: cocii
 
