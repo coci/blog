@@ -6,15 +6,11 @@ language: Farsi
 url: https://thecoci.me/farsi/
 root: /farsi/
 
-static: /farsi/static/
-imageurl: /farsi/img/
-
 default_extension: md
 
 permalink: :title/
 
 template: sallar
-disqus_shortname: cocii
 
 lists:
 

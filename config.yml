@@ -3,20 +3,20 @@ description: soroush safari / Exploring python & Things.
 
 author: soroush safari
 email: soroush_safarii@yahoo.com
-timezone: +02:00
+timezone: +03:30
 
 url: https://thecoci.me/
 root: /
 static: /static
-imageurl: /static/images
+
 icon: /static/theme/sallar/img/iconn.ico
 
 post_num: all
 archive_post_num: all
 feed_output: atom.xml
 
-default_floor: en
-default_markup: mmd
+default_floor: fa
+default_markup: markmod
 
 disqus_shortname: cocii
 
