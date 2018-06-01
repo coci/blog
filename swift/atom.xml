@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/swift//feed.xml" rel="self"/>
   <link href="https://thecoci.me/swift/"/>
 
-  <updated>2018-06-01T13:32:26+0330</updated>
+  <updated>2018-06-01T13:34:08+0330</updated>
   <id>https://thecoci.me/swift/</id>
   
   <author>
@@ -91,7 +91,7 @@ c &lt; 4
 
 <p>این نشان میده بزرگتر ">" و بزرگتر مساوی ">=" و کوچکتر "&lt;" که شما توی قسمت نتیجه میبینید نوشته :</p>
 
-<p><img src="/swift/_images/5-swift.jpg" alt="5-swift" id="swift" /></p>
+<p><img src="/swift/images/5-swift.jpg" alt="xcode" id="xcode" /> </p>
 
 <p>برای نتیجه از data type های bool استفاده کرده چون جواب این جملات فقط میتونه درست یا غلط باشه(false or true) .</p>
 
@@ -105,7 +105,7 @@ name == "soroush safar"
 
 <p>"soroush safari" - "Soroush Safari" - "SOROUSH SAFARI" این 3 تا String  شاید در متن یکی باشن اما بخاطرحساسیت بزرگ و کوچک بودن حروف در سویفت اگه از == استفاده کنید به شما false نشان میده :</p>
 
-<p><img src="/swift/_images/6-swift.jpg" alt="6-swift" id="swift" /></p>
+<p><img src="/swift/images/6-swift.jpg" alt="xcode" id="xcode" /> </p>
 
 <p>حالا من میخوام به شما یه عملگر دیگه " ! " که به معنی "نیست " رو به شما معرفی کنم که این عملگر همون علامت تعجب است . به عنوان مثال :</p>
 
