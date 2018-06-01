@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/swift//feed.xml" rel="self"/>
   <link href="https://thecoci.me/swift/"/>
 
-  <updated>2018-06-01T13:30:41+0330</updated>
+  <updated>2018-06-01T13:31:40+0330</updated>
   <id>https://thecoci.me/swift/</id>
   
   <author>
@@ -93,7 +93,7 @@ c &lt; 4
 
 <p><img src="/swift/_images/5-swift.jpg" alt="5-swift" id="swift" /></p>
 
-<p>از data type های bool استفاده کرده چون جواب این جملات فقط میتونه درست یا غلط باشه(false or true) .</p>
+<p>برای نتیجه از data type های bool استفاده کرده چون جواب این جملات فقط میتونه درست یا غلط باشه(false or true) .</p>
 
 <p>اگه شما میخواین مساوی بودن 2 مقداررو بررسی کنید باید از == استفاده کنید ٬ به عنوان مثال :</p>
 
