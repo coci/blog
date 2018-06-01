@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="Farsi">
+<head>
+  <title>سروش صفری | آموزش سویفت قسمت ۴ - عملگرها</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="سلام ، این وبلاگ منه">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="آموزش سویفت قسمت ۴ - عملگرها">
+  <meta property="og:url" content="https://thecoci.me/swift/">
+  <meta property="og:site_name" content="سروش صفری">
+  <meta property="og:description" content="&lt;p&gt;عملگرها (Operators)
+
+عملگرها (Operators) شبیه همون علامت هایی که توی اولین کلاس های ریاضی خوندین و مثلا :
+
+برای جمع : +
+
+برای ضرب : *
+
+برای تقسیم : /
+
+برای منها : -
+
+برای مساوی : = 
+
+که این عملگرهای ریاضی دقیقا توی سویفت هم هستن .
+
+اجازه بدین یکم به صورت پایه ازین عملگرها استفاده کنیم ٬ لطفا کدهای زیر رو داخل playground قرار بدین :
+
+var a = 10
+a = a + 1
+a = a - 1
+a = a * a
+
+در قسمت نتیجه شما مشاهده میکنید که نوشته 10 ٬ 11 ٬ 10 و 10 ٬ حالا این رو امتحان کنید :
+
+var b = 10
+b += 10
+b -= 10 
+
+عملگر =+ یعنی مقدار جدید رو اضافه و بعد نتیجه رو داخل متغیر قرار بده . توی مثال ما اول  به مقدار متغیر b ر&lt;/p&gt;">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="آموزش سویفت قسمت ۴ - عملگرها">
+  <meta name="twitter:description" content="&lt;p&gt;عملگرها (Operators)
+
+عملگرها (Operator...">
+
+  <link rel="alternative" href="/swift/atom.xml" title="سروش صفری" type="application/atom+xml">
+  <link rel="short icon" href="/static/theme/sallar/img/iconn.ico">
+  <link rel="stylesheet" href="/static/theme/sallar/css/style.css" type="text/css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115996537-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-115996537-1');
+	</script>
+
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <section class="container">
+    <nav>
+      <h1>
+        <a href="/" class="logo">سروش صفری</a>
+      </h1>
+      <ul>
+        
+          <li><a href="/swift/">فهرست</a></li>
+          <li><a href="https://github.com/coci" target="_blank">گیت‌هاب</a></li>
+          <li><a href="/swift/" target="_blank">آموزش سویفت</a></li>
+          <li><a href="/farsi/">فارسی</a></li>
+          <li><a href="/blog">English</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+</header>
+<!-- /Header -->
+
+<section id="content" class="container">
+
+  <article id="oprators" class="article article-type-post" itemscope itemprop="blogPost">
+    <h2 class="title" itemprop="name">آموزش سویفت قسمت ۴ - عملگرها</h2>
+
+    
+      <h4 class="time">
+    <time datetime="2018-06-01 12:39:58" itemprop="datePublished">جمعه، ۱۱ خرداد ۱۳۹۷</time>
+  </h4>
+    
+
+    <section class="content">
+    <a name="more"></a>
+<h1 id="operators">عملگرها (Operators)</h1>
+
+<p>عملگرها (Operators) شبیه همون علامت هایی که توی اولین کلاس های ریاضی خوندین و مثلا :</p>
+
+<p>برای جمع : +</p>
+
+<p>برای ضرب : *</p>
+
+<p>برای تقسیم : /</p>
+
+<p>برای منها : -</p>
+
+<p>برای مساوی : = </p>
+
+<p>که این عملگرهای ریاضی دقیقا توی سویفت هم هستن .</p>
+
+<p>اجازه بدین یکم به صورت پایه ازین عملگرها استفاده کنیم ٬ لطفا کدهای زیر رو داخل playground قرار بدین :</p>
+
+<pre><code class="language-swift">var a = 10
+a = a + 1
+a = a - 1
+a = a * a
+</code></pre>
+
+<p>در قسمت نتیجه شما مشاهده میکنید که نوشته 10 ٬ 11 ٬ 10 و 10 ٬ حالا این رو امتحان کنید :</p>
+
+<pre><code class="language-swift">var b = 10
+b += 10
+b -= 10 
+</code></pre>
+
+<p>عملگر =+ یعنی مقدار جدید رو اضافه و بعد نتیجه رو داخل متغیر قرار بده . توی مثال ما اول  به مقدار متغیر b رو 10 واحد اضافه کن  و بعد نتیجه جدید رو داخل متغیر b قرار بده . شما میتونین تصور کنین =- همین طور عمل میکنه اما از متغیر کم میکنه بجای اینکه اضافه کنه پس کد ما توی قسمت نتیجه به شما اعداد : 10 ٬ 20  ٬ 10 رو به شما نشان میده .</p>
+
+<p>بعضی ازین عملگرها برای data type های دیگه هم استفاده میشه ٬ مثلا 2 تا متغیر دابل رو بهم اضافه کنید :</p>
+
+<pre><code class="language-swift">var a = 1.1
+var b = 2.2 
+var c = a + b
+</code></pre>
+
+<p>یا مثلا 2 تا String رو به علامت + با هم جمع کنید :</p>
+
+<pre><code class="language-swift">var name1 = "soroush safari"
+var name2 = "ali"
+var both = name1 + " and  " + name2
+</code></pre>
+
+<p>که این مثال به عنوان نتیجه "soroush safari and ali" رو به شما نشان میده .</p>
+
+<p>یکی دیگه از عملگرهای رایج که شما در اینده خواهید دید % است که یعنی "عدد سمت راست و بر عدد سمت چپ تقسیم کن و باقیمانده رو برگردون" ٬ که به عنوان مثال 3 ٪ 9 میشه 0 و  3 ٪ 10 میشه 1 چون 10 تقسیم بر 3 باقیمانده میشه 1 .</p>
+
+<h1 id="comparisonoperators:">عملگرهای مقایسه ای (Comparison operators) :</h1>
+
+<p>سویفت یه مجموعه از عملگرها داره که میتونن ۲ تا مقدار(value) رو با هم مقایسه کنن ٬ برای مثال :</p>
+
+<pre><code class="language-swift">var a = 1.1
+var b = 2.2
+var c = a + b
+
+c &gt; 3
+c &gt;= 3
+c &gt; 4
+c &lt; 4
+</code></pre>
+
+<p>این نشان میده بزرگتر ">" و بزرگتر مساوی ">=" و کوچکتر "&lt;" که شما توی قسمت نتیجه میبینید نوشته :</p>
+
+<p><img src="/swift/_images/5-swift.jpg" alt="5-swift" id="swift" /></p>
+
+<p>از data type های bool استفاده کرده چون جواب این جملات فقط میتونه درست یا غلط باشه(false or true) .</p>
+
+<p>اگه شما میخواین مساوی بودن 2 مقداررو بررسی کنید باید از == استفاده کنید ٬ به عنوان مثال :</p>
+
+<pre><code class="language-swift">var name = "soroush safari"
+name == "soroush safar"
+</code></pre>
+
+<p>که در قسمت نتیجه خواهید دید نوشته true اما حالا یه چیزی که توی مقایسه String ها شما ممکنه باهاش برخورد کنید بزرگ یا کوچک بودن حروف یعنی :</p>
+
+<p>"soroush safari" - "Soroush Safari" - "SOROUSH SAFARI" این 3 تا استرین شاید در متن یکی باشن اما بخاطرحساسیت بزرگ و کوچک بودن حروف در سویفت اگه از == استفاده کنید به شما false نشان میده :</p>
+
+<p><img src="/swift/_images/6-swift.jpg" alt="6-swift" id="swift" /></p>
+
+<p>حالا من میخوام به شما یه عملگر دیگه " ! " که به معنی "نیست " رو به شما معرفی کنم که این عملگر همون علامت تعجب است . به عنوان مثال :</p>
+
+<pre><code class="language-swift">var stayInHome = true
+stayInHome
+!stayInHome
+</code></pre>
+
+<p>که دومین جمله مقدار true برمیگردونه اما سومین جمله که میگه stayInHome نباشه مقدار False رو برمیگردونه . </p>
+
+<p>شما میتونین ! رو با = استفاده کنید =! یعنی "برابر نیست" ٬ به عنوان مثال :</p>
+
+<pre><code class="language-swift">var name = "soroush safari"
+name == "soroush safari"
+name != "soroush safari"
+</code></pre>
+
+<p>اگه در هر قسمت گیج شدین اصلا مشکلی نیست و در اینده کاملا و بصورت عمیق همه مطالب رو توضیح میدم . حتما هر بخش رو تکرار و تمرین کنید .</p>
+
+<p>منتظر پست بعدی باشین :))</p>
+
+  </section>
+
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_twitter"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+    
+      <script>
+var idcomments_acct = 'fe0e59c5d710febd7774428cee9eb164';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+    
+  </article>
+
+</section>
+
+<!-- Paging -->
+<section class="pagination">
+  <nav class="container">
+    
+      <a></a>
+    
+      <a class="extend next" rel="next" href="/swift/datatype/">
+        <i>-></i>
+        <span>آموزش سویفت قسمت ۳ - انواع دیتا</span>
+      </a>
+  </nav>
+</section>
+<!-- /Paging -->
+
+<!-- /Content -->
+<!-- Footer -->
+<footer>
+    <!--<section class="copyright">
+
+    </section>-->
+    <section class="container">
+      <div class="delimiter">
+        <a href="/" class="logo">
+          <img src="/static/theme/sallar/img/logo.svg">
+        </a>
+      </div>
+      <p>
+        
+          ۱۳۹۷<br>
+          مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+        
+        <br>
+        powered with 💜 by <a href="https://miraxy.github.io">Mira</a>
+      </p>
+    </section>
+</footer>
+<!-- /Footer -->
+
+<!-- Scripts -->
+<script src="/static/theme/sallar/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
