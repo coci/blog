@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="Farsi">
+<head>
+  <title>سروش صفری | آموزش سویفت قسمت ۵ - الحاق رشته حرف</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="سلام ، این وبلاگ منه">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="آموزش سویفت قسمت ۵ - الحاق رشته حرف">
+  <meta property="og:url" content="https://thecoci.me/swift/">
+  <meta property="og:site_name" content="سروش صفری">
+  <meta property="og:description" content="&lt;p&gt;الحاق رشته حرف (String interpolation) :
+
+ترکیب کردن متغیر و یا ثابت در داخل رشته حروف (string) بهترین تعریفی هست که میشه برای این بخش انجام داد و بزارین تو مثال نشون بدم دقیقا چی هست ٬ همه کدهای توی playground و یاک کنید بجز این خط :
+
+var name = &quot;soroush safari&quot;
+
+اگه ما بخوایم یه پیغامی رو به کاربر نمایش بدیم که شامل اسمش باشه String interpolation چیزیه که این کار و برای ما راحت میکنه ٬ شما فقط نیاز دارین یه &quot; \ &quot; و &quot;()&quot; کنار هم قرار بدین و همه چیز تمام ٬ مثلا‌ :
+
+var name = &quot;soroush safari&quot;
+&quot;your name is \(name)&quot;
+
+اگه این کد رو توی playground  قرار بدین تو قسمت نیجه میبینین که نوشته : &quot;your n&lt;/p&gt;">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="آموزش سویفت قسمت ۵ - الحاق رشته حرف">
+  <meta name="twitter:description" content="&lt;p&gt;الحاق رشته حرف (String interpolation) ...">
+
+  <link rel="alternative" href="/swift/atom.xml" title="سروش صفری" type="application/atom+xml">
+  <link rel="short icon" href="/static/theme/sallar/img/iconn.ico">
+  <link rel="stylesheet" href="/static/theme/sallar/css/style.css" type="text/css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115996537-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-115996537-1');
+	</script>
+
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <section class="container">
+    <nav>
+      <h1>
+        <a href="/" class="logo">سروش صفری</a>
+      </h1>
+      <ul>
+        
+          <li><a href="/swift/">فهرست</a></li>
+          <li><a href="https://github.com/coci" target="_blank">گیت‌هاب</a></li>
+          <li><a href="/swift/" target="_blank">آموزش سویفت</a></li>
+          <li><a href="/farsi/">فارسی</a></li>
+          <li><a href="/blog">English</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+</header>
+<!-- /Header -->
+
+<section id="content" class="container">
+
+  <article id="StringInterpolation" class="article article-type-post" itemscope itemprop="blogPost">
+    <h2 class="title" itemprop="name">آموزش سویفت قسمت ۵ - الحاق رشته حرف</h2>
+
+    
+      <h4 class="time">
+    <time datetime="2018-06-01 16:28:13" itemprop="datePublished">جمعه، ۱۱ خرداد ۱۳۹۷</time>
+  </h4>
+    
+
+    <section class="content">
+    <a name="more"></a>
+<h1 id="stringinterpolation:">الحاق رشته حرف (String interpolation) :</h1>
+
+<p>ترکیب کردن متغیر و یا ثابت در داخل رشته حروف (string) بهترین تعریفی هست که میشه برای این بخش انجام داد و بزارین تو مثال نشون بدم دقیقا چی هست ٬ همه کدهای توی playground و یاک کنید بجز این خط :</p>
+
+<pre><code class="language-swift">var name = "soroush safari"
+</code></pre>
+
+<p>اگه ما بخوایم یه پیغامی رو به کاربر نمایش بدیم که شامل اسمش باشه String interpolation چیزیه که این کار و برای ما راحت میکنه ٬ شما فقط نیاز دارین یه " \ " و "()" کنار هم قرار بدین و همه چیز تمام ٬ مثلا‌ :</p>
+
+<pre><code class="language-swift">var name = "soroush safari"
+"your name is \(name)"
+</code></pre>
+
+<p>اگه این کد رو توی playground  قرار بدین تو قسمت نیجه میبینین که نوشته : "your name is soroush safari" .</p>
+
+<p>و حالا ما می تونیم اون کار و با یه روش دیگه هم انجام بدیم :</p>
+
+<pre><code class="language-swift">var name = "soroush safari"
+"your name is " + name
+</code></pre>
+
+<p>اما این کار در اینجا کارآمد نیست و این روش فقط مخصوص زمانی که میخواین چند تا متغیر رو با هم ترکیب کنید می باشد و بعلاوه اینکه روشی که اول ذکر شد در مورد data type کاملا هوشمند و تمام موارد رو خودش اماده میکنه به طور مثال :</p>
+
+<pre><code class="language-swift">var name = "soroush safari"
+var age = 25
+var latitude = 36.166667    
+
+"your name is \(name) , you'r age is \(age) and you'r latitude is \(latitude) . "
+</code></pre>
+
+<p>نکته ای در اینجا وجود داره و اونهم اینه که روش دوم ( + ) خیلی سخته چون سویفت به شما اجازه نمیده که Int یا Double رو به String اضافه کنید .</p>
+
+<p><strong>نکته</strong> : یکی از  قدرتمند ترین ویژگی های الحاق رشته ( String interpolation ) اینه که همه چیز در بین ()\ به صورت جمله دستوری سویفت حساب میشه ٬ مثلا میتونین اعمال ریاضی باهاش انجام بدین :</p>
+
+<pre><code class="language-swift">var age = 25
+" you are \(age) years old. in another \(age) years will be \(age * 2) "
+</code></pre>
+
+<p>دوستان لطفا هر بخش رو که می خونین حتما تمرین کنید و با دقت انجام بدین . منتظر پست بعدی باشین :))</p>
+
+  </section>
+
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_twitter"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+    
+      <script>
+var idcomments_acct = 'fe0e59c5d710febd7774428cee9eb164';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+    
+  </article>
+
+</section>
+
+<!-- Paging -->
+<section class="pagination">
+  <nav class="container">
+    
+      <a></a>
+    
+      <a class="extend next" rel="next" href="/swift/oprators/">
+        <i>-></i>
+        <span>آموزش سویفت قسمت ۴ - عملگرها</span>
+      </a>
+  </nav>
+</section>
+<!-- /Paging -->
+
+<!-- /Content -->
+<!-- Footer -->
+<footer>
+    <!--<section class="copyright">
+
+    </section>-->
+    <section class="container">
+      <div class="delimiter">
+        <a href="/" class="logo">
+          <img src="/static/theme/sallar/img/logo.svg">
+        </a>
+      </div>
+      <p>
+        
+          ۱۳۹۷<br>
+          مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+        
+        <br>
+        powered with 💜 by <a href="https://miraxy.github.io">Mira</a>
+      </p>
+    </section>
+</footer>
+<!-- /Footer -->
+
+<!-- Scripts -->
+<script src="/static/theme/sallar/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

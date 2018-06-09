@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/swift//feed.xml" rel="self"/>
   <link href="https://thecoci.me/swift/"/>
 
-  <updated>2018-06-01T13:36:21+0330</updated>
+  <updated>2018-06-09T20:35:08+0330</updated>
   <id>https://thecoci.me/swift/</id>
   
   <author>
@@ -14,6 +14,72 @@
     
   <generator>Mira</generator>
 
+  
+  <entry>
+    <title>آموزش سویفت قسمت ۵ - الحاق رشته حرف</title>
+    <link href="https://thecoci.me/swift/stringinterpolation/"/>
+    <id>https://thecoci.me/swift/stringinterpolation/</id>
+
+    <published>2018-06-01T16:28:13+0330</published>
+    <updated>2018-06-01T16:28:13+0330</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+<h1 id="stringinterpolation:">الحاق رشته حرف (String interpolation) :</h1>
+
+<p>ترکیب کردن متغیر و یا ثابت در داخل رشته حروف (string) بهترین تعریفی هست که میشه برای این بخش انجام داد و بزارین تو مثال نشون بدم دقیقا چی هست ٬ همه کدهای توی playground و یاک کنید بجز این خط :</p>
+
+<pre><code class="language-swift">var name = "soroush safari"
+</code></pre>
+
+<p>اگه ما بخوایم یه پیغامی رو به کاربر نمایش بدیم که شامل اسمش باشه String interpolation چیزیه که این کار و برای ما راحت میکنه ٬ شما فقط نیاز دارین یه " \ " و "()" کنار هم قرار بدین و همه چیز تمام ٬ مثلا‌ :</p>
+
+<pre><code class="language-swift">var name = "soroush safari"
+"your name is \(name)"
+</code></pre>
+
+<p>اگه این کد رو توی playground  قرار بدین تو قسمت نیجه میبینین که نوشته : "your name is soroush safari" .</p>
+
+<p>و حالا ما می تونیم اون کار و با یه روش دیگه هم انجام بدیم :</p>
+
+<pre><code class="language-swift">var name = "soroush safari"
+"your name is " + name
+</code></pre>
+
+<p>اما این کار در اینجا کارآمد نیست و این روش فقط مخصوص زمانی که میخواین چند تا متغیر رو با هم ترکیب کنید می باشد و بعلاوه اینکه روشی که اول ذکر شد در مورد data type کاملا هوشمند و تمام موارد رو خودش اماده میکنه به طور مثال :</p>
+
+<pre><code class="language-swift">var name = "soroush safari"
+var age = 25
+var latitude = 36.166667    
+
+"your name is \(name) , you'r age is \(age) and you'r latitude is \(latitude) . "
+</code></pre>
+
+<p>نکته ای در اینجا وجود داره و اونهم اینه که روش دوم ( + ) خیلی سخته چون سویفت به شما اجازه نمیده که Int یا Double رو به String اضافه کنید .</p>
+
+<p><strong>نکته</strong> : یکی از  قدرتمند ترین ویژگی های الحاق رشته ( String interpolation ) اینه که همه چیز در بین ()\ به صورت جمله دستوری سویفت حساب میشه ٬ مثلا میتونین اعمال ریاضی باهاش انجام بدین :</p>
+
+<pre><code class="language-swift">var age = 25
+" you are \(age) years old. in another \(age) years will be \(age * 2) "
+</code></pre>
+
+<p>دوستان لطفا هر بخش رو که می خونین حتما تمرین کنید و با دقت انجام بدین . منتظر پست بعدی باشین :))</p>
+]]></content>
+
+    <summary>
+    &lt;p&gt;الحاق رشته حرف (String interpolation) :
+
+ترکیب کردن متغیر و یا ثابت در داخل رشته حروف (string) بهترین تعریفی هست که میشه برای این بخش انجام داد و بزارین تو مثال نشون بدم دقیقا چی هست ٬ همه کدهای توی playground و یاک کنید بجز این خط :
+
+var name = &quot;soroush safari&quot;
+
+اگه ما بخوایم یه پیغامی رو به کاربر نمایش بدیم که شامل اسمش باشه String interpolation چیزیه که این کار و برای ما راحت میکنه ٬ شما فقط نیاز دارین یه &quot; \ &quot; و &quot;()&quot; کنار هم قرار بدین و همه چیز تمام ٬ مثلا‌ :
+
+var name = &quot;soroush safari&quot;
+&quot;your name is \(name)&quot;
+
+اگه این کد رو توی playground  قرار بدین تو قسمت نیجه میبینین که نوشته : &quot;your n&lt;/p&gt;
+    </summary>
+  </entry>
   
   <entry>
     <title>آموزش سویفت قسمت ۴ - عملگرها</title>
