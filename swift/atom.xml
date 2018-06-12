@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/swift//feed.xml" rel="self"/>
   <link href="https://thecoci.me/swift/"/>
 
-  <updated>2018-06-09T20:35:08+0330</updated>
+  <updated>2018-06-12T09:11:41+0330</updated>
   <id>https://thecoci.me/swift/</id>
   
   <author>
@@ -26,20 +26,20 @@
     <content type="html"><![CDATA[<a name="more"></a>
 <h1 id="stringinterpolation:">الحاق رشته حرف (String interpolation) :</h1>
 
-<p>ترکیب کردن متغیر و یا ثابت در داخل رشته حروف (string) بهترین تعریفی هست که میشه برای این بخش انجام داد و بزارین تو مثال نشون بدم دقیقا چی هست ٬ همه کدهای توی playground و یاک کنید بجز این خط :</p>
+<p>ترکیب کردن متغیر و یا ثابت در داخل رشته حروف (string) بهترین تعریفی هست که میشه برای این بخش انجام داد و بزارین تو مثال نشون بدم دقیقا چی هست ٬ همه کدهای توی playground رو پاک کنید بجز این خط :</p>
 
 <pre><code class="language-swift">var name = "soroush safari"
 </code></pre>
 
-<p>اگه ما بخوایم یه پیغامی رو به کاربر نمایش بدیم که شامل اسمش باشه String interpolation چیزیه که این کار و برای ما راحت میکنه ٬ شما فقط نیاز دارین یه " \ " و "()" کنار هم قرار بدین و همه چیز تمام ٬ مثلا‌ :</p>
+<p>اگه ما بخوایم یه پیغامی رو به کاربر نمایش بدیم که شامل اسمش باشه String interpolation چیزیه که این کار رو برای ما راحت میکنه ٬ شما فقط نیاز دارین یه " \ " و "()" کنار هم قرار بدین و همه چیز تمام ٬ مثلا‌ :</p>
 
 <pre><code class="language-swift">var name = "soroush safari"
 "your name is \(name)"
 </code></pre>
 
-<p>اگه این کد رو توی playground  قرار بدین تو قسمت نیجه میبینین که نوشته : "your name is soroush safari" .</p>
+<p>اگه این کد رو توی playground  قرار بدین تو قسمت نتیجه می بینین که نوشته : "your name is soroush safari" .</p>
 
-<p>و حالا ما می تونیم اون کار و با یه روش دیگه هم انجام بدیم :</p>
+<p>و حالا ما می تونیم اون کار رو با یک روش دیگه هم انجام بدیم :</p>
 
 <pre><code class="language-swift">var name = "soroush safari"
 "your name is " + name
@@ -68,16 +68,16 @@ var latitude = 36.166667
     <summary>
     &lt;p&gt;الحاق رشته حرف (String interpolation) :
 
-ترکیب کردن متغیر و یا ثابت در داخل رشته حروف (string) بهترین تعریفی هست که میشه برای این بخش انجام داد و بزارین تو مثال نشون بدم دقیقا چی هست ٬ همه کدهای توی playground و یاک کنید بجز این خط :
+ترکیب کردن متغیر و یا ثابت در داخل رشته حروف (string) بهترین تعریفی هست که میشه برای این بخش انجام داد و بزارین تو مثال نشون بدم دقیقا چی هست ٬ همه کدهای توی playground رو پاک کنید بجز این خط :
 
 var name = &quot;soroush safari&quot;
 
-اگه ما بخوایم یه پیغامی رو به کاربر نمایش بدیم که شامل اسمش باشه String interpolation چیزیه که این کار و برای ما راحت میکنه ٬ شما فقط نیاز دارین یه &quot; \ &quot; و &quot;()&quot; کنار هم قرار بدین و همه چیز تمام ٬ مثلا‌ :
+اگه ما بخوایم یه پیغامی رو به کاربر نمایش بدیم که شامل اسمش باشه String interpolation چیزیه که این کار رو برای ما راحت میکنه ٬ شما فقط نیاز دارین یه &quot; \ &quot; و &quot;()&quot; کنار هم قرار بدین و همه چیز تمام ٬ مثلا‌ :
 
 var name = &quot;soroush safari&quot;
 &quot;your name is \(name)&quot;
 
-اگه این کد رو توی playground  قرار بدین تو قسمت نیجه میبینین که نوشته : &quot;your n&lt;/p&gt;
+اگه این کد رو توی playground  قرار بدین تو قسمت نتیجه می بینین که نوشته : &quot;yo&lt;/p&gt;
     </summary>
   </entry>
   
