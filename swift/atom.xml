@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/swift//feed.xml" rel="self"/>
   <link href="https://thecoci.me/swift/"/>
 
-  <updated>2018-06-12T09:11:41+0330</updated>
+  <updated>2018-06-21T19:23:41+0330</updated>
   <id>https://thecoci.me/swift/</id>
   
   <author>
@@ -16,7 +16,47 @@
 
   
   <entry>
-    <title>آموزش سویفت قسمت ۵ - الحاق رشته حرف</title>
+    <title>آموزش سویفت قسمت ۶ - ارایه ها</title>
+    <link href="https://thecoci.me/swift/arrays/"/>
+    <id>https://thecoci.me/swift/arrays/</id>
+
+    <published>2018-06-12T20:21:21+0330</published>
+    <updated>2018-06-12T20:21:21+0330</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+<h1>ارایه</h1>
+
+<p>آرایه به شما اجازه میده که مقدار زیادی از دیتا رو داخل یه مجموعه جمع کنید‍ و بعدا با استفاده از جایگاهشون توی مجموعه بهشون دسترسی داشته باشین . مثل :</p>
+
+<pre><code class="language-swift">var evenNumbers = [2,4,6,8]
+var songs = ["shake it off" , "you belong with me" , "back to december"]
+</code></pre>
+
+<p>همون طور که می بینید سویفت از براکت برای نشان دادن شروع و پایان Array استفاده میکنه و هر کدوم از ایتم های داخل array با کاما" , "از هم جدا شده . اما یه نکته ای اینجا وجود داره زمانی که میخواین ایتم های یه Array رو بخونین یا بشمارین ٬ سویفت شمارش ایتم های داخل Array رو از عدد 0 شروع میکنه . این یعنی اینکه ایتم اول 0 و ایتم دوم 1 و ایتم سوم 2 و همینطور تا اخر می باشد . لطفا این کد رو داخل playground قرار بدین :</p>
+
+<pre><code class="language-swift">var songs = ["shake it off" , "you belong with me" , "back to december"]
+songs[0]
+songs[1]
+songs[2]
+</code></pre>
+
+<p>توی قسمت نتیجه می بینین نوشته :   “Shake it Off", "You Belong with Me", and "Back to December” </p>
+]]></content>
+
+    <summary>
+    &lt;p&gt;ارایه
+
+آرایه به شما اجازه میده که مقدار زیادی از دیتا رو داخل یه مجموعه جمع کنید‍ و بعدا با استفاده از جایگاهشون توی مجموعه بهشون دسترسی داشته باشین . مثل :
+
+var evenNumbers = [2,4,6,8]
+var songs = [&quot;shake it off&quot; , &quot;you belong with me&quot; , &quot;back to december&quot;]
+
+همون طور که می بینید سویفت از براکت برای نشان دادن شروع و پایان Array استفاده میکنه و هر کدوم از ایتم های داخل array با کاما&quot; , &quot;از هم جدا شده . اما یه نکته ای اینجا وجود داره زمانی که میخواین ایتم های یه Array رو بخونین یا بشمارین ٬ سویفت شمارش ایتم های داخل Array رو از عدد 0 شروع میکنه . این یعنی اینکه ایتم اول 0 و ایتم دوم 1 و ایتم سوم&lt;/p&gt;
+    </summary>
+  </entry>
+  
+  <entry>
+    <title>آموزش سویفت قسمت ۵ - الحاق متغیر به رشته حرف</title>
     <link href="https://thecoci.me/swift/stringinterpolation/"/>
     <id>https://thecoci.me/swift/stringinterpolation/</id>
 
@@ -24,7 +64,7 @@
     <updated>2018-06-01T16:28:13+0330</updated>
 
     <content type="html"><![CDATA[<a name="more"></a>
-<h1 id="stringinterpolation:">الحاق رشته حرف (String interpolation) :</h1>
+<h1 id="stringinterpolation:">الحاق متغیر به رشته حرف (String interpolation) :</h1>
 
 <p>ترکیب کردن متغیر و یا ثابت در داخل رشته حروف (string) بهترین تعریفی هست که میشه برای این بخش انجام داد و بزارین تو مثال نشون بدم دقیقا چی هست ٬ همه کدهای توی playground رو پاک کنید بجز این خط :</p>
 
@@ -66,7 +106,7 @@ var latitude = 36.166667
 ]]></content>
 
     <summary>
-    &lt;p&gt;الحاق رشته حرف (String interpolation) :
+    &lt;p&gt;الحاق متغیر به رشته حرف (String interpolation) :
 
 ترکیب کردن متغیر و یا ثابت در داخل رشته حروف (string) بهترین تعریفی هست که میشه برای این بخش انجام داد و بزارین تو مثال نشون بدم دقیقا چی هست ٬ همه کدهای توی playground رو پاک کنید بجز این خط :
 
@@ -77,7 +117,7 @@ var name = &quot;soroush safari&quot;
 var name = &quot;soroush safari&quot;
 &quot;your name is \(name)&quot;
 
-اگه این کد رو توی playground  قرار بدین تو قسمت نتیجه می بینین که نوشته : &quot;yo&lt;/p&gt;
+اگه این کد رو توی playground  قرار بدین تو قسمت نتیجه می بینین که نو&lt;/p&gt;
     </summary>
   </entry>
   
