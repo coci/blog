@@ -1,0 +1,15 @@
+title: soroush safari
+description: soroush safari's Blog. Exploring python & Things.
+author: soroush safari
+language: English
+
+url: https://thecoci.me/res
+root: /res
+
+default_extension: md
+
+permalink: :title/
+
+template: d
+
+lists:
