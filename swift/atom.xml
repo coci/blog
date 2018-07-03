@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/swift//feed.xml" rel="self"/>
   <link href="https://thecoci.me/swift/"/>
 
-  <updated>2018-07-03T20:25:28+0330</updated>
+  <updated>2018-07-03T20:27:39+0330</updated>
   <id>https://thecoci.me/swift/</id>
   
   <author>
@@ -87,7 +87,7 @@ add explicit type annotation if this is intentional.”
 
 <p>که اگه بخوام توضیح بدم این میشه که میگه <em>* به نظر میرسه این ارایه قرار چند نوع data type ذخیره کنه ٬ اگه واقعا قصد شما اینه لطفا صریحا (واضح) بیان کنید *</em></p>
 
-<p>من قبلا گفتم شما می تونین از type annotation استفاده کنید تا دقیقا بگین از چه نوع data میخواین داخل ارایه ذخیره کنید برای اینکار توی ارایه بالا باید اینکار رو انجام بدین :</p>
+<p>من قبلا گفتم شما می تونین از type annotation استفاده کنید تا دقیقا بگین چه نوع data میخواین داخل ارایه ذخیره کنید برای اینکار توی ارایه بالا باید اینکار رو انجام بدین :</p>
 
 <pre><code class="language-swift">var songs: [String] = ["Shake it Off", "You Belong with Me", "Back to December", 3]
 </code></pre>
@@ -123,9 +123,10 @@ var both = songs + songs2
 
 <p>و همچنین از " =+ " برای اضافه کردن و قرار دادن (add and assign) هم استفاده کنید :</p>
 
-<p><code>swift
-both += ["Everything has Changed"]
-</code></p>
+<pre><code class="language-swift">both += ["Everything has Changed"]
+</code></pre>
+
+<p>من سربازم و الان تونستم با برنامه ریزی مشخص کنم ازین ب بعد هر هفته پست جدید رو منتشر کنم . منتظر پست های بعدی باشین :))</p>
 ]]></content>
 
     <summary>
