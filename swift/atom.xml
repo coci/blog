@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/swift//feed.xml" rel="self"/>
   <link href="https://thecoci.me/swift/"/>
 
-  <updated>2018-07-03T20:24:01+0330</updated>
+  <updated>2018-07-03T20:24:25+0330</updated>
   <id>https://thecoci.me/swift/</id>
   
   <author>
@@ -41,7 +41,7 @@
     <updated>2018-06-12T20:21:21+0330</updated>
 
     <content type="html"><![CDATA[<a name="more"></a>
-<h1>ارایه</h1>
+<h1>آرایه</h1>
 
 <p>آرایه به شما اجازه میده که مقدار زیادی از دیتا رو داخل یه مجموعه جمع کنید‍ و بعدا با استفاده از جایگاهشون توی مجموعه بهشون دسترسی داشته باشین . مثل :</p>
 
@@ -128,7 +128,7 @@ both += ["Everything has Changed"]
 ]]></content>
 
     <summary>
-    &lt;p&gt;ارایه
+    &lt;p&gt;آرایه
 
 آرایه به شما اجازه میده که مقدار زیادی از دیتا رو داخل یه مجموعه جمع کنید‍ و بعدا با استفاده از جایگاهشون توی مجموعه بهشون دسترسی داشته باشین . مثل :
 
