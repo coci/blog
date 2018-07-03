@@ -106,6 +106,61 @@ type(of: songs)
 
 <p>اگه کد بالا رو در playground قرار بدین در قسمت نتیجه مشاهده میکنید : Array<String>.Type</p>
 
+<p>که به شما میگه سویفت فکر میکنه ارایه Songs از نوع String هست .</p>
+
+<p>اجازه بدین یه اشتباهی بکنیم و تصادفا یه عدد به اخر ارایه اضافه کنیم . این کد رو توی playground قرار بدین :</p>
+
+<pre><code class="language-swift">var songs = ["Shake it Off", "You Belong with Me", "Back to December", 3]
+type(of: songs) 
+</code></pre>
+
+<p>شما در این لحظه یه error دریافت کردین اما این error مبنی بر اینکه سویفت نمیتونه یه ارایه از چند نوع data type رو handle کنه در عوض به شما این error رو دریافت میکنین :  </p>
+
+<pre><code>“heterogenous collection literal could only be inferred to '[Any]'; add explicit type annotation if this is intentional.”
+</code></pre>
+
+<p>که اگه بخوام توضیح بدم این میشه که میگه <em>* به نظر میرسه این ارایه قرار چند نوع data type ذخیره کنه ٬ اگه واقعا قصد شما اینه لطفا صریحا (واضح) بیان کنید *</em></p>
+
+<p>من قبلا گفتم شما می تونین از type annotation استفاده کنید تا دقیقا بگین از چه نوع data میخواین داخل ارایه ذخیره کنید برای اینکار توی ارایه بالا باید اینکار رو انجام بدین :</p>
+
+<pre><code class="language-swift">var songs: [String] = ["Shake it Off", "You Belong with Me", "Back to December", 3]
+</code></pre>
+
+<p>حالا ما به سویفت گفتیم میخوایم داخل ارایه String ذخیره کنیم ٬ همیشه playground از اجرا شدن کد جلوگیری میکنه چون عدد ۳ که اخر ارایه هست از نوع String نیست . اگه شما واقعا میخواین ارایه ای داشته باشین که هر نوع data رو توش بتونین ذخیره کنین باید از Any استفاده کنید :</p>
+
+<pre><code class="language-swift">var songs: [Any] = ["Shake it Off", "You Belong with Me", "Back to December", 3]
+</code></pre>
+
+<h2>ساخت ارایه</h2>
+
+<p>اگه شما از روش بالا برای ساخت ارایه استفاده کنید سویفت یک ارایه برای شما میسازه و با data موردنظر شما کاملش میکنه اما همیشه data از اول مشخص نیست و اگه شما بخواین اول یه ارایه بسازین و <strong><em>بعدا</em></strong> داخلش data ذخیره کنین چی ؟</p>
+
+<p>اینکار رو میکنین :؟؟؟؟</p>
+
+<pre><code class="language-swift">var songs: [String]
+songs[0] = "Shake it Off"
+</code></pre>
+
+<p>اما این کار درست نیست و کار نمیکنه و دلیلش اینه شما نگفتین این ارایه الان خالی هست ٬ اگه بخواین این کار رو انجام بدین باید اینطوری عمل کنید :</p>
+
+<pre><code class="language-swift">var songs = [String]()
+</code></pre>
+
+<h2>عملگرها در ارایه</h2>
+
+<p>شما میتونین از تعداد محدودی از عملگرها در ارایه استفاده کنید ٬ برای مثال شما میتونین ۲ تا ارایه رو باهم ترکیب کنین با استفاده از عملگر " + " :</p>
+
+<pre><code class="language-swift">var songs = ["Shake it Off", "You Belong with Me", "Love Story"]
+var songs2 = ["Today was a Fairytale", "Welcome to New York", "Fifteen"]
+var both = songs + songs2
+</code></pre>
+
+<p>و همچنین از " =+ " برای اضافه کردن و قرار دادن (add and assign) هم استفاده کنید :</p>
+
+<p><code>swift
+both += ["Everything has Changed"]
+</code></p>
+
   </section>
 
 <!-- AddToAny BEGIN -->
