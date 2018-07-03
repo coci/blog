@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/swift//feed.xml" rel="self"/>
   <link href="https://thecoci.me/swift/"/>
 
-  <updated>2018-07-03T20:19:16+0330</updated>
+  <updated>2018-07-03T20:24:01+0330</updated>
   <id>https://thecoci.me/swift/</id>
   
   <author>
@@ -14,6 +14,23 @@
     
   <generator>Mira</generator>
 
+  
+  <entry>
+    <title>آموزش سویفت قسمت ۷ - دیکشنری</title>
+    <link href="https://thecoci.me/swift/dictionary/"/>
+    <id>https://thecoci.me/swift/dictionary/</id>
+
+    <published>2018-07-03T20:20:32+0330</published>
+    <updated>2018-07-03T20:20:32+0330</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+
+]]></content>
+
+    <summary>
+    &lt;p&gt;&lt;/p&gt;
+    </summary>
+  </entry>
   
   <entry>
     <title>آموزش سویفت قسمت ۶ - ارایه ها</title>
@@ -62,7 +79,7 @@ type(of: songs)
 type(of: songs) 
 </code></pre>
 
-<p>شما در این لحظه یه error دریافت کردین اما این error مبنی بر اینکه سویفت نمیتونه یه ارایه از چند نوع data type رو handle کنه در عوض به شما این error رو دریافت میکنین :  </p>
+<p>شما در این لحظه یه error دریافت کردین اما این error مبنی بر اینکه سویفت نمیتونه یه ارایه از چند نوع data type رو handle کنه نیست در عوض شما این error رو دریافت میکنین :  </p>
 
 <pre><code>“heterogenous collection literal could only be inferred to '[Any]'; add explicit type annotation if this is intentional.”
 </code></pre>
