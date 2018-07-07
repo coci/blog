@@ -10,10 +10,20 @@
   <meta property="og:title" content="آموزش سویفت قسمت ۷ - دیکشنری">
   <meta property="og:url" content="https://thecoci.me/swift/">
   <meta property="og:site_name" content="سروش صفری">
-  <meta property="og:description" content="&lt;p&gt;&lt;/p&gt;">
+  <meta property="og:description" content="&lt;p&gt;دیکشنری (Dictionaries)
+
+همونطور که دیدین آرایه ها در سویفت برای ذخیره مجموعه ای از data هست که شما میتونین به هر ایتم آن با استفاده از عدد جایگاهش (index) بهش دسترسی داشته باشین مثل : [songs[0
+
+دیکشنری یکی دیگه از انواع مجموعه ای از data ها است که با آرایه کمی تفاوت داره ٬ این تفاوت ازین قرار که دیکشنری به شما اجازه میده به value دسترسی داشته باشین بر پایه کلید هر مقدار (key) ٬اگه گیج شدین لطفا ادامه بدین که با مثال ها کاملا متوجه خواهید شد .
+
+برای مثال اجازه بدین تصور کنیم که ما چطور data از یک انسان را داخل یک آرایه ای ذخیره میکنیم :
+
+var person = [&quot;Taylor&quot;, &quot;Alison&quot;, &quot;Swift&quot;, &quot;December&quot;, &quot;t&lt;/p&gt;">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="آموزش سویفت قسمت ۷ - دیکشنری">
-  <meta name="twitter:description" content="&lt;p&gt;&lt;/p&gt;">
+  <meta name="twitter:description" content="&lt;p&gt;دیکشنری (Dictionaries)
+
+همونطور که دید...">
 
   <link rel="alternative" href="/swift/atom.xml" title="سروش صفری" type="application/atom+xml">
   <link rel="short icon" href="/static/theme/sallar/img/iconn.ico">
@@ -67,7 +77,43 @@
 
     <section class="content">
     <a name="more"></a>
+<h1 id="dictionaries">دیکشنری (Dictionaries)</h1>
 
+<p>همونطور که دیدین آرایه ها در سویفت برای ذخیره مجموعه ای از data هست که شما میتونین به هر ایتم آن با استفاده از عدد جایگاهش (index) بهش دسترسی داشته باشین مثل : [songs[0</p>
+
+<p>دیکشنری یکی دیگه از انواع مجموعه ای از data ها است که با آرایه کمی تفاوت داره ٬ این تفاوت ازین قرار که دیکشنری به شما اجازه میده به value دسترسی داشته باشین بر پایه کلید هر مقدار (key) ٬اگه گیج شدین لطفا ادامه بدین که با مثال ها کاملا متوجه خواهید شد .</p>
+
+<p>برای مثال اجازه بدین تصور کنیم که ما چطور data از یک انسان را داخل یک آرایه ای ذخیره میکنیم :</p>
+
+<pre><code class="language-swift">var person = ["Taylor", "Alison", "Swift", "December", "taylorswift.com"]
+</code></pre>
+
+<p>برای خواندن نام خانوادگی این شخص ما باید از [person[1 استفاده کنیم و برای ماه تولد این شخص از [person[3 استفاده میکنیم .این کار چند تا مشکل داره که مهمترینش این که به یاد داشتن اینکه کدام یک از اطلاعات در کدام جایگاه ذخیره شده ما رو با دشواری و سختی مواجه میکنه و …… .</p>
+
+<p>با دیکشنری ما می توانیم این موضوع رو بازنویسی کنیم ٬ به جای اینکه شما عدد جایگاه اطلاعات موردنظر رو حفظ باشین از key استفاده میکنین . مثل :</p>
+
+<pre><code class="language-swift">var person = ["first": "Taylor", "middle": "Alison", "last": "Swift", "month": "December", "website": "taylorswift.com"]
+person["middle"]
+person["month"]. 
+</code></pre>
+
+<p>اما کد بالا رو هم میشه اینطوری بنویسیم (برای راحتی در خوندن کد توسط شما) :</p>
+
+<pre><code class="language-swift">var person = [
+                "first": "Taylor",
+                "middle": "Alison",
+                "last": "Swift",
+                "month": "December",
+                "website": "taylorswift.com"
+            ]
+
+person["middle"]
+person["month"]
+</code></pre>
+
+<p>همین طور که مشاهده میکنید وقتی شما یه دیکشنری میسازین شما اول کلید (key ) و بعد یه " : " و بعد مقدار رو وارد میکنید و بعدش شما میتونین هر مقداری رو بخونین فقط با دانستن کلید(key) اون مقدار(value) ٬ اینطوری کار اسون تری خواهید داشت .</p>
+
+<p>منتظر پست بعدی من باشید :))</p>
 
   </section>
 
