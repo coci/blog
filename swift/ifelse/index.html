@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="Farsi">
+<head>
+  <title>سروش صفری | آموزش سویفت قسمت ۸ - عبارات شرطی</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="سلام ، این وبلاگ منه">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="آموزش سویفت قسمت ۸ - عبارات شرطی">
+  <meta property="og:url" content="https://thecoci.me/swift/">
+  <meta property="og:site_name" content="سروش صفری">
+  <meta property="og:description" content="&lt;p&gt;عبارات شرطی (Conditional statements) :
+
+بعضی وقت ها شما میخواین کدی رو اجرا کنین فقط  به شرط اینکه عبارت مشخصی صحیح باشه (true) و در سویفت با جملات if و else این کار شدنی می باشد . شما به سویفت عبارتی میدین که چک کنه که اگه این عبارت درست بود کدی رو برای شما اجرا کنه .
+
+شما به صورت دلخواه می تونین else رو بنویسین که معنیش این میشه اگه عبارت صحیح بود فلان کد *و اگر عبارت صحیح نبود فلان کد * اجرا بشه .
+
+کدهایی که در صورت درست بودن عبارت قرار است اجرا شود داخل {  و } قرار میگیرند . به مثال زیر توجه کنید :
+
+var action: String
+var person = &quot;hater&quot;
+
+if person == &quot;hater&quot; {
+    action = &quot;hate
+}
+
+قبلا &lt;/p&gt;">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="آموزش سویفت قسمت ۸ - عبارات شرطی">
+  <meta name="twitter:description" content="&lt;p&gt;عبارات شرطی (Conditional statements) :...">
+
+  <link rel="alternative" href="/swift/atom.xml" title="سروش صفری" type="application/atom+xml">
+  <link rel="short icon" href="/static/theme/sallar/img/iconn.ico">
+  <link rel="stylesheet" href="/static/theme/sallar/css/style.css" type="text/css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115996537-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-115996537-1');
+	</script>
+
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <section class="container">
+    <nav>
+      <h1>
+        <a href="/" class="logo">سروش صفری</a>
+      </h1>
+      <ul>
+        
+          <li><a href="/swift/">فهرست</a></li>
+          <li><a href="https://github.com/coci" target="_blank">گیت‌هاب</a></li>
+          <li><a href="/swift/" target="_blank">آموزش سویفت</a></li>
+          <li><a href="/farsi/">فارسی</a></li>
+          <li><a href="/blog">English</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+</header>
+<!-- /Header -->
+
+<section id="content" class="container">
+
+  <article id="ifElse" class="article article-type-post" itemscope itemprop="blogPost">
+    <h2 class="title" itemprop="name">آموزش سویفت قسمت ۸ - عبارات شرطی</h2>
+
+    
+      <h4 class="time">
+    <time datetime="2018-07-14 20:50:01" itemprop="datePublished">شنبه، ۲۳ تیر ۱۳۹۷</time>
+  </h4>
+    
+
+    <section class="content">
+    <a name="more"></a>
+<h1 id="conditionalstatements:">عبارات شرطی (Conditional statements) :</h1>
+
+<p>بعضی وقت ها شما میخواین کدی رو اجرا کنین فقط  به شرط اینکه عبارت مشخصی صحیح باشه (true) و در سویفت با جملات if و else این کار شدنی می باشد . شما به سویفت عبارتی میدین که چک کنه که اگه این عبارت درست بود کدی رو برای شما اجرا کنه .</p>
+
+<p>شما به صورت دلخواه می تونین else رو بنویسین که معنیش این میشه اگه عبارت صحیح بود فلان کد <em>*و اگر عبارت صحیح نبود فلان کد *</em> اجرا بشه .</p>
+
+<p>کدهایی که در صورت درست بودن عبارت قرار است اجرا شود داخل {  و } قرار میگیرند . به مثال زیر توجه کنید :</p>
+
+<pre><code class="language-swift">var action: String
+var person = "hater"
+
+if person == "hater" {
+    action = "hate
+}
+</code></pre>
+
+<p>قبلا علامت == برای چک کردن برابری رو در پست های قبل توضیح دادم و در اینجا کد ما چک میکنه اگر person برابر با "hater " می باشد متغیر action رو برابر با " hate " قرار میدهد .</p>
+
+<p>اجازه بدین به کد else if و else اضافه کنیم :</p>
+
+<pre><code class="language-swift">var action: String
+var person = "hater"
+
+if person == "hater {
+    action = "hate"
+}else if person == "player" {
+    action = "play"
+}else {
+    action = "cruise"
+}
+</code></pre>
+
+<p>در کد بالا فقط یک دستور شرطی اجرا خواهد شد ٬ ما گفتیم اگر person برابر بود با " hater " متغیر action رو با "hate " مقدار رهی کن ولی اگر person برابر بود با "player " متغیر اکشن را برابر با "play " کن در غیر اینصورت متغیر action را برابر با "cruise " کن .</p>
+
+  </section>
+
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_twitter"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+    
+      <script>
+var idcomments_acct = 'fe0e59c5d710febd7774428cee9eb164';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+    
+  </article>
+
+</section>
+
+<!-- Paging -->
+<section class="pagination">
+  <nav class="container">
+    
+      <a></a>
+    
+      <a class="extend next" rel="next" href="/swift/dictionary/">
+        <i>-></i>
+        <span>آموزش سویفت قسمت ۷ - دیکشنری</span>
+      </a>
+  </nav>
+</section>
+<!-- /Paging -->
+
+<!-- /Content -->
+<!-- Footer -->
+<footer>
+    <!--<section class="copyright">
+
+    </section>-->
+    <section class="container">
+      <div class="delimiter">
+        <a href="/" class="logo">
+          <img src="/static/theme/sallar/img/logo.svg">
+        </a>
+      </div>
+      <p>
+        
+          ۱۳۹۷<br>
+          مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+        
+        <br>
+        powered with 💜 by <a href="https://miraxy.github.io">Mira</a>
+      </p>
+    </section>
+</footer>
+<!-- /Footer -->
+
+<!-- Scripts -->
+<script src="/static/theme/sallar/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

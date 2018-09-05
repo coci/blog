@@ -5,7 +5,7 @@
   <link href="https://thecoci.me/swift//feed.xml" rel="self"/>
   <link href="https://thecoci.me/swift/"/>
 
-  <updated>2018-07-07T20:08:54+0330</updated>
+  <updated>2018-09-05T13:14:02+0330</updated>
   <id>https://thecoci.me/swift/</id>
   
   <author>
@@ -14,6 +14,70 @@
     
   <generator>Mira</generator>
 
+  
+  <entry>
+    <title>آموزش سویفت قسمت ۸ - عبارات شرطی</title>
+    <link href="https://thecoci.me/swift/ifelse/"/>
+    <id>https://thecoci.me/swift/ifelse/</id>
+
+    <published>2018-07-14T20:50:01+0330</published>
+    <updated>2018-07-14T20:50:01+0330</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+<h1 id="conditionalstatements:">عبارات شرطی (Conditional statements) :</h1>
+
+<p>بعضی وقت ها شما میخواین کدی رو اجرا کنین فقط  به شرط اینکه عبارت مشخصی صحیح باشه (true) و در سویفت با جملات if و else این کار شدنی می باشد . شما به سویفت عبارتی میدین که چک کنه که اگه این عبارت درست بود کدی رو برای شما اجرا کنه .</p>
+
+<p>شما به صورت دلخواه می تونین else رو بنویسین که معنیش این میشه اگه عبارت صحیح بود فلان کد <em>*و اگر عبارت صحیح نبود فلان کد *</em> اجرا بشه .</p>
+
+<p>کدهایی که در صورت درست بودن عبارت قرار است اجرا شود داخل {  و } قرار میگیرند . به مثال زیر توجه کنید :</p>
+
+<pre><code class="language-swift">var action: String
+var person = "hater"
+
+if person == "hater" {
+    action = "hate
+}
+</code></pre>
+
+<p>قبلا علامت == برای چک کردن برابری رو در پست های قبل توضیح دادم و در اینجا کد ما چک میکنه اگر person برابر با "hater " می باشد متغیر action رو برابر با " hate " قرار میدهد .</p>
+
+<p>اجازه بدین به کد else if و else اضافه کنیم :</p>
+
+<pre><code class="language-swift">var action: String
+var person = "hater"
+
+if person == "hater {
+    action = "hate"
+}else if person == "player" {
+    action = "play"
+}else {
+    action = "cruise"
+}
+</code></pre>
+
+<p>در کد بالا فقط یک دستور شرطی اجرا خواهد شد ٬ ما گفتیم اگر person برابر بود با " hater " متغیر action رو با "hate " مقدار رهی کن ولی اگر person برابر بود با "player " متغیر اکشن را برابر با "play " کن در غیر اینصورت متغیر action را برابر با "cruise " کن .</p>
+]]></content>
+
+    <summary>
+    &lt;p&gt;عبارات شرطی (Conditional statements) :
+
+بعضی وقت ها شما میخواین کدی رو اجرا کنین فقط  به شرط اینکه عبارت مشخصی صحیح باشه (true) و در سویفت با جملات if و else این کار شدنی می باشد . شما به سویفت عبارتی میدین که چک کنه که اگه این عبارت درست بود کدی رو برای شما اجرا کنه .
+
+شما به صورت دلخواه می تونین else رو بنویسین که معنیش این میشه اگه عبارت صحیح بود فلان کد *و اگر عبارت صحیح نبود فلان کد * اجرا بشه .
+
+کدهایی که در صورت درست بودن عبارت قرار است اجرا شود داخل {  و } قرار میگیرند . به مثال زیر توجه کنید :
+
+var action: String
+var person = &quot;hater&quot;
+
+if person == &quot;hater&quot; {
+    action = &quot;hate
+}
+
+قبلا &lt;/p&gt;
+    </summary>
+  </entry>
   
   <entry>
     <title>آموزش سویفت قسمت ۷ - دیکشنری</title>
