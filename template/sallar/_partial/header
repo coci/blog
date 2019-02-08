@@ -8,8 +8,8 @@
       <ul>
         {{ IF SITE.language == 'Farsi' }}
           <li><a href="{{ SITE.root }}">فهرست</a></li>
-          <li><a href="{{ MAIN.github }}" target="_blank">گیت‌هاب</a></li>
-          <li><a href="{{ FLOORS.swift.root }}" target="_blank">آموزش سویفت</a></li>
+          
+          <li><a href="{{ FLOORS.python.root }}" target="_blank">آموزش پایتون</a></li>
           <li><a href="{{ FLOORS.fa.root }}">فارسی</a></li>
           <li><a href="{{ FLOORS.en.root }}">English</a></li>
         {{ ELSE }}

@@ -1,0 +1,20 @@
+title: سروش صفری
+description: سلام ، این وبلاگ منه
+author: سروش صفری
+language: Farsi
+
+url: https://thecoci.me/python/
+root: /python/
+
+default_extension: md
+
+permalink: :title/
+
+template: sallar
+
+lists:
+
+namespace:
+
+plugins:
+ - Jdate
