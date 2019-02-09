@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>سروش صفری</title>
+
+  <link href="https://imgod.ir/python//feed.xml" rel="self"/>
+  <link href="https://imgod.ir/python/"/>
+
+  <updated>2019-02-09T15:59:13+0330</updated>
+  <id>https://imgod.ir/python/</id>
+  
+  <author>
+    <name>سروش صفری</name>
+  </author>
+    
+  <generator>Mira</generator>
+
+  
+  <entry>
+    <title>اموزش پایتون ۱</title>
+    <link href="https://imgod.ir/python/اموزش-پایتون-۱/"/>
+    <id>https://imgod.ir/python/اموزش-پایتون-۱/</id>
+
+    <published>2019-02-09T15:58:54+0330</published>
+    <updated>2019-02-09T15:58:54+0330</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+<p>سلام پایتون</p>]]></content>
+
+    <summary>
+    &lt;p&gt;سلام پایتون&lt;/p&gt;
+    </summary>
+  </entry>
+  
+</feed>
