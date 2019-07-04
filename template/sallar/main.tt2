@@ -1,67 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>{{ MAIN.title }}</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-	<link rel="icon" href="{{ MAIN.icon }}" type="image/x-icon">
-	<!-- FontAwesome -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-
-	<!-- Sheet Style -->
-	<link rel="stylesheet" href="{{ MAIN.static }}/theme/sallar/css/main_style.css" />
-
-	<meta name="title" content ="programming"><title>soroush safari - coci - python - swift</title>
-
-	<meta name="description" content="programming">
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115996537-1"></script>
+	<title>soroush safari</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="http://amirshnll.ir/sorosh//favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<style type="text/css">
+		@charset "UTF-8";@font-face{font-family:sanfrans;src:url(sanfrans.ttf) format('truetype')}.sanfrans{font-family:sanfrans}a{text-decoration:none}body{background-color:#272822;padding:20px;box-sizing:border-box}p{word-wrap:break-word;width:100%;overflow-y:hidden}h1{font-weight:400;font-style:normal;display:inline}.text-normal{color:#88999999}.bg-normal{background-color:#88999999}.text-yellow{color:#e6db74}.bg-yellow{background-color:#e6db74}.text-red{color:#ff5959}.bg-red{background-color:#e3819a}.text-light{color:#f8f8f2}.bg-light{background-color:#f8f8f2}.text-gray{color:#686868}.bg-gray{background-color:#686868}.text-green{color:#85a52a}.bg-green{background-color:#85a52a}.text-dark{color:#000}.bg-dark{background-color:#000}.text-blue{color:#2e8ccf}.bg-blue{background-color:#2e8ccf}.text-cyan{color:#5badbb}.bg-cyan{background-color:#5badbb}.text-orange{color:#fd5f00}.bg-orange{background-color:#e4aa6b}.text-purple{color:#9764c7}.bg-purple{background-color:#8f7d95}.content,.copyright,.directory,.login,.menu,h1{font-size:24px}.login p{letter-spacing:1px;margin-bottom:7px}.directory p{display:inline;padding:2.7px;margin:0;box-sizing:border-box;position:relative;top:-10.3px}.directory .branch-p{margin-left:-45px;z-index:-1}.directory p .branch{background:url("http://amirshnll.ir/sorosh/branch.png") no-repeat;width:16px;height:16px;display:inline-block}.directory .triangle-right{width:0;height:0;border-style:solid;border-width:16.79px 0 16.79px 35px;display:inline-block;margin-left:-6.5px}.directory #triangle1{border-color:transparent transparent transparent #2e8ccf}.directory #triangle2{border-color:transparent transparent transparent #85a52a}.menu{margin:10px 0 30px 0}.menu p{margin:1px 0}.menu .min-menu{display:inline}.menu .max-menu{display:none}.menu .max-menu p:nth-child(2) span:after,.menu .max-menu p:nth-child(2) span:nth-child(1):before,.menu .min-menu p:nth-child(2) span:after,.menu .min-menu p:nth-child(2) span:nth-child(1):before{content:'\B7';color:#464741;font-size:24px}.content .line{display:block;line-height:25px;letter-spacing:1px}.content .line p{display:inline;margin:0;padding:0}.copyright{margin:50px 0 30px 0}.copyright p{margin:10px 0}.copyright .min-copyright{display:inline}.copyright .max-copyright{display:none}
+	</style>
 	<script>
-  	window.dataLayer = window.dataLayer || [];
-  	function gtag(){dataLayer.push(arguments);}
-  	gtag('js', new Date());
+		function menu_onmouseover() {
+			document.getElementById('min_menu').style.display = "none";
+			document.getElementById('max_menu').style.display = "inline";
+		}
 
-  	gtag('config', 'UA-115996537-1');
+		function menu_onmouseleave() {
+			document.getElementById('min_menu').style.display = "inline";
+			document.getElementById('max_menu').style.display = "none";
+		}
+
+		function copyright_minonclick() {
+			document.getElementById('min_copyright').style.display = "none";
+			document.getElementById('max_copyright').style.display = "inline";
+		}
+		function copyright_maxonclick() {
+			document.getElementById('min_copyright').style.display = "inline";
+			document.getElementById('max_copyright').style.display = "none";
+		}
 	</script>
-
-
-
+	<meta name="geo.region" content="IR" />
+	<meta name="googlebot" content="index,follow" /> 
+	<meta name="robots" content="index, follow" />
+	<meta name="generator" content="camelcase.ir" />
+	<meta name="author" content="http://www.imgod.ir/">
+    <meta property="og:locale" content="fa-IR" />
+    <meta property="og:site_name" content="soroush safari" />
+    <meta property="og:title" content="soroush safari" />
+    <meta property="og:type" content="official website" />
+    <meta property="og:url" content="http://www.imgod.ir/farsi" />
+    <meta property="dc:creator" content="http://www.imgod.ir/farsi" />
+    <meta property="og:image" content="http://amirshnll.ir/sorosh/favicon.png" />
+    <meta property="og:description" content="soroush safari official website" />
+	<meta name="description" content="soroush safari official website" />
+	<meta name="keywords" content="Ubuntu,soroush,safari,official,website,iran,tehran,twitter,git,github,instagram,i am god,god,html,python,profile,programming,developer,develop" />		
 </head>
+
 <body>
+	<div class="container sanfrans">
+		
+		<div class="login text-normal">
+			<p>Last login: <span id="fulldate"></span> on Ubuntu</p>
+			<script type="text/javascript">
+				var today = new Date();
+				var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+				var date = today.getFullYear() + ' ' + months[(today.getMonth())] +' '+ today.getDate();
+				var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+				var dateTime = date + ' ' + time;
+				document.getElementById("fulldate").innerHTML = date + " " + time;
+			</script>
+		</div>
 
+		<div class="directory text-dark">
+			<p class="bg-blue">~/imgod.ir&nbsp;&nbsp;&nbsp;</p>
+			<div class="triangle-right" id='triangle1'></div>
 
-   <div class="contianer">
+			<p class="branch-p bg-green">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="branch"></span>master</p>
+			<div class="triangle-right" id='triangle2'></div>
 
-      <div class="row">
+			<p class="text-green">cat</p>
+			<p class="text-light">profile.py</p>
+		</div>
 
-        <div class="logo">
-        	<img src="{{ MAIN.static }}/theme/sallar/img/logo1.png" alt="logo" class="img-responsive">
-        </div>
-		<p class="name">{{ MAIN.author }}</p>
-		<p class="bio">I'm passionate about learning how to code.</br></br>So far i have mastered Swift, Python, Ruby, PHP and shell</p>
-		<p class="motto">Be Fun And Be Happy :)</p>
+		<div class="menu">
+			<div class="min-menu text-gray" id="min_menu" onmouseover="menu_onmouseover()">
+				<p>/**********</p><p>* <span>Profile</span> *</p><p>**********/</p>
+			</div>
+			<div class="max-menu text-gray" id="max_menu" onmouseleave="menu_onmouseleave()">
+				<p>/***********************</p><p>* <span>Profile</span><span>Welcome Dear</span>*</p><p>***********************/</p>
+			</div>
+		</div>
 
+		<div class="content">
 
-	    <footer>
-    	<div class="footer-menu">
-    		<a href="https://www.instagram.com/soroush_safarii" style="color:black"><i class="fab fa-instagram"></i></a>
-			<a href="https://twitter.com/soroush_safarii" style="color:black"><i class="fab fa-twitter"></i></a>
-			<a href="https://github.com/coci" style="color:black"><i class="fab fa-github"></i></a>
-			<a href="https://t.me/im_coci" style="color:black"><i class="fab fa-telegram-plane"></i></a>
-			<a href="https://keybase.io/coci" style="color:black"><i class="fab fa-keybase"></i></a>
-			<a href="mailto:soroush_safarii@yahoo.com" style="color:black"><i class="fas fa-at"></i></a>
-			<a href="/farsi" style="color:black"><i class="fas fa-align-right"></i></a>
-    	</div>
+			<div class="line">
+				<p><span class="text-orange">class</span> <span class="text-cyan">Profile:</span></p>
+			</div>
 
-		<p class="copyright">&copy; All right reserved - 2017</a></p>
-    </footer>
+			<div class="line">
+				<p>&nbsp;&nbsp;&nbsp;<span class="text-green">"create profile"</span></p>
+			</div>
 
+			<div class="line">
+				<p>&nbsp;&nbsp;&nbsp;<span class="text-orange">def</span><span class="text-red"> __init__</span><span class="text-gray">(</span><span class="text-purple">self,name,career</span><span class="text-gray">):</span></p>
+			</div>
 
-      </div>
+			<div class="line">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-cyan">self.</span><span class="text-gray">_name</span> <span class="text-red">=</span> <span class="text-gray">name</span></p>
+			</div>
 
-   </div>
+			<div class="line">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-cyan">self.</span><span class="text-gray">_career</span> <span class="text-red">=</span> <span class="text-gray">career</span></p>
+			</div>
 
+			<br />
+
+			<div class="line">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-orange">if</span> <span class="text-cyan">self</span><span class="text-gray">._career</span> <span class="text-red">==</span> <span class="text-green">'programming'</span><span class="text-gray">:</span></p>
+			</div>
+		
+			<div class="line">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-cyan">self</span><span class="text-gray">._favoriteLanguage</span> <span class="text-red">=</span> <span class="text-green">'python'</span></p>
+			</div>
+
+			<br /><br />
+
+			<div class="line">
+				<p>&nbsp;&nbsp;&nbsp;<span class="text-orange">def</span><span class="text-red"> __str__</span><span class="text-gray">(</span><span class="text-purple">self</span><span class="text-gray">):</span></p>
+			</div>
+
+			<div class="line">
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-orange">return</span> <span class="text-gray">(</span><span class="text-orange">f</span><span class="text-green">'iam</span> <span class="text-gray">{</span><span class="text-cyan">self.</span><span class="text-gray">_name</span><span class="text-gray">}</span> <span class="text-green">and i passionate about learning how to code in python .'</span><span class="text-gray">)</span></p>
+			</div>
+
+			<br /><br />
+
+			<div class="line">
+				<p><span class="text-gray">person1</span> <span class="text-red">=</span> <span class="text-orange">Profile</span><span class="text-gray">(</span><span class="text-purple">name</span><span class="text-red">=</span><span class="text-green">'soroush safari'</span><span class="text-purple">, career</span><span class="text-red">=</span><span class="text-green">'programming'</span><span class="text-gray">)</span></p>
+			</div>
+
+			<br />
+
+			<div class="line">
+				<p><span class="text-gray">person1.instagram</span> <span class="text-red">=</span> <span class="text-green"><a href="https://www.instagram.com/soroush_safari" title="instagram" rel="nofollow" class="text-green">'https://www.instagram.com/soroush_safari'</a></span></p>
+			</div>
+
+			<div class="line">
+				<p><span class="text-gray">person1.github</span> <span class="text-red">=</span> <span class="text-green"><a href="https://www.github.com/coci" title="github" rel="nofollow" class="text-green">'https://www.github.com/coci'</a></span></p>
+			</div>
+
+			<div class="line">
+				<p><span class="text-gray">person1.email</span> <span class="text-red">=</span> <span class="text-green"><a href="mailto:soroush_safarii@yahoo.com" title="email" rel="nofollow" class="text-green">'soroush_safarii@yahoo.com'</a></span></p>
+			</div>
+
+			<div class="line">
+				<p><span class="text-gray">person1.twitter</span> <span class="text-red">=</span> <span class="text-green"><a href="https://www.twitter.com/soroush_safarii" rel="nofollow" title="twitter" class="text-green">'https://www.twitter.com/soroush_safarii'</a></span></p>
+			</div>
+
+			<div class="line">
+				<p><span class="text-gray">person1.blog</span> <span class="text-red">=</span> <span class="text-green"><a href="http://www.imgod.ir/farsi" title="blog" rel="nofollow" class="text-green">"http://www.imgod.ir/farsi"</a></span></p>
+			</div>
+
+		</div>
+
+		<div class="copyright">
+			<div class="min-copyright text-gray" id="min_copyright" onclick="copyright_minonclick()">
+				<p>// (c) <span id="fullyear1"></span> soroush safari <small><...></small></p>
+			</div>
+			<div class="max-copyright text-gray" id="max_copyright" onclick="copyright_maxonclick()">
+				<p>/***************************</p>
+				<p>*&nbsp;&nbsp;&nbsp;(c) <span id="fullyear2"></span> soroush safari &nbsp; *</p>
+				<p>* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *</p>
+				<p>* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Design By : <a rel="nofollow" class="text-gray" href="https://github.com/amirshnll" title="Mr.nll">Mr.nll</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
+				<p>* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *</p>
+				<p>***************************/</p>
+			</div>
+
+			<script type="text/javascript">
+				var d = new Date();
+				document.getElementById("fullyear1").innerHTML = d.getFullYear();
+				document.getElementById("fullyear2").innerHTML = d.getFullYear();
+			</script>
+
+		</div>
+
+	</div>
 </body>
 </html>
