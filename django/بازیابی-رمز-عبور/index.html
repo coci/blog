@@ -10,12 +10,22 @@
   <meta property="og:title" content="بازیابی رمز عبور">
   <meta property="og:url" content="https://imgod.ir/django/">
   <meta property="og:site_name" content="سروش صفری">
-  <meta property="og:description" content="&lt;p&gt;&lt;/p&gt;">
+  <meta property="og:description" content="&lt;p&gt;سلام امروز با شما هستیم از سری اموزش های جنگو :‌ ( بازیابی رمز عبور)
+
+یکی از مسائلی که برنامه نویس های فریمورک جنگو ممکن باهاش درگیر باشن ٬ ساخت قسمت بازیابی رمز عبور که جنگو به صورت پیشفرض این قابلیت رو اماده کرده و برنامه نویس ها میتونن از این قابلیت به راحتی  استفاده کنن .
+
+نحوه کار بازیابی رمز عبور یا همون forgot password به این شکل میباشد که وقتی کاربر بروی فراموشی رمز عبور کلیک کرد :
+
+۱- ایمیل کاربری خودش رو در یک فرم وارد کنه .
+
+۲- یه پیام بهش نشون داده بشه که ایمیل بازیابی برای شما فرستاده شد .
+
+۳ - روی لینک که داخل ایمیل براش ارسال شده کلیک کنه که تا وارد فرمی بشه که بتونه پسورد جدید &lt;/p&gt;">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="بازیابی رمز عبور">
-  <meta name="twitter:description" content="&lt;p&gt;&lt;/p&gt;">
+  <meta name="twitter:description" content="&lt;p&gt;سلام امروز با شما هستیم از سری اموزش ه...">
 
-  <link rel="alternative" href="/django/atom.xml" title="سروش صفری" type="application/atom+xml">
+  <link rel="alternative" href="/djangoatom.xml" title="سروش صفری" type="application/atom+xml">
   <link rel="short icon" href="/static/theme/sallar/img/iconn.ico">
   <link rel="stylesheet" href="/static/theme/sallar/css/style.css" type="text/css">
 
@@ -42,10 +52,10 @@
       </h1>
       <ul>
         
-          <li><a href="/django/">فهرست</a></li>
+          <li><a href="/django">فهرست</a></li>
 
           <li><a href="/python/" target="python">آموزش پایتون</a></li>
-          <li><a href="/django/" target="python">آموزش جنگو</a></li>
+          <li><a href="/django" target="python">آموزش جنگو</a></li>
           <li><a href="/farsi/">فارسی</a></li>
           <li><a href="/blog">English</a></li>
         
@@ -68,7 +78,200 @@
 
     <section class="content">
     <a name="more"></a>
+<p>سلام امروز با شما هستیم از سری اموزش های جنگو :‌ ( بازیابی رمز عبور)</p>
 
+<p>یکی از مسائلی که برنامه نویس های فریمورک جنگو ممکن باهاش درگیر باشن ٬ ساخت قسمت بازیابی رمز عبور که جنگو به صورت پیشفرض این قابلیت رو اماده کرده و برنامه نویس ها میتونن از این قابلیت به راحتی  استفاده کنن .</p>
+
+<p>نحوه کار بازیابی رمز عبور یا همون forgot password به این شکل میباشد که وقتی کاربر بروی فراموشی رمز عبور کلیک کرد :</p>
+
+<p>۱- ایمیل کاربری خودش رو در یک فرم وارد کنه .</p>
+
+<p>۲- یه پیام بهش نشون داده بشه که ایمیل بازیابی برای شما فرستاده شد .</p>
+
+<p>۳ - روی لینک که داخل ایمیل براش ارسال شده کلیک کنه که تا وارد فرمی بشه که بتونه پسورد جدید رو وارد کنه  .</p>
+
+<p>۴ - و در اخر به کاربر پیامی مبنی بر این که رمز عبور شما با موفقیت تغییر یافت نمایش داده شود .</p>
+
+<p>نکته : لینکی که برای کاربر ارسال میشه تا کاربر با کلیک روی اون بتونه به صفحه تغییر رمز عبور هدایت بشه توسط خود فریمورک جنگو رمز نگاری میشه .</p>
+
+<p>خوب بریم برای انجام کار :</p>
+
+<h4 id="مرحله_۱_:">مرحله ۱ :</h4>
+
+<p>در مرحله اول یه app جدید داخل پروژه به اسم forgot_passowrd بسازید :</p>
+
+<pre><code>pythhon manage.py startapp forgot_password
+</code></pre>
+
+<p>و در اخر این app رو داخل settings.py اضافه کنید :</p>
+
+<pre><code>### django_project/settings.py
+
+INSTALLED_APPS = [
+    ...
+    'forgot_password.apps.ForgotPasswordConfig' , 
+    ...
+
+]
+</code></pre>
+
+<h4 id="مرحله_۲:">مرحله ۲:</h4>
+
+<p>در مرحله دوم در داخل اپ forgot_password یه پوشه به نام ( templates  )  ایجاد کنید و در داخل ان یه پوشه دیگه به نام ( forgot_password) و داخل ان فایل های زیر رو ایجاد کنید :</p>
+
+<p>1- password_reset_form.html</p>
+
+<p>2- password_reset_email.html</p>
+
+<p>3- password_reset_subject.txt</p>
+
+<p>4- password_reset_done.html</p>
+
+<p>5- password_reset_confirm.html</p>
+
+<p>6- password_reset_complete.html</p>
+
+<p>الان پروژه شما بدین شکل میباشد :</p>
+
+<pre><code>-django_project /
+        -forgot_password/
+                -templates/
+                    -forgot_password/
+                        -password_reset_form.html
+                        -password_reset_email.html
+                        -password_reset_subject.txt
+                        -password_reset_done.html
+                        -password_reset_confirm.html
+                        -password_reset_complete.html
+                - __init__.py
+                -admin.py
+                -apps.py
+                -models.py
+                -tests.py
+                -views.py
+
+        -django_project/
+            -settings.py
+            -urls.py
+            - __init__.py
+            -wsgi.py
+</code></pre>
+
+<p>حال محتویات فایل ها رو به صورت زیر تغییر بدین :</p>
+
+<p>۱ - فایل : password_reset_form.html</p>
+
+<pre><code>### forgot_password/password_reset_form.html
+
+
+&lt;p&gt; please enter your mail &lt;/p&gt;
+&lt;form method="POST"&gt;
+    {% csrf_token %}
+    {{form.as_p}}
+    &lt;button type='submit'&gt;send&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>۲ -فایل :  password_reset_email.html </p>
+
+<pre><code>### forgot_password/password_reset_email.html 
+
+
+{% autoescape off %}
+کاربر {{ user.get_username }}:
+برای ریست کردن پسورد روی لینک زیر کلیک کنید :
+
+{{ protocol }}://{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
+
+
+با تشکر,
+{% endautoescape %}
+</code></pre>
+
+<p>۳- فایل :  password_reset_subject.txt</p>
+
+<pre><code>### forgot_password/password_reset_subject.txt
+
+
+بازیابی رمز عبور
+</code></pre>
+
+<p>۴- فایل : password_reset_done.html</p>
+
+<pre><code>### forgot_password/password_reset_done.html
+
+
+ &lt;p&gt;ایمیل بازیابی رمز عبور با موفقیت برای شما ارسال شد .&lt;/p&gt;
+</code></pre>
+
+<p>۵- فایل : password_reset_confirm.html</p>
+
+<pre><code>### forgot_password/password_reset_confirm.html
+
+
+&lt;p&gt; please enter your new password &lt;/p&gt;
+&lt;form method="POST"&gt;
+    {% csrf_token %}
+    {{form.as_p}}
+    &lt;button type='submit'&gt;change&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>۶- فایل : password_reset_complete.html</p>
+
+<pre><code>### forgot_password/password_reset_complete.html
+
+
+&lt;p&gt; رمز عبور شما با موقیت تغییر یافت .&lt;/p&gt;
+</code></pre>
+
+<h4 id="مرحله_۳:">مرحله ۳:</h4>
+
+<p>در مرحله سوم در URLCONF اصلی پروژه  لینک های زیر رو اضافه کنید :</p>
+
+<pre><code>### django_project/urls.py
+
+
+from django.urls import path, include
+from django.contrib.auth import views as forogotpassword_view
+
+
+
+urlpatterns = [
+  path('password-reset/', forogotpassword_view.PasswordResetView.as_view( 
+        template_name='forgot_password/password_reset_form.html',
+        email_template_name='forgot_password/password_reset_email.html',
+        subject_template_name='forgot_password/password_reset_subject.txt'
+        ), 
+        name='password_reset'),
+
+    path('password-reset/done/', forogotpassword_view.PasswordResetDoneView.as_view(  
+        template_name='forgot_password/password_reset_done.html'
+    ), 
+    name='password_reset_done'),
+
+
+    path('password-reset-confirm/&lt;uidb64&gt;/&lt;token&gt;/',
+        forogotpassword_view.PasswordResetConfirmView.as_view(  
+            template_name='forgot_password/password_reset_confirm.html'
+        ), 
+        name='password_reset_confirm'),
+
+
+    path('password-reset-complete/',
+         forogotpassword_view.PasswordResetCompleteView.as_view(  
+             template_name='forgot_password/password_reset_complete.html'
+         ), 
+         name='password_reset_complete'),
+
+]
+</code></pre>
+
+<p>و در پایان اگه شما لینک :</p>
+
+<p>http://127.0.0.1:8000/passowrd_reset</p>
+
+<p>رو باز کنید ٬ مشاهده میکنید تمامی مراحل به درستی کار خواهد کرد . </p>
   </section>
 
 <!-- AddToAny BEGIN -->
