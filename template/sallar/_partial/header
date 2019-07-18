@@ -10,6 +10,7 @@
           <li><a href="{{ SITE.root }}">فهرست</a></li>
 
           <li><a href="{{ FLOORS.python.root }}" target="python">آموزش پایتون</a></li>
+          <li><a href="{{ FLOORS.django.root }}" target="python">آموزش جنگو</a></li>
           <li><a href="{{ FLOORS.fa.root }}">فارسی</a></li>
           <li><a href="{{ FLOORS.en.root }}">English</a></li>
         {{ ELSE }}
