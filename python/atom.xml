@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>سروش صفری</title>
 
-  <link href="https://imgod.ir/django//feed.xml" rel="self"/>
-  <link href="https://imgod.ir/django/"/>
+  <link href="https://imgod.ir/python//feed.xml" rel="self"/>
+  <link href="https://imgod.ir/python/"/>
 
-  <updated>2019-07-18T13:38:26+0330</updated>
-  <id>https://imgod.ir/django/</id>
+  <updated>2019-07-18T13:41:56+0330</updated>
+  <id>https://imgod.ir/python/</id>
   
   <author>
     <name>سروش صفری</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>اموزش پایتون - متغییر ها</title>
-    <link href="https://imgod.ir/django/اموزش-پایتون-متغییر-ها/"/>
-    <id>https://imgod.ir/django/اموزش-پایتون-متغییر-ها/</id>
+    <link href="https://imgod.ir/python/اموزش-پایتون-متغییر-ها/"/>
+    <id>https://imgod.ir/python/اموزش-پایتون-متغییر-ها/</id>
 
     <published>2019-07-04T15:58:54+0330</published>
     <updated>2019-07-04T15:58:54+0330</updated>
