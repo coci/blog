@@ -5,7 +5,7 @@
   <link href="https://imgod.ir/python//feed.xml" rel="self"/>
   <link href="https://imgod.ir/python/"/>
 
-  <updated>2019-07-18T15:19:56+0330</updated>
+  <updated>2019-08-19T08:11:32+0330</updated>
   <id>https://imgod.ir/python/</id>
   
   <author>
@@ -14,6 +14,160 @@
     
   <generator>Mira</generator>
 
+  
+  <entry>
+    <title>مقدمه ای بر generator در پایتون به زبان ادمیزاد</title>
+    <link href="https://imgod.ir/python/مقدمه-ای-بر-generator-در-پایتون-به-زبان-ادمیزاد/"/>
+    <id>https://imgod.ir/python/مقدمه-ای-بر-generator-در-پایتون-به-زبان-ادمیزاد/</id>
+
+    <published>2019-08-19T07:57:32+0330</published>
+    <updated>2019-08-19T07:57:32+0330</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+<h1 id="مقدمه_ای_آدمیزاد_گونه_بر_generator_در_پایتون">مقدمه ای آدمیزاد گونه بر generator در پایتون</h1>
+
+<p>من وقتی اولین بار generator رو توی پایتون دیدم ، دیدم خیلی برام مبهم و به این راحتی ها نمی تونم بفهمم دقیقا چی هست و هیچ اموزش یا تعریف واضح و درست و حسابی براش پیدا نکردم ، البته شاید به اندازه کافی سرچ نکردم :))</p>
+
+<h1 id="الف_-_generator_چیست__">الف - generator چیست ؟</h1>
+
+<ul>
+<li>در اصل همون فانکشن یا متد در پایتونِ</li>
+<li>دقیقا مثل iterator عمل میکنه</li>
+<li>دیتا رو به صدا زننده خودش ( caller ) با yield بر میگردونه به جای return</li>
+</ul>
+
+<h1 id="ب_-_یه_مثال_خیلی_ساده_برای_شروع__:">ب - یه مثال خیلی ساده برای شروع  :</h1>
+
+<p>این فانکشن رو در‌نظر بگیرین :</p>
+
+<pre><code class="language-python">def generator1():
+    yield 1
+    yield 2
+    yield 3
+</code></pre>
+
+<p>اگه این فانکشن رو مستقیما صدا بزنیم ابجکت generator به ما برگشت داده میشه  :</p>
+
+<p>​        </p>
+
+<pre><code class="language-python">&gt;&gt;&gt; generator1()
+&lt;generator object generator1 at 0x7fac361d8bf8&gt;
+</code></pre>
+
+<p>اما این شکلی میشه ازش استفاده کرد :</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; next(gen1)
+1
+&gt;&gt;&gt; next(gen1)
+2
+&gt;&gt;&gt; next(gen1)
+3
+&gt;&gt;&gt; next(gen1)
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+StopIteration
+&gt;
+</code></pre>
+
+<p>اون stopIteration در اخر به ما برگشت داده  شد به این خاطر که فانکشن ما ۳ تا دیتا در داخلش داشت و دیگه چیزی برای برگشت به ما نبود ( دقیقا مثل iterator ) .</p>
+
+<p>یا مورد استفاده دیگه generator :</p>
+
+<pre><code class="language-python">&gt;&gt;&gt; gen1 = generator1()
+&gt;&gt;&gt; list(gen1)
+[1, 2, 3]
+&gt;&gt;&gt; list(gen1)
+[]
+</code></pre>
+
+<p>اگه توی کد بالا دقت کنید دفعه دوم که صدا زده شد ، ابجکت gen1 کاملا خالی شده و یه لیست خالی به ما برگشت داده شده .</p>
+
+<p>و همچنین میشه ازین روش هم از generator استفاده کرد :</p>
+
+<pre><code class="language-python">gen1 = generator1()
+# this will print out 1,2,3
+for i in gen1:
+    print(i)
+</code></pre>
+
+<h1 id="پ-_کمی_فراتر_حرکت_کنیم_:">پ- کمی فراتر حرکت کنیم :</h1>
+
+<p>مثال های بالا زده شد تا شما با مفهوم yield اشنایی پیدا کنید .</p>
+
+<p>ما میتونیم فراتر بریم و به parameter به generator اضافه کنیم :</p>
+
+<pre><code class="language-python"># returns a Fibonacci number &lt; fib_max
+def fibonacci1(fib_max: int) -&gt; int:
+    # initial values
+    fib_n_2 = 0
+    fib_n_1 = 1
+    yield fib_n_2
+    yield fib_n_1
+    # now general case
+    fib_n = fib_n_2 + fib_n_1
+    while fib_n &lt;= fib_max:
+        yield fib_n
+        fib_n_2 = fib_n_1
+        fib_n_1 = fib_n
+        fib_n = fib_n_2 + fib_n_1
+# gives: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
+print(list(fibonacci1(1000)))
+</code></pre>
+
+<p>یادتون باشه این یه فانکشن برگشتی ( recursion ) نیست .</p>
+
+<p>خیلی راحت میتونیم کد قبل رو کمی تغییر بدیم و تا بینهایت دیتا بتونیم درست کنیم :</p>
+
+<pre><code class="language-python">from itertools import islice
+
+# returns an infinite sequence of Fibonacci numbers
+def fibonacci2() -&gt; int:
+    # initial values
+    fib_n_2 = 0
+    fib_n_1 = 1
+    yield fib_n_2
+    yield fib_n_1
+    # now general case
+    fib_n = fib_n_2 + fib_n_1
+    while True:
+        yield fib_n
+        fib_n_2 = fib_n_1
+        fib_n_1 = fib_n
+        fib_n = fib_n_2 + fib_n_1
+
+# gives: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987]
+print(list(islice(fibonacci2(), 17)))
+</code></pre>
+
+<p>امیدوارم لذت برده باشین ، اگه انتقادی یا پیشنهادی داشتین حتما خوشحال میشم زیر همین پست در بخش کامنت ها عنوان کنید ،</p>
+
+<p>در اخر منبع اصلی این پست :</p>
+
+<p>https://dev.to/dandyvica/a-gentle-introduction-to-python-generators-4g10</p>]]></content>
+
+    <summary>
+    &lt;p&gt;مقدمه ای آدمیزاد گونه بر generator در پایتون
+
+من وقتی اولین بار generator رو توی پایتون دیدم ، دیدم خیلی برام مبهم و به این راحتی ها نمی تونم بفهمم دقیقا چی هست و هیچ اموزش یا تعریف واضح و درست و حسابی براش پیدا نکردم ، البته شاید به اندازه کافی سرچ نکردم :))
+
+الف - generator چیست ؟
+
+در اصل همون فانکشن یا متد در پایتونِ
+دقیقا مثل iterator عمل میکنه
+دیتا رو به صدا زننده خودش ( caller ) با yield بر میگردونه به جای return
+
+ب - یه مثال خیلی ساده برای شروع  :
+
+این فانکشن رو در‌نظر بگیرین :
+
+def generator1():
+    yield 1
+    yield 2
+    yield 3
+
+اگه این فانکشن رو مستقیما صدا بزنیم ابجکت generator به&lt;/p&gt;
+    </summary>
+  </entry>
   
   <entry>
     <title>اموزش پایتون - متغییر ها</title>

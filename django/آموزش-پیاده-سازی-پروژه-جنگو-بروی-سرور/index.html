@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="Farsi">
+<head>
+  <title>سروش صفری | آموزش پیاده سازی پروژه جنگو بروی سرور</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="سلام ، این وبلاگ منه">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="آموزش پیاده سازی پروژه جنگو بروی سرور">
+  <meta property="og:url" content="https://imgod.ir/django/">
+  <meta property="og:site_name" content="سروش صفری">
+  <meta property="og:description" content="&lt;p&gt;آموزش پیاده سازی پروژه جنگو بروی سرور ubuntu
+
+امروز در خدمت شما هستیم با پیاده سازی پروژه جنگو با استفاده از Nginx و PostgreSql بروی سرور ubuntu . در طول این اموزش تمام تلاش من این که بتونم شما رو با نحوه دقیق پیاده سازی django بروی سرور اشنا کنم ٬ پس در ادامه همراه باشید .
+
+در ابتدا باید یه توضیح بدم و اونم این است که نحوه کار به این شکل که پروژه رو روی سرور انتقال میدیم و با استفاده از gunicorn پروژه رو serve میکنیم و در اخر با استفاده از nginx پروژه رو به دامنه متصل میکنیم .
+
+خوب برای شروع کار ابتدا پیکیج های زیر رو نصب کنید :
+
+$ sudo apt update
+$ sudo apt install python3-pip python3-dev li&lt;/p&gt;">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="آموزش پیاده سازی پروژه جنگو بروی سرور">
+  <meta name="twitter:description" content="&lt;p&gt;آموزش پیاده سازی پروژه جنگو بروی سرور ...">
+
+  <link rel="alternative" href="/djangoatom.xml" title="سروش صفری" type="application/atom+xml">
+  <link rel="short icon" href="">
+  <link rel="stylesheet" href="/static/theme/sallar/css/style.css" type="text/css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115996537-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-115996537-1');
+	</script>
+
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <section class="container">
+    <nav>
+      <h1>
+        <a href="/" class="logo">سروش صفری</a>
+      </h1>
+      <ul>
+        
+          <li><a href="/django">فهرست</a></li>
+
+          <li><a href="/python/" target="python">آموزش پایتون</a></li>
+          <li><a href="/django" target="django">آموزش جنگو</a></li>
+          <li><a href="/farsi/">فارسی</a></li>
+          <li><a href="/blog">English</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+</header>
+<!-- /Header -->
+
+<section id="content" class="container">
+
+  <article id="آموزش-پیاده-سازی-پروژه-جنگو-بروی-سرور" class="article article-type-post" itemscope itemprop="blogPost">
+    <h2 class="title" itemprop="name">آموزش پیاده سازی پروژه جنگو بروی سرور</h2>
+
+    
+      <h4 class="time">
+    <time datetime="2019-07-30 15:55:55" itemprop="datePublished">سه‌شنبه‌، ۰۸ مرداد ۱۳۹۸</time>
+  </h4>
+    
+
+    <section class="content">
+    <a name="more"></a>
+<h3 id="آموزش_پیاده_سازی_پروژه_جنگو_بروی_سرور_ubuntu">آموزش پیاده سازی پروژه جنگو بروی سرور ubuntu</h3>
+
+<p>امروز در خدمت شما هستیم با پیاده سازی پروژه جنگو با استفاده از Nginx و PostgreSql بروی سرور ubuntu . در طول این اموزش تمام تلاش من این که بتونم شما رو با نحوه دقیق پیاده سازی django بروی سرور اشنا کنم ٬ پس در ادامه همراه باشید .</p>
+
+<p>در ابتدا باید یه توضیح بدم و اونم این است که نحوه کار به این شکل که پروژه رو روی سرور انتقال میدیم و با استفاده از gunicorn پروژه رو serve میکنیم و در اخر با استفاده از nginx پروژه رو به دامنه متصل میکنیم .</p>
+
+<p>خوب برای شروع کار ابتدا پیکیج های زیر رو نصب کنید :</p>
+
+<pre><code>$ sudo apt update
+$ sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
+</code></pre>
+
+<p>بعد از اتمام نصب وقت ساخت دیتابیس برای پروژه میباشد . </p>
+
+<h2 id="ساخت_دیتابیس">ساخت دیتابیس</h2>
+  </section>
+
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_twitter"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+    
+      <script>
+var idcomments_acct = 'fe0e59c5d710febd7774428cee9eb164';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+    
+  </article>
+
+</section>
+
+<!-- Paging -->
+<section class="pagination">
+  <nav class="container">
+    
+      <a></a>
+    
+      <a class="extend next" rel="next" href="/django/بازیابی-رمز-عبور/">
+        <i>-></i>
+        <span>بازیابی رمز عبور</span>
+      </a>
+  </nav>
+</section>
+<!-- /Paging -->
+
+<!-- /Content -->
+<!-- Footer -->
+<footer>
+    <!--<section class="copyright">
+
+    </section>-->
+    <section class="container">
+      <div class="delimiter">
+        <a href="/" class="logo">
+          <img src="/static/theme/sallar/img/logo.svg">
+        </a>
+      </div>
+      <p>
+        
+          ۱۳۹۸<br>
+          مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+        
+        <br>
+        powered with 💜 by <a href="https://miraxy.github.io">Mira</a>
+      </p>
+    </section>
+</footer>
+<!-- /Footer -->
+
+<!-- Scripts -->
+<script src="/static/theme/sallar/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

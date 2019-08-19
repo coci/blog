@@ -5,7 +5,7 @@
   <link href="https://imgod.ir/django//feed.xml" rel="self"/>
   <link href="https://imgod.ir/django/"/>
 
-  <updated>2019-07-18T15:19:56+0330</updated>
+  <updated>2019-08-19T08:11:32+0330</updated>
   <id>https://imgod.ir/django/</id>
   
   <author>
@@ -14,6 +14,45 @@
     
   <generator>Mira</generator>
 
+  
+  <entry>
+    <title>آموزش پیاده سازی پروژه جنگو بروی سرور</title>
+    <link href="https://imgod.ir/django//آموزش-پیاده-سازی-پروژه-جنگو-بروی-سرور/"/>
+    <id>https://imgod.ir/django//آموزش-پیاده-سازی-پروژه-جنگو-بروی-سرور/</id>
+
+    <published>2019-07-30T15:55:55+0330</published>
+    <updated>2019-07-30T15:55:55+0330</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+<h3 id="آموزش_پیاده_سازی_پروژه_جنگو_بروی_سرور_ubuntu">آموزش پیاده سازی پروژه جنگو بروی سرور ubuntu</h3>
+
+<p>امروز در خدمت شما هستیم با پیاده سازی پروژه جنگو با استفاده از Nginx و PostgreSql بروی سرور ubuntu . در طول این اموزش تمام تلاش من این که بتونم شما رو با نحوه دقیق پیاده سازی django بروی سرور اشنا کنم ٬ پس در ادامه همراه باشید .</p>
+
+<p>در ابتدا باید یه توضیح بدم و اونم این است که نحوه کار به این شکل که پروژه رو روی سرور انتقال میدیم و با استفاده از gunicorn پروژه رو serve میکنیم و در اخر با استفاده از nginx پروژه رو به دامنه متصل میکنیم .</p>
+
+<p>خوب برای شروع کار ابتدا پیکیج های زیر رو نصب کنید :</p>
+
+<pre><code>$ sudo apt update
+$ sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
+</code></pre>
+
+<p>بعد از اتمام نصب وقت ساخت دیتابیس برای پروژه میباشد . </p>
+
+<h2 id="ساخت_دیتابیس">ساخت دیتابیس</h2>]]></content>
+
+    <summary>
+    &lt;p&gt;آموزش پیاده سازی پروژه جنگو بروی سرور ubuntu
+
+امروز در خدمت شما هستیم با پیاده سازی پروژه جنگو با استفاده از Nginx و PostgreSql بروی سرور ubuntu . در طول این اموزش تمام تلاش من این که بتونم شما رو با نحوه دقیق پیاده سازی django بروی سرور اشنا کنم ٬ پس در ادامه همراه باشید .
+
+در ابتدا باید یه توضیح بدم و اونم این است که نحوه کار به این شکل که پروژه رو روی سرور انتقال میدیم و با استفاده از gunicorn پروژه رو serve میکنیم و در اخر با استفاده از nginx پروژه رو به دامنه متصل میکنیم .
+
+خوب برای شروع کار ابتدا پیکیج های زیر رو نصب کنید :
+
+$ sudo apt update
+$ sudo apt install python3-pip python3-dev li&lt;/p&gt;
+    </summary>
+  </entry>
   
   <entry>
     <title>بازیابی رمز عبور</title>
