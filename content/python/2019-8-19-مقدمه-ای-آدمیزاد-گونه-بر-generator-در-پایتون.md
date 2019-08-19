@@ -2,7 +2,7 @@
 utid: 20190819075732
 date: 2019-08-19 07:57:32
 title: مقدمه ای بر generator در پایتون به زبان ادمیزاد
-_index:
+_index: generator-in-python
 categories:
   -
 tags:
