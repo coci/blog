@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>سروش صفری</title>
 
-  <link href="https://imgod.ir/python//feed.xml" rel="self"/>
-  <link href="https://imgod.ir/python/"/>
+  <link href="https://koky.ir/python//feed.xml" rel="self"/>
+  <link href="https://koky.ir/python/"/>
 
-  <updated>2020-01-18T13:11:38+0330</updated>
-  <id>https://imgod.ir/python/</id>
+  <updated>2020-01-18T13:17:33+0330</updated>
+  <id>https://koky.ir/python/</id>
   
   <author>
     <name>سروش صفری</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>مقدمه ای بر generator در پایتون به زبان ادمیزاد</title>
-    <link href="https://imgod.ir/python/generator-in-python/"/>
-    <id>https://imgod.ir/python/generator-in-python/</id>
+    <link href="https://koky.ir/python/generator-in-python/"/>
+    <id>https://koky.ir/python/generator-in-python/</id>
 
     <published>2019-08-19T07:57:32+0330</published>
     <updated>2019-08-19T07:57:32+0330</updated>
@@ -171,8 +171,8 @@ def generator1():
   
   <entry>
     <title>اموزش پایتون - متغییر ها</title>
-    <link href="https://imgod.ir/python/اموزش-پایتون-متغییر-ها/"/>
-    <id>https://imgod.ir/python/اموزش-پایتون-متغییر-ها/</id>
+    <link href="https://koky.ir/python/اموزش-پایتون-متغییر-ها/"/>
+    <id>https://koky.ir/python/اموزش-پایتون-متغییر-ها/</id>
 
     <published>2019-07-04T15:58:54+0330</published>
     <updated>2019-07-04T15:58:54+0330</updated>

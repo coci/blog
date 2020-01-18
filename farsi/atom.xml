@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>سروش صفری</title>
 
-  <link href="https://imgod.ir/farsi//feed.xml" rel="self"/>
-  <link href="https://imgod.ir/farsi/"/>
+  <link href="https://koky.ir/farsi//feed.xml" rel="self"/>
+  <link href="https://koky.ir/farsi/"/>
 
-  <updated>2020-01-18T13:11:38+0330</updated>
-  <id>https://imgod.ir/farsi/</id>
+  <updated>2020-01-18T13:17:33+0330</updated>
+  <id>https://koky.ir/farsi/</id>
   
   <author>
     <name>سروش صفری</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>دوری از مجازی</title>
-    <link href="https://imgod.ir/farsi/دوری-از-مجازی/"/>
-    <id>https://imgod.ir/farsi/دوری-از-مجازی/</id>
+    <link href="https://koky.ir/farsi/دوری-از-مجازی/"/>
+    <id>https://koky.ir/farsi/دوری-از-مجازی/</id>
 
     <published>2019-09-28T10:53:09+0330</published>
     <updated>2019-09-28T10:53:09+0330</updated>
@@ -61,8 +61,8 @@
   
   <entry>
     <title>تجربه استفاده از تکنیک پومودورو</title>
-    <link href="https://imgod.ir/farsi/focus/"/>
-    <id>https://imgod.ir/farsi/focus/</id>
+    <link href="https://koky.ir/farsi/focus/"/>
+    <id>https://koky.ir/farsi/focus/</id>
 
     <published>2018-05-20T00:02:17+0330</published>
     <updated>2018-05-20T00:02:17+0330</updated>
@@ -103,8 +103,8 @@
   
   <entry>
     <title>ورلد اف وارکرافت</title>
-    <link href="https://imgod.ir/farsi/wow/"/>
-    <id>https://imgod.ir/farsi/wow/</id>
+    <link href="https://koky.ir/farsi/wow/"/>
+    <id>https://koky.ir/farsi/wow/</id>
 
     <published>2018-05-11T18:02:56+0330</published>
     <updated>2018-05-11T18:02:56+0330</updated>
@@ -131,8 +131,8 @@
   
   <entry>
     <title>عوض شو</title>
-    <link href="https://imgod.ir/farsi/newyear/"/>
-    <id>https://imgod.ir/farsi/newyear/</id>
+    <link href="https://koky.ir/farsi/newyear/"/>
+    <id>https://koky.ir/farsi/newyear/</id>
 
     <published>2018-03-19T09:38:35+0330</published>
     <updated>2018-03-19T09:38:35+0330</updated>
@@ -167,8 +167,8 @@
   
   <entry>
     <title>ساخت یک بلاکچین</title>
-    <link href="https://imgod.ir/farsi/blockchain/"/>
-    <id>https://imgod.ir/farsi/blockchain/</id>
+    <link href="https://koky.ir/farsi/blockchain/"/>
+    <id>https://koky.ir/farsi/blockchain/</id>
 
     <published>2018-02-24T18:38:25+0330</published>
     <updated>2018-02-24T18:38:25+0330</updated>
@@ -1018,8 +1018,8 @@ if __name__ == '__main__':
   
   <entry>
     <title>کتابی که هر برنامه نویسی باید بخونه</title>
-    <link href="https://imgod.ir/farsi/کتابی-که-هر-برنامه-نویسی-باید-بخونه/"/>
-    <id>https://imgod.ir/farsi/کتابی-که-هر-برنامه-نویسی-باید-بخونه/</id>
+    <link href="https://koky.ir/farsi/کتابی-که-هر-برنامه-نویسی-باید-بخونه/"/>
+    <id>https://koky.ir/farsi/کتابی-که-هر-برنامه-نویسی-باید-بخونه/</id>
 
     <published>2018-02-20T18:42:24+0330</published>
     <updated>2018-02-20T18:42:24+0330</updated>
@@ -1107,8 +1107,8 @@ quotient = divide(1,2)
   
   <entry>
     <title>میرا</title>
-    <link href="https://imgod.ir/farsi/میرا/"/>
-    <id>https://imgod.ir/farsi/میرا/</id>
+    <link href="https://koky.ir/farsi/میرا/"/>
+    <id>https://koky.ir/farsi/میرا/</id>
 
     <published>2018-02-11T17:43:32+0330</published>
     <updated>2018-02-11T17:43:32+0330</updated>
@@ -1162,8 +1162,8 @@ quotient = divide(1,2)
   
   <entry>
     <title>منجلاب مجازی</title>
-    <link href="https://imgod.ir/farsi/منجلاب-مجازی/"/>
-    <id>https://imgod.ir/farsi/منجلاب-مجازی/</id>
+    <link href="https://koky.ir/farsi/منجلاب-مجازی/"/>
+    <id>https://koky.ir/farsi/منجلاب-مجازی/</id>
 
     <published>2018-02-09T11:44:24+0330</published>
     <updated>2018-02-09T11:44:24+0330</updated>
@@ -1200,8 +1200,8 @@ quotient = divide(1,2)
   
   <entry>
     <title>اصول استاد فو</title>
-    <link href="https://imgod.ir/farsi/اصول-استاد-فو/"/>
-    <id>https://imgod.ir/farsi/اصول-استاد-فو/</id>
+    <link href="https://koky.ir/farsi/اصول-استاد-فو/"/>
+    <id>https://koky.ir/farsi/اصول-استاد-فو/</id>
 
     <published>2018-01-26T02:39:48+0330</published>
     <updated>2018-01-26T02:39:48+0330</updated>
@@ -1305,8 +1305,8 @@ php , javaScript , python ,.......
   
   <entry>
     <title>سلام دنیا</title>
-    <link href="https://imgod.ir/farsi/سلام-دنیا/"/>
-    <id>https://imgod.ir/farsi/سلام-دنیا/</id>
+    <link href="https://koky.ir/farsi/سلام-دنیا/"/>
+    <id>https://koky.ir/farsi/سلام-دنیا/</id>
 
     <published>2018-01-23T19:00:52+0330</published>
     <updated>2018-01-23T19:00:52+0330</updated>

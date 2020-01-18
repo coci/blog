@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>soroush safari</title>
 
-  <link href="https://imgod.ir/blog/feed.xml" rel="self"/>
-  <link href="https://imgod.ir/blog"/>
+  <link href="https://koky.ir/blog/feed.xml" rel="self"/>
+  <link href="https://koky.ir/blog"/>
 
-  <updated>2020-01-18T13:11:38+0330</updated>
-  <id>https://imgod.ir/blog</id>
+  <updated>2020-01-18T13:17:33+0330</updated>
+  <id>https://koky.ir/blog</id>
   
   <author>
     <name>soroush safari</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>hello world</title>
-    <link href="https://imgod.ir/blog/helloworld/"/>
-    <id>https://imgod.ir/blog/helloworld/</id>
+    <link href="https://koky.ir/blog/helloworld/"/>
+    <id>https://koky.ir/blog/helloworld/</id>
 
     <published>2018-01-22T17:58:51+0330</published>
     <updated>2018-01-22T17:58:51+0330</updated>

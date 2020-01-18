@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>سروش صفری</title>
 
-  <link href="https://imgod.ir/swift//feed.xml" rel="self"/>
-  <link href="https://imgod.ir/swift/"/>
+  <link href="https://koky.ir/swift//feed.xml" rel="self"/>
+  <link href="https://koky.ir/swift/"/>
 
-  <updated>2020-01-18T13:11:38+0330</updated>
-  <id>https://imgod.ir/swift/</id>
+  <updated>2020-01-18T13:17:33+0330</updated>
+  <id>https://koky.ir/swift/</id>
   
   <author>
     <name>سروش صفری</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>آموزش سویفت قسمت ۸ - عبارات شرطی</title>
-    <link href="https://imgod.ir/swift/ifelse/"/>
-    <id>https://imgod.ir/swift/ifelse/</id>
+    <link href="https://koky.ir/swift/ifelse/"/>
+    <id>https://koky.ir/swift/ifelse/</id>
 
     <published>2018-07-14T20:50:01+0330</published>
     <updated>2018-07-14T20:50:01+0330</updated>
@@ -80,8 +80,8 @@ if person == &quot;hater&quot; {
   
   <entry>
     <title>آموزش سویفت قسمت ۷ - دیکشنری</title>
-    <link href="https://imgod.ir/swift/dictionary/"/>
-    <id>https://imgod.ir/swift/dictionary/</id>
+    <link href="https://koky.ir/swift/dictionary/"/>
+    <id>https://koky.ir/swift/dictionary/</id>
 
     <published>2018-07-03T20:20:32+0330</published>
     <updated>2018-07-03T20:20:32+0330</updated>
@@ -140,8 +140,8 @@ var person = [&quot;Taylor&quot;, &quot;Alison&quot;, &quot;Swift&quot;, &quot;D
   
   <entry>
     <title>آموزش سویفت قسمت ۶ - ارایه ها</title>
-    <link href="https://imgod.ir/swift/arrays/"/>
-    <id>https://imgod.ir/swift/arrays/</id>
+    <link href="https://koky.ir/swift/arrays/"/>
+    <id>https://koky.ir/swift/arrays/</id>
 
     <published>2018-06-12T20:21:21+0330</published>
     <updated>2018-06-12T20:21:21+0330</updated>
@@ -248,8 +248,8 @@ var songs = [&quot;shake it off&quot; , &quot;you belong with me&quot; , &quot;b
   
   <entry>
     <title>آموزش سویفت قسمت ۵ - الحاق متغیر به رشته حرف</title>
-    <link href="https://imgod.ir/swift/stringinterpolation/"/>
-    <id>https://imgod.ir/swift/stringinterpolation/</id>
+    <link href="https://koky.ir/swift/stringinterpolation/"/>
+    <id>https://koky.ir/swift/stringinterpolation/</id>
 
     <published>2018-06-01T16:28:13+0330</published>
     <updated>2018-06-01T16:28:13+0330</updated>
@@ -313,8 +313,8 @@ var name = &quot;soroush safari&quot;
   
   <entry>
     <title>آموزش سویفت قسمت ۴ - عملگرها</title>
-    <link href="https://imgod.ir/swift/oprators/"/>
-    <id>https://imgod.ir/swift/oprators/</id>
+    <link href="https://koky.ir/swift/oprators/"/>
+    <id>https://koky.ir/swift/oprators/</id>
 
     <published>2018-06-01T12:39:58+0330</published>
     <updated>2018-06-01T12:39:58+0330</updated>
@@ -459,8 +459,8 @@ b -= 10
   
   <entry>
     <title>آموزش سویفت قسمت ۳ - انواع دیتا</title>
-    <link href="https://imgod.ir/swift/datatype/"/>
-    <id>https://imgod.ir/swift/datatype/</id>
+    <link href="https://koky.ir/swift/datatype/"/>
+    <id>https://koky.ir/swift/datatype/</id>
 
     <published>2018-05-30T08:54:12+0330</published>
     <updated>2018-05-30T08:54:12+0330</updated>
@@ -566,8 +566,8 @@ String میتونه خیلی طولانی باشه (چندین میلیون حر
   
   <entry>
     <title>آموزش سویفت قسمت ۲ - متغییر و ثابت ها</title>
-    <link href="https://imgod.ir/swift/variableandconstant/"/>
-    <id>https://imgod.ir/swift/variableandconstant/</id>
+    <link href="https://koky.ir/swift/variableandconstant/"/>
+    <id>https://koky.ir/swift/variableandconstant/</id>
 
     <published>2018-05-30T08:52:58+0330</published>
     <updated>2018-05-30T08:52:58+0330</updated>
@@ -649,8 +649,8 @@ var name = "Romeo"
   
   <entry>
     <title>آموزش سویفت قسمت ۱ - نصب ایکس کد</title>
-    <link href="https://imgod.ir/swift/howtoinstallxcode/"/>
-    <id>https://imgod.ir/swift/howtoinstallxcode/</id>
+    <link href="https://koky.ir/swift/howtoinstallxcode/"/>
+    <id>https://koky.ir/swift/howtoinstallxcode/</id>
 
     <published>2018-05-30T08:49:23+0330</published>
     <updated>2018-05-30T08:49:23+0330</updated>

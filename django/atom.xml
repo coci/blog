@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>سروش صفری</title>
 
-  <link href="https://imgod.ir/django//feed.xml" rel="self"/>
-  <link href="https://imgod.ir/django/"/>
+  <link href="https://koky.ir/django//feed.xml" rel="self"/>
+  <link href="https://koky.ir/django/"/>
 
-  <updated>2020-01-18T13:11:38+0330</updated>
-  <id>https://imgod.ir/django/</id>
+  <updated>2020-01-18T13:17:33+0330</updated>
+  <id>https://koky.ir/django/</id>
   
   <author>
     <name>سروش صفری</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>آموزش پیاده سازی پروژه جنگو بروی سرور</title>
-    <link href="https://imgod.ir/django//آموزش-پیاده-سازی-پروژه-جنگو-بروی-سرور/"/>
-    <id>https://imgod.ir/django//آموزش-پیاده-سازی-پروژه-جنگو-بروی-سرور/</id>
+    <link href="https://koky.ir/django//آموزش-پیاده-سازی-پروژه-جنگو-بروی-سرور/"/>
+    <id>https://koky.ir/django//آموزش-پیاده-سازی-پروژه-جنگو-بروی-سرور/</id>
 
     <published>2019-07-30T15:55:55+0330</published>
     <updated>2019-07-30T15:55:55+0330</updated>
@@ -56,8 +56,8 @@ $ sudo apt install python3-pip python3-dev li&lt;/p&gt;
   
   <entry>
     <title>بازیابی رمز عبور</title>
-    <link href="https://imgod.ir/django//بازیابی-رمز-عبور/"/>
-    <id>https://imgod.ir/django//بازیابی-رمز-عبور/</id>
+    <link href="https://koky.ir/django//بازیابی-رمز-عبور/"/>
+    <id>https://koky.ir/django//بازیابی-رمز-عبور/</id>
 
     <published>2019-07-18T13:41:11+0330</published>
     <updated>2019-07-18T13:41:11+0330</updated>
