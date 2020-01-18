@@ -100,5 +100,5 @@ if ($opts{push})
 	chdir $source;
 
 	say "push master and gh-pages to Remote(origin)...";
-	say qx{git push origin master gh-pages};
+	say qx{git push origin master gh-pages -ff};
 }
