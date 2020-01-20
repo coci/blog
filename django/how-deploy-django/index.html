@@ -1,29 +1,86 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>سروش صفری</title>
+<!DOCTYPE html>
+<html lang="Farsi">
+<head>
+  <title>سروش صفری | نحوه دیپلوی کردن پروژه جنگو</title>
 
-  <link href="https://koky.ir/django//feed.xml" rel="self"/>
-  <link href="https://koky.ir/django/"/>
+  <meta charset="utf-8">
+  <meta name="description" content="سلام ، این وبلاگ منه">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="نحوه دیپلوی کردن پروژه جنگو">
+  <meta property="og:url" content="https://koky.ir/django/">
+  <meta property="og:site_name" content="سروش صفری">
+  <meta property="og:description" content="&lt;p&gt;اموزش دیپلوی کردن پروژه جنگو
 
-  <updated>2020-01-20T11:03:44+0330</updated>
-  <id>https://koky.ir/django/</id>
-  
-  <author>
-    <name>سروش صفری</name>
-  </author>
+یکی از چیزایی که برای خیلی از دولوپر ها سوال هست این که یه پروژه جنگو رو چطوری روی هاست پیاده سازی (deploy) کنیم . اگه این برای شما هم سوال هست در ادامه همراه باشین .
+
+من توی این اموزش برای دیپلوی کردن جنگو از ابزار زیر استفاده میکنم :
+
+ubuntu server : سروری که من برای پروژه در نظر گرفتم ubuntu 18.04 هست
+nginx : به عنوان وب سرور
+Postgres : به عنوان دیتابیس پروژه
+Gunicorn : برای ارتباط پروژه با nginx
+
+در نهایت اگه شما تصمیم به استفاده از ابزارهای دیگه ای به غیر از مواردی که در بالا ذکر شده رو دارین ٬ میتونین از این اموزش استفاده کنین فقط توی اون قسمت کاری مشابه به &lt;/p&gt;">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="نحوه دیپلوی کردن پروژه جنگو">
+  <meta name="twitter:description" content="&lt;p&gt;اموزش دیپلوی کردن پروژه جنگو
+
+یکی از چ...">
+
+  <link rel="alternative" href="/djangoatom.xml" title="سروش صفری" type="application/atom+xml">
+  <link rel="short icon" href="">
+  <link rel="stylesheet" href="/static/theme/sallar/css/style.css" type="text/css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115996537-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-115996537-1');
+	</script>
+
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <section class="container">
+    <nav>
+      <h1>
+        <a href="/" class="logo">سروش صفری</a>
+      </h1>
+      <ul>
+        
+          <li><a href="/django">فهرست</a></li>
+
+          <li><a href="/python/" target="python">آموزش پایتون</a></li>
+          <li><a href="/django" target="django">آموزش جنگو</a></li>
+          <li><a href="/farsi/">فارسی</a></li>
+          <li><a href="/blog">English</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+</header>
+<!-- /Header -->
+
+<section id="content" class="container">
+
+  <article id="how-deploy-django" class="article article-type-post" itemscope itemprop="blogPost">
+    <h2 class="title" itemprop="name">نحوه دیپلوی کردن پروژه جنگو</h2>
+
     
-  <generator>Mira</generator>
+      <h4 class="time">
+    <time datetime="2020-01-16 12:37:01" itemprop="datePublished">پنج‌شنبه، ۲۶ دی ۱۳۹۸</time>
+  </h4>
+    
 
-  
-  <entry>
-    <title>نحوه دیپلوی کردن پروژه جنگو</title>
-    <link href="https://koky.ir/django//how-deploy-django/"/>
-    <id>https://koky.ir/django//how-deploy-django/</id>
-
-    <published>2020-01-16T12:37:01+0330</published>
-    <updated>2020-01-16T12:37:01+0330</updated>
-
-    <content type="html"><![CDATA[<a name="more"></a>
+    <section class="content">
+    <a name="more"></a>
 <h1 id="اموزش_دیپلوی_کردن_پروژه_جنگو">اموزش دیپلوی کردن پروژه جنگو</h1>
 
 <p>یکی از چیزایی که برای خیلی از دولوپر ها سوال هست این که یه پروژه جنگو رو چطوری روی هاست پیاده سازی (deploy) کنیم . اگه این برای شما هم سوال هست در ادامه همراه باشین .</p>
@@ -370,280 +427,70 @@ $       sudo ufw allow 'Nginx Full'
 
 <p>خیلی خوشحال میشم نظراتتون رو با من به اشتراک بزارین و اگه این پست به دردتون خورد حتما با دیگران به اشتراک بزارین تا اون ها هم بتونن استفاده کنن .</p>
 
-<p>موفق باشد .</p>]]></content>
-
-    <summary>
-    &lt;p&gt;اموزش دیپلوی کردن پروژه جنگو
-
-یکی از چیزایی که برای خیلی از دولوپر ها سوال هست این که یه پروژه جنگو رو چطوری روی هاست پیاده سازی (deploy) کنیم . اگه این برای شما هم سوال هست در ادامه همراه باشین .
-
-من توی این اموزش برای دیپلوی کردن جنگو از ابزار زیر استفاده میکنم :
-
-ubuntu server : سروری که من برای پروژه در نظر گرفتم ubuntu 18.04 هست
-nginx : به عنوان وب سرور
-Postgres : به عنوان دیتابیس پروژه
-Gunicorn : برای ارتباط پروژه با nginx
-
-در نهایت اگه شما تصمیم به استفاده از ابزارهای دیگه ای به غیر از مواردی که در بالا ذکر شده رو دارین ٬ میتونین از این اموزش استفاده کنین فقط توی اون قسمت کاری مشابه به &lt;/p&gt;
-    </summary>
-  </entry>
-  
-  <entry>
-    <title>آموزش پیاده سازی پروژه جنگو بروی سرور</title>
-    <link href="https://koky.ir/django//آموزش-پیاده-سازی-پروژه-جنگو-بروی-سرور/"/>
-    <id>https://koky.ir/django//آموزش-پیاده-سازی-پروژه-جنگو-بروی-سرور/</id>
-
-    <published>2019-07-30T15:55:55+0330</published>
-    <updated>2019-07-30T15:55:55+0330</updated>
-
-    <content type="html"><![CDATA[<a name="more"></a>
-<h3 id="آموزش_پیاده_سازی_پروژه_جنگو_بروی_سرور_ubuntu">آموزش پیاده سازی پروژه جنگو بروی سرور ubuntu</h3>
-
-<p>امروز در خدمت شما هستیم با پیاده سازی پروژه جنگو با استفاده از Nginx و PostgreSql بروی سرور ubuntu . در طول این اموزش تمام تلاش من این که بتونم شما رو با نحوه دقیق پیاده سازی django بروی سرور اشنا کنم ٬ پس در ادامه همراه باشید .</p>
-
-<p>در ابتدا باید یه توضیح بدم و اونم این است که نحوه کار به این شکل که پروژه رو روی سرور انتقال میدیم و با استفاده از gunicorn پروژه رو serve میکنیم و در اخر با استفاده از nginx پروژه رو به دامنه متصل میکنیم .</p>
-
-<p>خوب برای شروع کار ابتدا پیکیج های زیر رو نصب کنید :</p>
-
-<pre><code>$ sudo apt update
-$ sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
-</code></pre>
-
-<p>بعد از اتمام نصب وقت ساخت دیتابیس برای پروژه میباشد . </p>
-
-<h2 id="ساخت_دیتابیس">ساخت دیتابیس</h2>]]></content>
-
-    <summary>
-    &lt;p&gt;آموزش پیاده سازی پروژه جنگو بروی سرور ubuntu
-
-امروز در خدمت شما هستیم با پیاده سازی پروژه جنگو با استفاده از Nginx و PostgreSql بروی سرور ubuntu . در طول این اموزش تمام تلاش من این که بتونم شما رو با نحوه دقیق پیاده سازی django بروی سرور اشنا کنم ٬ پس در ادامه همراه باشید .
-
-در ابتدا باید یه توضیح بدم و اونم این است که نحوه کار به این شکل که پروژه رو روی سرور انتقال میدیم و با استفاده از gunicorn پروژه رو serve میکنیم و در اخر با استفاده از nginx پروژه رو به دامنه متصل میکنیم .
-
-خوب برای شروع کار ابتدا پیکیج های زیر رو نصب کنید :
-
-$ sudo apt update
-$ sudo apt install python3-pip python3-dev li&lt;/p&gt;
-    </summary>
-  </entry>
-  
-  <entry>
-    <title>بازیابی رمز عبور</title>
-    <link href="https://koky.ir/django//بازیابی-رمز-عبور/"/>
-    <id>https://koky.ir/django//بازیابی-رمز-عبور/</id>
-
-    <published>2019-07-18T13:41:11+0330</published>
-    <updated>2019-07-18T13:41:11+0330</updated>
-
-    <content type="html"><![CDATA[<a name="more"></a>
-<p>سلام امروز با شما هستیم از سری اموزش های جنگو :‌ ( بازیابی رمز عبور)</p>
-
-<p>یکی از مسائلی که برنامه نویس های فریمورک جنگو ممکن باهاش درگیر باشن ٬ ساخت قسمت بازیابی رمز عبور که جنگو به صورت پیشفرض این قابلیت رو اماده کرده و برنامه نویس ها میتونن از این قابلیت به راحتی  استفاده کنن .</p>
-
-<p>نحوه کار بازیابی رمز عبور یا همون forgot password به این شکل میباشد که وقتی کاربر بروی فراموشی رمز عبور کلیک کرد :</p>
-
-<p>۱- ایمیل کاربری خودش رو در یک فرم وارد کنه .</p>
-
-<p>۲- یه پیام بهش نشون داده بشه که ایمیل بازیابی برای شما فرستاده شد .</p>
-
-<p>۳ - روی لینک که داخل ایمیل براش ارسال شده کلیک کنه که تا وارد فرمی بشه که بتونه پسورد جدید رو وارد کنه  .</p>
-
-<p>۴ - و در اخر به کاربر پیامی مبنی بر این که رمز عبور شما با موفقیت تغییر یافت نمایش داده شود .</p>
-
-<p>نکته : لینکی که برای کاربر ارسال میشه تا کاربر با کلیک روی اون بتونه به صفحه تغییر رمز عبور هدایت بشه توسط خود فریمورک جنگو رمز نگاری میشه .</p>
-
-<p>خوب بریم برای انجام کار :</p>
-
-<h4 id="مرحله_۱_:">مرحله ۱ :</h4>
-
-<p>در مرحله اول یه app جدید داخل پروژه به اسم forgot_passowrd بسازید :</p>
-
-<pre><code>pythhon manage.py startapp forgot_password
-</code></pre>
-
-<p>و در اخر این app رو داخل settings.py اضافه کنید :</p>
-
-<pre><code>### django_project/settings.py
-
-INSTALLED_APPS = [
-    ...
-    'forgot_password.apps.ForgotPasswordConfig' , 
-    ...
-
-]
-</code></pre>
-
-<h4 id="مرحله_۲:">مرحله ۲:</h4>
-
-<p>در مرحله دوم در داخل اپ forgot_password یه پوشه به نام ( templates  )  ایجاد کنید و در داخل ان یه پوشه دیگه به نام ( forgot_password) و داخل ان فایل های زیر رو ایجاد کنید :</p>
-
-<p>1- password_reset_form.html</p>
-
-<p>2- password_reset_email.html</p>
-
-<p>3- password_reset_subject.txt</p>
-
-<p>4- password_reset_done.html</p>
-
-<p>5- password_reset_confirm.html</p>
-
-<p>6- password_reset_complete.html</p>
-
-<p>الان پروژه شما بدین شکل میباشد :</p>
-
-<pre><code>-django_project /
-        -forgot_password/
-                -templates/
-                    -forgot_password/
-                        -password_reset_form.html
-                        -password_reset_email.html
-                        -password_reset_subject.txt
-                        -password_reset_done.html
-                        -password_reset_confirm.html
-                        -password_reset_complete.html
-                - __init__.py
-                -admin.py
-                -apps.py
-                -models.py
-                -tests.py
-                -views.py
-
-        -django_project/
-            -settings.py
-            -urls.py
-            - __init__.py
-            -wsgi.py
-</code></pre>
-
-<p>حال محتویات فایل ها رو به صورت زیر تغییر بدین :</p>
-
-<p>۱ - فایل : password_reset_form.html</p>
-
-<pre><code>### forgot_password/password_reset_form.html
-
-
-&lt;p&gt; please enter your mail &lt;/p&gt;
-&lt;form method="POST"&gt;
-    {% csrf_token %}
-    {{form.as_p}}
-    &lt;button type='submit'&gt;send&lt;/button&gt;
-&lt;/form&gt;
-</code></pre>
-
-<p>۲ -فایل :  password_reset_email.html </p>
-
-<pre><code>### forgot_password/password_reset_email.html 
-
-
-{% autoescape off %}
-کاربر {{ user.get_username }}:
-برای ریست کردن پسورد روی لینک زیر کلیک کنید :
-
-{{ protocol }}://{{ domain }}{% url 'password_reset_confirm' uidb64=uid token=token %}
-
-
-با تشکر,
-{% endautoescape %}
-</code></pre>
-
-<p>۳- فایل :  password_reset_subject.txt</p>
-
-<pre><code>### forgot_password/password_reset_subject.txt
-
-
-بازیابی رمز عبور
-</code></pre>
-
-<p>۴- فایل : password_reset_done.html</p>
-
-<pre><code>### forgot_password/password_reset_done.html
-
-
- &lt;p&gt;ایمیل بازیابی رمز عبور با موفقیت برای شما ارسال شد .&lt;/p&gt;
-</code></pre>
-
-<p>۵- فایل : password_reset_confirm.html</p>
-
-<pre><code>### forgot_password/password_reset_confirm.html
-
-
-&lt;p&gt; please enter your new password &lt;/p&gt;
-&lt;form method="POST"&gt;
-    {% csrf_token %}
-    {{form.as_p}}
-    &lt;button type='submit'&gt;change&lt;/button&gt;
-&lt;/form&gt;
-</code></pre>
-
-<p>۶- فایل : password_reset_complete.html</p>
-
-<pre><code>### forgot_password/password_reset_complete.html
-
-
-&lt;p&gt; رمز عبور شما با موقیت تغییر یافت .&lt;/p&gt;
-</code></pre>
-
-<h4 id="مرحله_۳:">مرحله ۳:</h4>
-
-<p>در مرحله سوم در URLCONF اصلی پروژه  لینک های زیر رو اضافه کنید :</p>
-
-<pre><code>### django_project/urls.py
-
-
-from django.urls import path, include
-from django.contrib.auth import views as forogotpassword_view
-
-
-
-urlpatterns = [
-  path('password-reset/', forogotpassword_view.PasswordResetView.as_view( 
-        template_name='forgot_password/password_reset_form.html',
-        email_template_name='forgot_password/password_reset_email.html',
-        subject_template_name='forgot_password/password_reset_subject.txt'
-        ), 
-        name='password_reset'),
-
-    path('password-reset/done/', forogotpassword_view.PasswordResetDoneView.as_view(  
-        template_name='forgot_password/password_reset_done.html'
-    ), 
-    name='password_reset_done'),
-
-
-    path('password-reset-confirm/&lt;uidb64&gt;/&lt;token&gt;/',
-        forogotpassword_view.PasswordResetConfirmView.as_view(  
-            template_name='forgot_password/password_reset_confirm.html'
-        ), 
-        name='password_reset_confirm'),
-
-
-    path('password-reset-complete/',
-         forogotpassword_view.PasswordResetCompleteView.as_view(  
-             template_name='forgot_password/password_reset_complete.html'
-         ), 
-         name='password_reset_complete'),
-
-]
-</code></pre>
-
-<p>و در پایان اگه شما لینک :</p>
-
-<p>http://127.0.0.1:8000/passowrd_reset</p>
-
-<p>رو باز کنید ٬ مشاهده میکنید تمامی مراحل به درستی کار خواهد کرد . </p>]]></content>
-
-    <summary>
-    &lt;p&gt;سلام امروز با شما هستیم از سری اموزش های جنگو :‌ ( بازیابی رمز عبور)
-
-یکی از مسائلی که برنامه نویس های فریمورک جنگو ممکن باهاش درگیر باشن ٬ ساخت قسمت بازیابی رمز عبور که جنگو به صورت پیشفرض این قابلیت رو اماده کرده و برنامه نویس ها میتونن از این قابلیت به راحتی  استفاده کنن .
-
-نحوه کار بازیابی رمز عبور یا همون forgot password به این شکل میباشد که وقتی کاربر بروی فراموشی رمز عبور کلیک کرد :
-
-۱- ایمیل کاربری خودش رو در یک فرم وارد کنه .
-
-۲- یه پیام بهش نشون داده بشه که ایمیل بازیابی برای شما فرستاده شد .
-
-۳ - روی لینک که داخل ایمیل براش ارسال شده کلیک کنه که تا وارد فرمی بشه که بتونه پسورد جدید &lt;/p&gt;
-    </summary>
-  </entry>
-  
-</feed>
+<p>موفق باشد .</p>
+  </section>
+
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_twitter"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+    
+      <script>
+var idcomments_acct = 'fe0e59c5d710febd7774428cee9eb164';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+    
+  </article>
+
+</section>
+
+<!-- Paging -->
+<section class="pagination">
+  <nav class="container">
+    
+      <a></a>
+    
+      <a class="extend next" rel="next" href="/django/آموزش-پیاده-سازی-پروژه-جنگو-بروی-سرور/">
+        <i>-></i>
+        <span>آموزش پیاده سازی پروژه جنگو بروی سرور</span>
+      </a>
+  </nav>
+</section>
+<!-- /Paging -->
+
+<!-- /Content -->
+<!-- Footer -->
+<footer>
+    <!--<section class="copyright">
+
+    </section>-->
+    <section class="container">
+      <div class="delimiter">
+        <a href="/" class="logo">
+          <img src="/static/theme/sallar/img/logo.svg">
+        </a>
+      </div>
+      <p>
+        
+          ۱۳۹۸<br>
+          مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+        
+        <br>
+        powered with 💜 by <a href="https://miraxy.github.io">Mira</a>
+      </p>
+    </section>
+</footer>
+<!-- /Footer -->
+
+<!-- Scripts -->
+<script src="/static/theme/sallar/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
