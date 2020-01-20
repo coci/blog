@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-01-20T11:13:50+0330</updated>
+  <updated>2020-01-20T11:18:31+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -59,14 +59,14 @@ $   sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-con
 
 <p>در اولین مرحله ما باید database برای پروژه بسازیم اما قبلش باید به کامند لاین postgresql  وصل شدیم .  برای این کار دستور زیر رو وارد کنید :</p>
 
-<pre><code class="language-powershell">$ sudo -u postgres psql 
+<pre><code class="language-python">$   sudo -u postgres psql 
 </code></pre>
 
 <p>بعد از متصل شدن به postgresql ما یک دیتابیس میسازیم ٬دستور زیر رو وارد کنید :</p>
 
 <p>( به جای myproject که اسم دیتابیس من میباشد ٬ شما هر اسمی که میخواین رو وارد کنید )</p>
 
-<pre><code class="language-powershell">CREATE DATABASE myproject;
+<pre><code class="language-python">CREATE DATABASE myproject;
 </code></pre>
 
 <p>حال باید یه کاربر جدید برای دیتابسی که ساختیم ایجاد کنیم ٬ برای این کار دستور زیر را وارد کنید :</p>
@@ -75,14 +75,14 @@ $   sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-con
 
 <p>دقت کنید که <strong>این اطلاعاتی رو که وارد میکنید در جایی یادداشت کنید</strong> .</p>
 
-<pre><code class="language-powershell">CREATE USER myprojectuser WITH PASSWORD 'password';
+<pre><code class="language-python">CREATE USER myprojectuser WITH PASSWORD 'password';
 </code></pre>
 
 <p>حالا که کاربر دیتابس شما ساخته شد ما باید یه سری تنظیمات که با جنگو سازگار هست رو به کاربر دیتابیس اضافه کنیم .</p>
 
 <p>( به جای myprojectuser شما باید username که در قسمت بالا وارد کردین رو قرار بدین )</p>
 
-<pre><code class="language-powershell">ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
+<pre><code class="language-python">ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
 ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
 ALTER ROLE myprojectuser SET timezone TO 'UTC';
 </code></pre>
@@ -91,12 +91,12 @@ ALTER ROLE myprojectuser SET timezone TO 'UTC';
 
 <p>( به جای myproject شما باید اسم دیتابیس خودتون رو وارد کنید و به جای myprojectuser شما باید username کاربری که ساختین رو قرار بدین  )</p>
 
-<pre><code class="language-powershell">GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
+<pre><code class="language-python">GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
 </code></pre>
 
 <p>و در اخر هم برای خروج از prompt دیتابیس دستور زیر رو وارد کنید :</p>
 
-<pre><code class="language-powershell">\q
+<pre><code class="language-python">\q
 </code></pre>
 
 <h3 id="ایجاد_یک_python_virtual_environment_برای_پروژه_:">ایجاد یک Python Virtual Environment برای پروژه :</h3>
@@ -105,35 +105,35 @@ ALTER ROLE myprojectuser SET timezone TO 'UTC';
 
 <p>خوب برای شروع نیاز داریم Virtual Environment رو روی سرور نصب کنیم :</p>
 
-<pre><code class="language-powershell">$   sudo -H pip3 install --upgrade pip
-$       sudo -H pip3 install virtualenv
+<pre><code class="language-python">$ sudo -H pip3 install --upgrade pip
+$   sudo -H pip3 install virtualenv
 </code></pre>
 
 <p>حالا باید پوشه برای ساخت Virtual Environment و پروژه جنگو ایجاد کنیم و به داخل اون پوشه بریم :</p>
 
 <p>( به جای myprojectdir که اسم پوشه میباشد ٬ شما اسم دلخواه خودتون رو وارد کنید )</p>
 
-<pre><code class="language-powershell">$       mkdir ~/myprojectdir
-$       cd ~/myprojectdir
+<pre><code class="language-python">$   mkdir ~/myprojectdir
+$   cd ~/myprojectdir
 </code></pre>
 
 <p>حال برای ساخت یک Virtual Environment دستور زیر رو وارد کنید :</p>
 
 <p>( به جای myprojectenv که اسم Virtual Environment ما میباشد ٬ شما اسم دلخواه خودتون رو وارد کنید )</p>
 
-<pre><code class="language-powershell">$       virtualenv myprojectenv
+<pre><code class="language-python">$   virtualenv myprojectenv
 </code></pre>
 
 <p>حال که Virtual Environment ما ساخته شد ٬ برای فعال سازی اون دستور زیر رو وارد کنید :</p>
 
 <p>( به جای myprojectenv که اسم Virtual Environment  میباشد ٬ شما اسمی که در دستور بالا وارد کردین رو قرار بدین )</p>
 
-<pre><code class="language-powershell">$       source myprojectenv/bin/activate
+<pre><code class="language-python">$   source myprojectenv/bin/activate
 </code></pre>
 
 <p>تا اینجای کار ما یک Virtual Environment ساختیم و فعالش کردیم ٬ الان میتونیم تمام package های مورد نیاز خودمون از قبیل خود django رو توی این Virtual Environment نصب کنیم :</p>
 
-<pre><code class="language-powershell">$       pip install django gunicorn psycopg2-binary
+<pre><code class="language-python">$   pip install django gunicorn psycopg2-binary
 </code></pre>
 
 <h3 id="ساخت_و_انجام_تنظیمات_پروژه_جنگو_:">ساخت و انجام تنظیمات پروژه جنگو :</h3>
@@ -144,14 +144,14 @@ $       cd ~/myprojectdir
 
 <p>( به جای myproject که اسم پروژه ما میباشد ٬ شما اسم دلخواه خودتون رو وارد کنید )</p>
 
-<pre><code class="language-powershell">$       django-admin.py startproject myproject .
+<pre><code class="language-python">$   django-admin.py startproject myproject .
 </code></pre>
 
 <p>حالا برای انجام تنظیمات مورد نیاز جنگو باید فایل settings.py رو تغییر بدیم . برای این کار :</p>
 
 <p>( به جای myprojectdir که اسم پوشه اصلی و myproject که اسم پروژه ما میباشد ٬ شما مقادیری که در بالا وارد کردین رو قرار بدین )</p>
 
-<pre><code class="language-powershell">$       nano ~/myprojectdir/myproject/settings.py
+<pre><code class="language-python">$   nano ~/myprojectdir/myproject/settings.py
 </code></pre>
 
 <p>اگه به درستی این مراحل رو طی کرده باشین ٬ میبینین که وارد یه ویرایشگر متن شدین که محتویات فایل settings.py پروژه در اون قرار داره . حالا  قسمت ALLOWED_HOSTS رو شکل زیر تغییر بدین :</p>
@@ -186,30 +186,30 @@ $       cd ~/myprojectdir
 
 <p>در این قسمت باید جداول مربوط به جنگو می سازیم :</p>
 
-<pre><code class="language-powershell">$       python manage.py makemigrations
-$       python manage.py migrate
+<pre><code class="language-python">$   python manage.py makemigrations
+$   python manage.py migrate
 </code></pre>
 
 <p>حال یه super user برای دسترسی به admin panel جنگو میسازیم :</p>
 
-<pre><code class="language-powershell">$       python manage.py createsuperuser
+<pre><code class="language-python">$   python manage.py createsuperuser
 </code></pre>
 
 <p>یه نکته مهم در اینجت هست که برای اینکه nginx بتونه css های پروژه رو serve کنه ما باید یه پوشه برای تمام css ها بسازیم و css ها رو داخل اون قرار بدیم و به nginx مسیر این پوشه رو بدیم . جنگو برای ساخت این پوشه و انتقال فایل های css یه دستور اماده داره که ازون استفاده میکنیم ٬ در اصل این دستور داخل root پروژه یه فایل با نام static می سازه و تمام css ها رو داخل این فایل انتقال میده ٬ برای این کار دستور زیر رو وارد کنید :</p>
 
 <p><strong>(در نظر بگیرین در هر زمان که شما تغییری در css های پروژه میدین یا فایل css جدیدی اضافه میکنید ٬ باید این دستور رو دوباره بزنین )</strong></p>
 
-<pre><code class="language-powershell">$       python manage.py collectstatic
+<pre><code class="language-python">$   python manage.py collectstatic
 </code></pre>
 
 <p>حالا برای تست پروژه باید پورت 8000 سرور رو به اصطلاح باز کنیم ٬ برای اینکار دستور زیر رو وارد کنید :</p>
 
-<pre><code class="language-powershell">$       sudo ufw allow 8000
+<pre><code class="language-python">$   sudo ufw allow 8000
 </code></pre>
 
 <p>حالا برای اجرای پروژه دستور زیر رو وارد کنید :</p>
 
-<pre><code class="language-powershell">$       python manage.py runserver 0.0.0.0:8000
+<pre><code class="language-python">$   python manage.py runserver 0.0.0.0:8000
 </code></pre>
 
 <p>کار تمام است . حالا اگه داخل مرورگر ادرس زیر رو وارد کنید :</p>
@@ -229,7 +229,7 @@ $       python manage.py migrate
 
 <p>( به جای myproject اسم پروژه خودتون رو وارد کنید )</p>
 
-<pre><code class="language-powershell">$       gunicorn --bind 0.0.0.0:8000 myproject.wsgi
+<pre><code class="language-python">$   gunicorn --bind 0.0.0.0:8000 myproject.wsgi
 </code></pre>
 
 <p>و دوباره توی مرورگر ادرس زیر رو وارد کنید و باید صفحه ای مثل قبل رو مشاهده کنید‌:</p>
@@ -245,12 +245,12 @@ $       python manage.py migrate
 
 <p><strong>(این دستور یه socket برای gunicorn می سازه .)</strong></p>
 
-<pre><code class="language-powershell">$       sudo nano /etc/systemd/system/gunicorn.socket
+<pre><code class="language-python">$   sudo nano /etc/systemd/system/gunicorn.socket
 </code></pre>
 
 <p>بعد از زدن دستور بالا میبینیم که دوباره وارد محیط ویرایشگر متن شدیم اما این دفعه هیچی چیزی داخل صفحه نیست و ما باید اطلاعات رو واردش کنیم . برای این کار کدهای زیر رو وارد کنید :</p>
 
-<pre><code>[Unit]
+<pre><code class="language-python">[Unit]
 Description=gunicorn socket
 
 [Socket]
@@ -264,7 +264,7 @@ WantedBy=sockets.target
 
 <p>در گام بعدی احتیاج داریم فایل service که برای gunicorn هست رو بسازیم :</p>
 
-<pre><code class="language-powershell">$       sudo nano /etc/systemd/system/gunicorn.service
+<pre><code class="language-python">$   sudo nano /etc/systemd/system/gunicorn.service
 </code></pre>
 
 <p>حال در صفحه باز شده کدهای زیر رو وارد کنید :</p>
@@ -303,8 +303,8 @@ WantedBy=multi-user.target
 
 <p>الان ما میتونیم فایل socket مه ساختیم رو اجرا کنیم . برای این کار دستورات زیر رو وارد کنید :</p>
 
-<pre><code class="language-powershell">$       sudo systemctl start gunicorn.socket
-$       sudo systemctl enable gunicorn.socket
+<pre><code class="language-python">$   sudo systemctl start gunicorn.socket
+$   sudo systemctl enable gunicorn.socket
 </code></pre>
 
 <h3 id="اضافه_کردن_تنظیمات_nginx:">اضافه کردن تنظیمات nginx:</h3>
@@ -313,7 +313,7 @@ $       sudo systemctl enable gunicorn.socket
 
 <p>( به جای myproject یه اسم دلخواه میتونین قرار بدین )</p>
 
-<pre><code class="language-powershell">$       sudo nano /etc/nginx/sites-available/myproject
+<pre><code class="language-python">$   sudo nano /etc/nginx/sites-available/myproject
 </code></pre>
 
 <p>در صفحه که جلوی شما قرار داره کدهای زیر رو وارد کنید :</p>
@@ -347,19 +347,19 @@ $       sudo systemctl enable gunicorn.socket
 
 <p>( به جای myproject اسمی که در مرحله قبل وارد کردید رو قرار بدین )</p>
 
-<pre><code class="language-powershell">$       sudo ln -s /etc/nginx/sites-available/myproject /etc/nginx/sites-enabled
+<pre><code class="language-python">$   sudo ln -s /etc/nginx/sites-available/myproject /etc/nginx/sites-enabled
 </code></pre>
 
 <p>حالا دستور زیر رو وارد کنید تا تنظیمات به nginx اعمال بشه : </p>
 
-<pre><code class="language-powershell">$       sudo nginx -t
-$       sudo systemctl restart nginx
+<pre><code class="language-python">$   sudo nginx -t
+$   sudo systemctl restart nginx
 </code></pre>
 
 <p>و در اخر کدهای زیر رو وارد کنید :</p>
 
-<pre><code class="language-powershell">$       sudo ufw delete allow 8000
-$       sudo ufw allow 'Nginx Full'
+<pre><code class="language-python">$   sudo ufw delete allow 8000
+$   sudo ufw allow 'Nginx Full'
 </code></pre>
 
 <p>حالا مرورگر خودتون رو باز کنین و ادرس دامنه خودتون رو بزنین و باید دوباره صفحه ابتدایی جنگو رو مشاهده کنید .دقت کنید که نیازی به وارد کردن 8000 در اخر دامنه نیست . </p>
