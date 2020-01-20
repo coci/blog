@@ -7,7 +7,6 @@
       </h1>
       <ul>
         {{ IF SITE.language == 'Farsi' }}
-          <li><a href="{{ SITE.root }}">فهرست</a></li>
 
           <li><a href="{{ FLOORS.python.root }}" target="python">آموزش پایتون</a></li>
           <li><a href="{{ FLOORS.django.root }}" target="django">آموزش جنگو</a></li>
