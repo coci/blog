@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-01-20T11:08:33+0330</updated>
+  <updated>2020-01-20T11:13:06+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -47,7 +47,7 @@
 
 <p><strong>( دقت کنید نیازی به کپی کردن علامت $ نیست )</strong></p>
 
-<pre><code class="language-powershell">$ sudo apt update
+<pre><code class="language-python">$ sudo apt update
 $ sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
 </code></pre>
 
