@@ -10,7 +10,7 @@
   <meta property="og:title" content="نحوه دیپلوی کردن پروژه جنگو">
   <meta property="og:url" content="https://koky.ir/django/">
   <meta property="og:site_name" content="سروش صفری">
-  <meta property="og:description" content="&lt;p&gt;اموزش دیپلوی کردن پروژه جنگو
+  <meta property="og:description" content="&lt;p&gt;مقدمه
 
 یکی از چیزایی که برای خیلی از دولوپر ها سوال هست این که یه پروژه جنگو رو چطوری روی هاست پیاده سازی (deploy) کنیم . اگه این برای شما هم سوال هست در ادامه همراه باشین .
 
@@ -21,12 +21,12 @@ nginx : به عنوان وب سرور
 Postgres : به عنوان دیتابیس پروژه
 Gunicorn : برای ارتباط پروژه با nginx
 
-در نهایت اگه شما تصمیم به استفاده از ابزارهای دیگه ای به غیر از مواردی که در بالا ذکر شده رو دارین ٬ میتونین از این اموزش استفاده کنین فقط توی اون قسمت کاری مشابه به &lt;/p&gt;">
+در نهایت اگه شما تصمیم به استفاده از ابزارهای دیگه ای به غیر از مواردی که در بالا ذکر شده رو دارین ٬ میتونین از این اموزش استفاده کنین فقط توی اون قسمت کاری مشابه به کاری که من انجام دادم ر&lt;/p&gt;">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="نحوه دیپلوی کردن پروژه جنگو">
-  <meta name="twitter:description" content="&lt;p&gt;اموزش دیپلوی کردن پروژه جنگو
+  <meta name="twitter:description" content="&lt;p&gt;مقدمه
 
-یکی از چ...">
+یکی از چیزایی که برای خیلی از د...">
 
   <link rel="alternative" href="/djangoatom.xml" title="سروش صفری" type="application/atom+xml">
   <link rel="short icon" href="">
@@ -81,7 +81,7 @@ Gunicorn : برای ارتباط پروژه با nginx
 
     <section class="content">
     <a name="more"></a>
-<h1 id="اموزش_دیپلوی_کردن_پروژه_جنگو">اموزش دیپلوی کردن پروژه جنگو</h1>
+<h1 id="مقدمه">مقدمه</h1>
 
 <p>یکی از چیزایی که برای خیلی از دولوپر ها سوال هست این که یه پروژه جنگو رو چطوری روی هاست پیاده سازی (deploy) کنیم . اگه این برای شما هم سوال هست در ادامه همراه باشین .</p>
 
@@ -112,7 +112,7 @@ $   sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-con
 
 <h3 id="ساخت_دیتابیس_:">ساخت دیتابیس :</h3>
 
-<p>برای استفاده از Postgres  دراین قسمت ما یک دیتابیس و یک کاربر میسازیم که بتونیم پروژه جنگو رو به Postgres متصل کنیم . </p>
+<p>برای استفاده از Postgres  به عنوان دیتابیس پروژه ما نیاز به ساخت یک دیتابیس و کاربر هستیم ٬ پس دراین قسمت ما یک دیتابیس و یک کاربر میسازیم که بتونیم پروژه جنگو رو به Postgres متصل کنیم . </p>
 
 <p>در اولین مرحله ما باید database برای پروژه بسازیم اما قبلش باید به کامند لاین postgresql  وصل شدیم .  برای این کار دستور زیر رو وارد کنید :</p>
 
@@ -123,7 +123,7 @@ $   sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-con
 
 <p>( به جای myproject که اسم دیتابیس من میباشد ٬ شما هر اسمی که میخواین رو وارد کنید )</p>
 
-<pre><code class="language-python">CREATE DATABASE myproject;
+<pre><code class="language-python">postgres=# CREATE DATABASE myproject;
 </code></pre>
 
 <p>حال باید یه کاربر جدید برای دیتابسی که ساختیم ایجاد کنیم ٬ برای این کار دستور زیر را وارد کنید :</p>
@@ -132,28 +132,28 @@ $   sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-con
 
 <p>دقت کنید که <strong>این اطلاعاتی رو که وارد میکنید در جایی یادداشت کنید</strong> .</p>
 
-<pre><code class="language-python">CREATE USER myprojectuser WITH PASSWORD 'password';
+<pre><code class="language-python">postgres=# CREATE USER myprojectuser WITH PASSWORD 'password';
 </code></pre>
 
 <p>حالا که کاربر دیتابس شما ساخته شد ما باید یه سری تنظیمات که با جنگو سازگار هست رو به کاربر دیتابیس اضافه کنیم .</p>
 
 <p>( به جای myprojectuser شما باید username که در قسمت بالا وارد کردین رو قرار بدین )</p>
 
-<pre><code class="language-python">ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
-ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
-ALTER ROLE myprojectuser SET timezone TO 'UTC';
+<pre><code class="language-python">postgres=# ALTER ROLE myprojectuser SET client_encoding TO 'utf8';
+postgres=# ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';
+postgres=# ALTER ROLE myprojectuser SET timezone TO 'UTC';
 </code></pre>
 
-<p>حالا ما یه دیتابیس ساختیم و یه کاربر ٬ الان باید این کاربر رو به دیتابیس که در مرحله اول ساختیم وصل کنیم . برای این کار :</p>
+<p>حالا ما یه دیتابیس ساختیم و یک کاربر ٬ الان باید این کاربر رو به دیتابیس که در مرحله اول ساختیم وصل کنیم . برای این کار :</p>
 
 <p>( به جای myproject شما باید اسم دیتابیس خودتون رو وارد کنید و به جای myprojectuser شما باید username کاربری که ساختین رو قرار بدین  )</p>
 
-<pre><code class="language-python">GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
+<pre><code class="language-python">postgres=# GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;
 </code></pre>
 
 <p>و در اخر هم برای خروج از prompt دیتابیس دستور زیر رو وارد کنید :</p>
 
-<pre><code class="language-python">\q
+<pre><code class="language-python">postgres=# \q
 </code></pre>
 
 <h3 id="ایجاد_یک_python_virtual_environment_برای_پروژه_:">ایجاد یک Python Virtual Environment برای پروژه :</h3>
@@ -162,7 +162,7 @@ ALTER ROLE myprojectuser SET timezone TO 'UTC';
 
 <p>خوب برای شروع نیاز داریم Virtual Environment رو روی سرور نصب کنیم :</p>
 
-<pre><code class="language-python">$ sudo -H pip3 install --upgrade pip
+<pre><code class="language-python">$   sudo -H pip3 install --upgrade pip
 $   sudo -H pip3 install virtualenv
 </code></pre>
 
