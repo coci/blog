@@ -270,7 +270,7 @@ Creating gitea_server_1   ... done
 
 <p>حالا از منوی سمت راست بالای صفحه بروی دکمه sing in کلیک کنید و با صفحه مثل زیر رو به رو میشید :</p>
 
-<p><strong>دقت کنید این صفحه فقط برای اولین بار برای شما نمایش داده میشه و اگه اطلاعات رو به درستی وارد نکنید باید تمامی مراحل بالا رو از اول انجام بدید .</strong></p>
+<p><strong>(دقت کنید این صفحه فقط برای اولین بار برای شما نمایش داده میشه و اگه اطلاعات رو به درستی وارد نکنید باید تمامی مراحل بالا رو از اول انجام بدید .)</strong></p>
 
 <p><img src="/farsi/images/gitea2.jpg" alt="gitea" id="gitea"></p>
 
@@ -298,7 +298,7 @@ Creating gitea_server_1   ... done
 <pre><code class="language-python">server {
     listen 80;
     server_name 37.152.181.14;
-        client_max_body_size 100M;
+  client_max_body_size 100M;
     location = /favicon.ico { access_log off; log_not_found off; }
 
     location / {
