@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-01-20T11:05:11+0330</updated>
+  <updated>2020-01-20T11:08:33+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -47,8 +47,8 @@
 
 <p><strong>( دقت کنید نیازی به کپی کردن علامت $ نیست )</strong></p>
 
-<pre><code class="language-powershell">   $ sudo apt update
-   $ sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
+<pre><code class="language-powershell">$ sudo apt update
+$ sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
 </code></pre>
 
 <p>توی دستورات بالا اول ما سرور رو اپدیت کردیم و در دستور دوم python , Postgres , nginx و curl رو روی سرور نصب کردیم .</p>
@@ -158,14 +158,14 @@ $       cd ~/myprojectdir
 
 <p>( شما باید به جای your_server_domain_or_IP که ادرس دامنه یا ip سرور میباشد باید دامنه یا ip سرور خودتون رو وارد کنید )</p>
 
-<pre><code class="language-powershell">ALLOWED_HOSTS = ['your_server_domain_or_IP', 'localhost']
+<pre><code class="language-python">ALLOWED_HOSTS = ['your_server_domain_or_IP', 'localhost']
 </code></pre>
 
 <p>حال کمی پایین تر برین و قسمت DATABASES رو به شکل زیر تغییر بدین :</p>
 
 <p>دقت کنید که جلوی مقدار 'NAME' باید اسم دیتابیسی ک جلوی 'USER' نام کاربری که ساختین و همین طور در جلوی 'PASSWORD' رمز عبور کاربر دیتابیس که در بالا وارد کردین رو قرار بدین .</p>
 
-<pre><code class="language-powershell">DATABASES = {
+<pre><code class="language-python">DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'myproject',
@@ -179,7 +179,7 @@ $       cd ~/myprojectdir
 
 <p>حال در پایین این فایل درست زیر '/STATIC_URL = '/static مقدار زیر رو وارد کنید :</p>
 
-<pre><code class="language-powershell">STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+<pre><code class="language-python">STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 </code></pre>
 
 <p>حالا با  نگه داشتن  ترکیبی control و x کیبورد این فایل رو ذخیره کنین .</p>
@@ -338,7 +338,7 @@ $       sudo systemctl enable gunicorn.socket
 
 <ul>
 <li>در جلو server_name باید ادرس دامنه خودتون رو وارد کنید</li>
-<li>در قسمت root /home/sammy/myprojectdir به جای ادرس وارد شده ادرس دقیق پروژه خودتون رو وارد کنید .</li>
+<li>در قسمت root /home/sammy/myprojectdir  به جای ادرس وارد شده ادرس دقیق پروژه خودتون رو وارد کنید .</li>
 </ul>
 
 <p>حالا با استفاده کلید های ترکیبی <strong>CTRL-X</strong> این فایل رو سیو کنید .</p>
@@ -385,45 +385,6 @@ Postgres : به عنوان دیتابیس پروژه
 Gunicorn : برای ارتباط پروژه با nginx
 
 در نهایت اگه شما تصمیم به استفاده از ابزارهای دیگه ای به غیر از مواردی که در بالا ذکر شده رو دارین ٬ میتونین از این اموزش استفاده کنین فقط توی اون قسمت کاری مشابه به &lt;/p&gt;
-    </summary>
-  </entry>
-  
-  <entry>
-    <title>آموزش پیاده سازی پروژه جنگو بروی سرور</title>
-    <link href="https://koky.ir/django//آموزش-پیاده-سازی-پروژه-جنگو-بروی-سرور/"/>
-    <id>https://koky.ir/django//آموزش-پیاده-سازی-پروژه-جنگو-بروی-سرور/</id>
-
-    <published>2019-07-30T15:55:55+0330</published>
-    <updated>2019-07-30T15:55:55+0330</updated>
-
-    <content type="html"><![CDATA[<a name="more"></a>
-<h3 id="آموزش_پیاده_سازی_پروژه_جنگو_بروی_سرور_ubuntu">آموزش پیاده سازی پروژه جنگو بروی سرور ubuntu</h3>
-
-<p>امروز در خدمت شما هستیم با پیاده سازی پروژه جنگو با استفاده از Nginx و PostgreSql بروی سرور ubuntu . در طول این اموزش تمام تلاش من این که بتونم شما رو با نحوه دقیق پیاده سازی django بروی سرور اشنا کنم ٬ پس در ادامه همراه باشید .</p>
-
-<p>در ابتدا باید یه توضیح بدم و اونم این است که نحوه کار به این شکل که پروژه رو روی سرور انتقال میدیم و با استفاده از gunicorn پروژه رو serve میکنیم و در اخر با استفاده از nginx پروژه رو به دامنه متصل میکنیم .</p>
-
-<p>خوب برای شروع کار ابتدا پیکیج های زیر رو نصب کنید :</p>
-
-<pre><code>$ sudo apt update
-$ sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
-</code></pre>
-
-<p>بعد از اتمام نصب وقت ساخت دیتابیس برای پروژه میباشد . </p>
-
-<h2 id="ساخت_دیتابیس">ساخت دیتابیس</h2>]]></content>
-
-    <summary>
-    &lt;p&gt;آموزش پیاده سازی پروژه جنگو بروی سرور ubuntu
-
-امروز در خدمت شما هستیم با پیاده سازی پروژه جنگو با استفاده از Nginx و PostgreSql بروی سرور ubuntu . در طول این اموزش تمام تلاش من این که بتونم شما رو با نحوه دقیق پیاده سازی django بروی سرور اشنا کنم ٬ پس در ادامه همراه باشید .
-
-در ابتدا باید یه توضیح بدم و اونم این است که نحوه کار به این شکل که پروژه رو روی سرور انتقال میدیم و با استفاده از gunicorn پروژه رو serve میکنیم و در اخر با استفاده از nginx پروژه رو به دامنه متصل میکنیم .
-
-خوب برای شروع کار ابتدا پیکیج های زیر رو نصب کنید :
-
-$ sudo apt update
-$ sudo apt install python3-pip python3-dev li&lt;/p&gt;
     </summary>
   </entry>
   

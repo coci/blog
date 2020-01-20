@@ -104,8 +104,8 @@ Gunicorn : برای ارتباط پروژه با nginx
 
 <p><strong>( دقت کنید نیازی به کپی کردن علامت $ نیست )</strong></p>
 
-<pre><code class="language-powershell">   $ sudo apt update
-   $ sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
+<pre><code class="language-powershell">$ sudo apt update
+$ sudo apt install python3-pip python3-dev libpq-dev postgresql postgresql-contrib nginx curl
 </code></pre>
 
 <p>توی دستورات بالا اول ما سرور رو اپدیت کردیم و در دستور دوم python , Postgres , nginx و curl رو روی سرور نصب کردیم .</p>
@@ -215,14 +215,14 @@ $       cd ~/myprojectdir
 
 <p>( شما باید به جای your_server_domain_or_IP که ادرس دامنه یا ip سرور میباشد باید دامنه یا ip سرور خودتون رو وارد کنید )</p>
 
-<pre><code class="language-powershell">ALLOWED_HOSTS = ['your_server_domain_or_IP', 'localhost']
+<pre><code class="language-python">ALLOWED_HOSTS = ['your_server_domain_or_IP', 'localhost']
 </code></pre>
 
 <p>حال کمی پایین تر برین و قسمت DATABASES رو به شکل زیر تغییر بدین :</p>
 
 <p>دقت کنید که جلوی مقدار 'NAME' باید اسم دیتابیسی ک جلوی 'USER' نام کاربری که ساختین و همین طور در جلوی 'PASSWORD' رمز عبور کاربر دیتابیس که در بالا وارد کردین رو قرار بدین .</p>
 
-<pre><code class="language-powershell">DATABASES = {
+<pre><code class="language-python">DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'myproject',
@@ -236,7 +236,7 @@ $       cd ~/myprojectdir
 
 <p>حال در پایین این فایل درست زیر '/STATIC_URL = '/static مقدار زیر رو وارد کنید :</p>
 
-<pre><code class="language-powershell">STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+<pre><code class="language-python">STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 </code></pre>
 
 <p>حالا با  نگه داشتن  ترکیبی control و x کیبورد این فایل رو ذخیره کنین .</p>
@@ -395,7 +395,7 @@ $       sudo systemctl enable gunicorn.socket
 
 <ul>
 <li>در جلو server_name باید ادرس دامنه خودتون رو وارد کنید</li>
-<li>در قسمت root /home/sammy/myprojectdir به جای ادرس وارد شده ادرس دقیق پروژه خودتون رو وارد کنید .</li>
+<li>در قسمت root /home/sammy/myprojectdir  به جای ادرس وارد شده ادرس دقیق پروژه خودتون رو وارد کنید .</li>
 </ul>
 
 <p>حالا با استفاده کلید های ترکیبی <strong>CTRL-X</strong> این فایل رو سیو کنید .</p>
@@ -457,9 +457,9 @@ var idcomments_post_url;
     
       <a></a>
     
-      <a class="extend next" rel="next" href="/django/آموزش-پیاده-سازی-پروژه-جنگو-بروی-سرور/">
+      <a class="extend next" rel="next" href="/django/بازیابی-رمز-عبور/">
         <i>-></i>
-        <span>آموزش پیاده سازی پروژه جنگو بروی سرور</span>
+        <span>بازیابی رمز عبور</span>
       </a>
   </nav>
 </section>
