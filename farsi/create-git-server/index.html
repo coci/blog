@@ -117,12 +117,12 @@ $ sudo apt install nginx
 
 <p>برای عوض کردن dns سرور دستور زیر رو وارد کنید :</p>
 
-<pre><code>$   sudo nano etc/resolv.conf
+<pre><code class="language-python">$   sudo nano etc/resolv.conf
 </code></pre>
 
 <p>در ویراشگر متن تمام nameserver هارو پاک کنید و این ۲ مقادیر رو وارد کنید :</p>
 
-<pre><code>nameserver 178.22.122.100
+<pre><code class="language-python">nameserver 178.22.122.100
 nameserver 185.51.200.2
 </code></pre>
 
@@ -134,18 +134,18 @@ nameserver 185.51.200.2
 
 <p><strong>(دقت کنید دستورات رو به ترتیب وارد کنید)</strong></p>
 
-<pre><code>$   sudo apt install apt-transport-https ca-certificates curl software-properties-common
+<pre><code class="language-python">$   sudo apt install apt-transport-https ca-certificates curl software-properties-common
 $   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 </code></pre>
 
 <p>سپس دستورات زیر رو وارد کنید :</p>
 
-<pre><code>$   sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+<pre><code class="language-python">$   sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 </code></pre>
 
 <p>و در اخر دستورات زیر رو وارد کنید :</p>
 
-<pre><code>$   sudo apt update
+<pre><code class="language-python">$   sudo apt update
 $   apt-cache policy docker-ce
 $   sudo apt install docker-ce
 </code></pre>
@@ -154,40 +154,40 @@ $   sudo apt install docker-ce
 
 <p>حال نیازمند نصب docker-compose هستیم . برای این کار هم دستورات زیر رو وارد کنید :</p>
 
-<pre><code>$   sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+<pre><code class="language-python">$   sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
 </code></pre>
 
 <p>پس از دانلود docker-compose با استفاده از دستور بالا ٬ دستور زیر را وارد کنید :</p>
 
-<pre><code>$   sudo chmod +x /usr/local/bin/docker-compose
+<pre><code class="language-python">$   sudo chmod +x /usr/local/bin/docker-compose
 </code></pre>
 
 <p>برای اینکه بفهمیم docker-compose به درستی نصب شده دستور زیر رو وارد کنید :</p>
 
-<pre><code>$   docker-compose --version
+<pre><code class="language-python">$   docker-compose --version
 </code></pre>
 
 <p>و باید چیزی شبیه به این رو ببینید :</p>
 
-<pre><code>$   docker-compose version 1.21.2, build a133471
+<pre><code class="language-python">$   docker-compose version 1.21.2, build a133471
 </code></pre>
 
 <h3 id="نصب_gitea_:">نصب Gitea :</h3>
 
 <p>در این مرحله یه پوشه به اسم gitea بسازین و برین داخل پوشه :</p>
 
-<pre><code>$   mkdir gitea
+<pre><code class="language-python">$   mkdir gitea
 $   cd gitea/
 </code></pre>
 
 <p>حال با دستور زیر یه فایل به اسم docker-compose.yml در داخل پوشه gitea بسازین :</p>
 
-<pre><code>$   touch docker-compose.yml
+<pre><code class="language-python">$   touch docker-compose.yml
 </code></pre>
 
 <p>سپس با استفاده از دستور زیر این فایل رو با ویرایشگر متن باز کنید :</p>
 
-<pre><code>$   nano docker-compose.yml
+<pre><code class="language-python">$   nano docker-compose.yml
 </code></pre>
 
 <p>حال متن زیر رو به درستی در ویراشگر باز شده وارد کنید :</p>
@@ -199,7 +199,7 @@ $   cd gitea/
 <li>اگه دانش در مورد داکر دارین میتونین فایل زیر رو ویرایش کنید .</li>
 </ul>
 
-<pre><code>version: "3"
+<pre><code class="language-python">version: "3"
 
 networks:
   valhalla:
@@ -247,12 +247,12 @@ volumes:
 
 <p>حال با استفاده از دکمه ترکیبی ctrl-x فایل رو سیو کنید و خارج شوید . سپس دستور زیر رو وارد کنید تا gitea با استفاده از فایلی که ساختیم نصب بشه :</p>
 
-<pre><code>$   sudo docker-compose up -d
+<pre><code class="language-python">$   sudo docker-compose up -d
 </code></pre>
 
 <p>پس از زدن کد بالا باید چیزی شبیه نوشته پایین رو ببینید :( بعد از زدن دستور بالا مقداری صبر کنید ٬ چون تقریبا نصب ۱۰ دقیقه طول میکشه)</p>
 
-<pre><code>.........
+<pre><code class="language-python">.........
 Creating gitea_gitea_db_1 ... done
 Creating gitea_server_1   ... done
 </code></pre>
@@ -261,7 +261,7 @@ Creating gitea_server_1   ... done
 
 <p>(دقت کنید به جای your_ip_addreess باید ادرس ip سرور خودتون رو وارد کنید)</p>
 
-<pre><code>http://your_ip_addreess:3000
+<pre><code class="language-python">http://your_ip_addreess:3000
 </code></pre>
 
 <p>باید صفحه زیر رو ببینید :</p>
@@ -288,14 +288,14 @@ Creating gitea_server_1   ... done
 
 <p>برای این کار دستور زیر رو در ترمینال سرور وارد کنید :</p>
 
-<pre><code>$   sudo nano /etc/nginx/sites-available/gitea
+<pre><code class="language-python">$   sudo nano /etc/nginx/sites-available/gitea
 </code></pre>
 
 <p>بعد در ویرایشگر متن باز شده کدهای زیر رو وارد کنید :</p>
 
 <p>( دقت کنید در قسمت پایین که من server_name رو 37.152.181.14 وارد کردم شما باید به جاش ip سرور خودتون رو وارد کنید )</p>
 
-<pre><code>server {
+<pre><code class="language-python">server {
     listen 80;
     server_name 37.152.181.14;
         client_max_body_size 100M;
@@ -310,12 +310,12 @@ Creating gitea_server_1   ... done
 
 <p>حال با استفاده از دکمه ترکیبی ctrl-x فایل رو سیو کنید و خارج شوید . سپس دستور زیر رو وارد کنید :</p>
 
-<pre><code>$   sudo ln -s /etc/nginx/sites-available/gitea /etc/nginx/sites-enabled
+<pre><code class="language-python">$   sudo ln -s /etc/nginx/sites-available/gitea /etc/nginx/sites-enabled
 </code></pre>
 
 <p>حالا با زدن دستور زیر nginx رو ریستارت کنید تا تنظیمات بالا اعمال بشه :</p>
 
-<pre><code>$   sudo systemctl restart nginx
+<pre><code class="language-python">$   sudo systemctl restart nginx
 </code></pre>
 
 <p>کار تمام است و اگه ip سرور رو بدون پورت 3000 باز کنید میبینید که gitea باز میشه و میتونین ازش استفاده کنید .</p>
