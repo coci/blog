@@ -5,7 +5,7 @@
   <link href="https://koky.ir/farsi//feed.xml" rel="self"/>
   <link href="https://koky.ir/farsi/"/>
 
-  <updated>2020-01-20T15:44:28+0330</updated>
+  <updated>2020-01-20T15:53:10+0330</updated>
   <id>https://koky.ir/farsi/</id>
   
   <author>
@@ -24,7 +24,7 @@
     <updated>2020-01-20T13:15:57+0330</updated>
 
     <content type="html"><![CDATA[<a name="more"></a>
-<p>در پی این تحریم هایی که github برای ایرانی ها اعمال کرده دیگه کاربران ایرانی اجازه ساخت repository به صورت private ندارن و همچنین با توجه به فیلتر بودن gitlab تصمیم گرفتم تا یه سرور گیت شخصی برای خودم راه اندازی کنم و بعد از کلی تست ابزارهای مختلف در اخر به بهترین گزینه موجود که با کمترین دردسر میشه ازش استفاده کرد رسیدم ٬ چیزی به اسم Gitea .</p>
+<p>در پی تحریم هایی که github برای ایرانی ها اعمال کرده دیگه کاربران ایرانی اجازه ساخت repository به صورت private ندارن و همچنین با توجه به فیلتر بودن gitlab تصمیم گرفتم تا یه سرور گیت شخصی برای خودم راه اندازی کنم و بعد از کلی تست ابزارهای مختلف در اخر به بهترین گزینه موجود که با کمترین دردسر میشه ازش استفاده کرد رسیدم ٬ چیزی به اسم Gitea .</p>
 
 <p>من تو این بلاگ پست قصد دارم مراحل ساخت  یه  گیت سرور شخصی با استفاده از Gitea رو که طی کردم با شما به اشتراک بزارم .</p>
 
@@ -54,15 +54,15 @@ $ sudo apt install nginx
 
 <h3 id="docker_:">docker :</h3>
 
-<p>ما برای نصب gitea روی سرور از داکر استفاده میکنیم ( روش های دیگه ای هم داره اما با نصب به وسیله داکر راحت ترین و بی دردسر ترین روش موجود میباشد ) .</p>
+<p>ما برای نصب gitea روی سرور از داکر استفاده میکنیم ( روش های دیگه ای هم داره اما نصب به وسیله داکر راحت ترین و بی دردسر ترین روش موجود میباشد ) .</p>
 
-<p>خوب برای نصب داکر یه مشکلی هست و اونم این که داکر در ایران تحریم  و اگه سرور شما برای ایران باشه  میتونید dns خودتون رو عوض کنین تا بتونین داکر رو نصب کنید .</p>
+<p>خوب برای نصب داکر یه مشکلی هست و اونم این که داکر در ایران تحریم  و اگه سرور شما برای ایران باشه نمیتونین docker رو نصب کنید پس برای راه حل این قضیه میتونید dns خودتون رو عوض کنین تا بتونین داکر رو نصب کنید .</p>
 
-<p><strong>اگه سرور شما برای ایران میباشد مراحل زیر رو طی کنید :</strong></p>
+<p><strong>(اگه سرور شما برای ایران میباشد مراحل زیر رو طی کنید)</strong></p>
 
 <p>برای عوض کردن dns سرور دستور زیر رو وارد کنید :</p>
 
-<pre><code>sudo nano etc/resolv.conf
+<pre><code>$   sudo nano etc/resolv.conf
 </code></pre>
 
 <p>در ویراشگر متن تمام nameserver هارو پاک کنید و این ۲ مقادیر رو وارد کنید :</p>
@@ -75,20 +75,36 @@ nameserver 185.51.200.2
 
 <h4 id="نصب_docker_:">نصب Docker :</h4>
 
-<pre><code>sudo apt install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-sudo apt update
-apt-cache policy docker-ce
-sudo apt install docker-ce
+<p>برای نصب داکر بروی سرور دستورات زیر رو وارد کنید :</p>
+
+<p><strong>(دقت کنید دستورات رو به ترتیب وارد کنید)</strong></p>
+
+<pre><code>$   sudo apt install apt-transport-https ca-certificates curl software-properties-common
+$   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+</code></pre>
+
+<p>سپس دستورات زیر رو وارد کنید :</p>
+
+<pre><code>$   sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+</code></pre>
+
+<p>و در اخر دستورات زیر رو وارد کنید :</p>
+
+<pre><code>$   sudo apt update
+$   apt-cache policy docker-ce
+$   sudo apt install docker-ce
 </code></pre>
 
 <h4 id="نصب_docker-compose_:">نصب docker-compose :</h4>
 
 <p>حال نیازمند نصب docker-compose هستیم . برای این کار هم دستورات زیر رو وارد کنید :</p>
 
-<pre><code>sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+<pre><code>$   sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+</code></pre>
+
+<p>پس از دانلود docker-compose با استفاده از دستور بالا ٬ دستور زیر را وارد کنید :</p>
+
+<pre><code>$   sudo chmod +x /usr/local/bin/docker-compose
 </code></pre>
 
 <p>برای اینکه بفهمیم docker-compose به درستی نصب شده دستور زیر رو وارد کنید :</p>
@@ -241,7 +257,7 @@ Creating gitea_server_1   ... done
 <p>در صفحه gitea از منوی register یه اکانت کاربری برای خودتون بسازین و پس از وارد شدن با اون اکانت میتونین از منوی بالای صفحه برا خودتون یک repository بسازین و ازش استفاده کنید .</p>]]></content>
 
     <summary>
-    &lt;p&gt;در پی این تحریم هایی که github برای ایرانی ها اعمال کرده دیگه کاربران ایرانی اجازه ساخت repository به صورت private ندارن و همچنین با توجه به فیلتر بودن gitlab تصمیم گرفتم تا یه سرور گیت شخصی برای خودم راه اندازی کنم و بعد از کلی تست ابزارهای مختلف در اخر به بهترین گزینه موجود که با کمترین دردسر میشه ازش استفاده کرد رسیدم ٬ چیزی به اسم Gitea .
+    &lt;p&gt;در پی تحریم هایی که github برای ایرانی ها اعمال کرده دیگه کاربران ایرانی اجازه ساخت repository به صورت private ندارن و همچنین با توجه به فیلتر بودن gitlab تصمیم گرفتم تا یه سرور گیت شخصی برای خودم راه اندازی کنم و بعد از کلی تست ابزارهای مختلف در اخر به بهترین گزینه موجود که با کمترین دردسر میشه ازش استفاده کرد رسیدم ٬ چیزی به اسم Gitea .
 
 من تو این بلاگ پست قصد دارم مراحل ساخت  یه  گیت سرور شخصی با استفاده از Gitea رو که طی کردم با شما به اشتراک بزارم .
 
@@ -252,7 +268,7 @@ Creating gitea_server_1   ... done
 ubuntu server  : من تو این اموزش از ubuntu server 18.04 استفاده کردم 
 nginx
 نصب داکر بروی سرور
-داش&lt;/p&gt;
+داشتن ح&lt;/p&gt;
     </summary>
   </entry>
   
