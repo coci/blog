@@ -5,7 +5,7 @@
   <link href="https://koky.ir/python//feed.xml" rel="self"/>
   <link href="https://koky.ir/python/"/>
 
-  <updated>2020-01-20T16:28:18+0330</updated>
+  <updated>2020-01-20T16:29:18+0330</updated>
   <id>https://koky.ir/python/</id>
   
   <author>
@@ -252,7 +252,7 @@ def generator1():
     <updated>2018-02-24T18:38:25+0330</updated>
 
     <content type="html"><![CDATA[<a name="more"></a>
-<p><img src="/farsi/images/blockchain.jpg" alt="block" id="block"></p>
+<p><img src="/python/images/blockchain.jpg" alt="block" id="block"></p>
 
 <h3 id="یادگیری_بلاکچین_با_ساختن_یک_بلاکچین">یادگیری بلاکچین با ساختن یک بلاکچین</h3>
 
