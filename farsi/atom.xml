@@ -5,7 +5,7 @@
   <link href="https://koky.ir/farsi//feed.xml" rel="self"/>
   <link href="https://koky.ir/farsi/"/>
 
-  <updated>2020-01-22T19:22:53+0330</updated>
+  <updated>2020-01-22T19:31:26+0330</updated>
   <id>https://koky.ir/farsi/</id>
   
   <author>
@@ -145,6 +145,7 @@ $   cd gitea/
 
 <ul>
 <li>در پست های بعدی در مورد داکر و docker-compose مطالبی قرار میدم .</li>
+<li>در قسمت DB_NAME و DB_PASSWD اسم دیتابیس و پسورد دلخواه خودتون رو وارد کنید و همچنین در POSTGRES_DB و POSTGRES_PASSWORD همون اطلاعات رو قرار بدین .</li>
 </ul>
 
 <pre><code class="language-python">version: "3"
