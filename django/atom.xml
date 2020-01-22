@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-01-22T18:49:33+0330</updated>
+  <updated>2020-01-22T19:10:47+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -95,6 +95,7 @@ class Comment(forms.ModelForm):
 <ul>
 <li>دقت کنید در قسمت form.comment شما اول باید به جای form اسم فرم خودتون رو که به html فرستادین وارد کنید و به جای comment باید اسم فیلد ( رو که در forms.py قراردادین ) در این قسمت هم قرار بدین . </li>
 <li>برای استفاده ازین روش شما برای تک تک فیلدهای form  کد زیر رو وارد کنید :( فقط توی هرکدوم باید بعد از نام فرم ٬ اسم فیلد رو به صورت دستی وارد کنید)</li>
+<li>در اصل شما فقط جای input هاتون ازین باید استفاده کنید و بقیه کدهای html مثل div رو متونین قرار بدین</li>
 </ul>
 
 <pre><code>{% render_field form.comment type="text" class="form-control4"%}
