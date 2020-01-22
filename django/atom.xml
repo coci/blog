@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-01-22T19:10:47+0330</updated>
+  <updated>2020-01-22T19:22:53+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -216,7 +216,7 @@ $   pip install django-widget-tweaks
 
 <p>اگه یه یادتون باشه در قسمت مقدمه گفتم من استفاده از جنگو رو به ۲ قسمت تقسیم میکنم ٬ تمام مراحل بالا در اصل قسمت اول بود و برای قسمت دوم ( در صورت علاقه و نیاز) که طراحی و توسعه api بود میتونین از پیکیج django rest framework که یکی از بهترین پیکیج های جنگو میباشد استفاده کنید و برای یادگرفتنش بازهم من خود سایتش و هم یه کتاب که در زیر اسم و لینکشون رو قرار میدم توصیه میکنم .</p>
 
-<p>سایت django rest framework :</p>
+<p>لینک سایت django rest framework :</p>
 
 <p><a href="https://www.django-rest-framework.org">سایت django rest framework</a></p>
 
