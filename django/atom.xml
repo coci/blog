@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-01-22T16:12:01+0330</updated>
+  <updated>2020-01-22T16:12:45+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>اضافه کردن css به فرم جنگو</title>
-    <link href="https://koky.ir/django//اضافه-کردن-css-به-فرم-جنگو/"/>
-    <id>https://koky.ir/django//اضافه-کردن-css-به-فرم-جنگو/</id>
+    <link href="https://koky.ir/django//how-to-add-css-to-form-django/"/>
+    <id>https://koky.ir/django//how-to-add-css-to-form-django/</id>
 
     <published>2020-01-22T15:15:25+0330</published>
     <updated>2020-01-22T15:15:25+0330</updated>
