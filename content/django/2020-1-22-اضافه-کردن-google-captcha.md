@@ -1,7 +1,7 @@
 ---
 utid: 20200122103534
 date: 2020-01-22 10:35:34
-title: google captcha اضافه کردن
+title: اضافه کردن google captcha 
 _index: add-google-captcha-django
 categories:
   -
