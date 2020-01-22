@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-01-22T11:08:37+0330</updated>
+  <updated>2020-01-22T16:12:01+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -14,6 +14,110 @@
     
   <generator>Mira</generator>
 
+  
+  <entry>
+    <title>اضافه کردن css به فرم جنگو</title>
+    <link href="https://koky.ir/django//اضافه-کردن-css-به-فرم-جنگو/"/>
+    <id>https://koky.ir/django//اضافه-کردن-css-به-فرم-جنگو/</id>
+
+    <published>2020-01-22T15:15:25+0330</published>
+    <updated>2020-01-22T15:15:25+0330</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+<p>یکی از مشکلاتی که دولوپر های جنگو دارن این که به فیلدهای فرمی که خود جنگو براشون میسازه نمیتونن style با استفاده از css بدن . توی این پست قصد دارم اموزش اینکه چطور میشه به فیلدهای فرم جنگو٬ style با استفاده از css اضافه کرد رو با شما به اشتراک بزارم .</p>
+
+<p>( قطعا راه های زیادی برای این کار وجود داره و هدف این پست این هست که راه کم دردسر که من باهاش پیش میرم رو به اشتراک بزارم )</p>
+
+<h4 id="نصب_package_مورد_نیاز_:">نصب package مورد نیاز :</h4>
+
+<p>برای این کار شما باید یه package که برای django ساخته شده رو نصب کنید . برای اینکار دستور زیر رو وارد کنید :</p>
+
+<pre><code>$   pip install django-widget-tweaks
+</code></pre>
+
+<p>و پس از پایان نصب package بالا در settings.py پروژه در قسمت INSTALLED_APPS پیکیج رو به شکل زیر اضافه کنید :</p>
+
+<pre><code>#settings.py
+
+INSTALLED_APPS = [
+    ......
+    'widget_tweaks',
+    ......
+]
+</code></pre>
+
+<p>کار نصب تمام است و در ادامه همراه باشید تا طریقه استفاده ازش رو بگم .</p>
+
+<h4 id="طریقه_استفاده_از_widget_tweaks_:">طریقه استفاده از widget_tweaks :</h4>
+
+<p>فایل forms.py زیر رو در نظر بگیرید :</p>
+
+<pre><code>#myapp/forms.py
+
+
+from django import forms
+from .models import Comment
+
+class Comment(forms.ModelForm):
+
+    comment = forms.CharField(label='',required=True)
+
+    class Meta:
+        model = Comment
+        fields = ['comment']
+</code></pre>
+
+<p>حالا فرض کنید من میخوام این فرم رو توی صفحه html با استفاده از css در اصل بهش style اضافه کنم . دراولین گام باید  widget_tweaks رو در صفحه مورد نظر فراخونی کنیم :</p>
+
+<pre><code>{% load widget_tweaks %}
+</code></pre>
+
+<p>حالا برای اضافه کردن style به فیلدهای فرم باید مثل زیر عمل کنید :</p>
+
+<pre><code># myapp/templates/myapp/index.html
+
+{% load widget_tweaks %}
+
+&lt;form action="" method=""&gt;
+    {% csrf_token %}
+
+    {% render_field form.comment type="text" class="form-control4"%}
+
+    &lt;button type="submit"&gt;save&lt;/button&gt;
+
+&lt;/form&gt;
+</code></pre>
+
+<p>اگه دقت کنید در کد بالا و در قسمت {% render_field form.comment type="text" class="form-control4"%}  من یه class اضافه کردم که شما میتونین در جلوی اون هر style رو که میخواین قرار بدین .</p>
+
+<p>به چند نکته در مورد کد بالا باید دقت کنید :</p>
+
+<ul>
+<li>دقت کنید در قسمت form.comment شما اول باید به جای form اسم فرم خودتون رو که به html فرستادین وارد کنید و به جای comment باید اسم فیلد ( رو که در forms.py قراردادین ) در این قسمت هم قرار بدین . </li>
+<li>برای استفاده ازین روش شما برای تک تک فیلدهای form  کد زیر رو وارد کنید :( فقط توی هرکدوم باید بعد از نام فرم ٬ اسم فیلد رو به صورت دستی وارد کنید)</li>
+</ul>
+
+<pre><code>{% render_field form.comment type="text" class="form-control4"%}
+</code></pre>
+
+<p>در اخرم امیدوارم این پست کمکتون کرده باشه . در صورت هرگونه مشکل و سوال میتونین از قسمت نظرات در زیر این پست بنده رو در جریان قرار بدین تا بتونم کمکتون کنم .</p>
+
+<p>موفق باشین .</p>]]></content>
+
+    <summary>
+    &lt;p&gt;یکی از مشکلاتی که دولوپر های جنگو دارن این که به فیلدهای فرمی که خود جنگو براشون میسازه نمیتونن style با استفاده از css بدن . توی این پست قصد دارم اموزش اینکه چطور میشه به فیلدهای فرم جنگو٬ style با استفاده از css اضافه کرد رو با شما به اشتراک بزارم .
+
+( قطعا راه های زیادی برای این کار وجود داره و هدف این پست این هست که راه کم دردسر که من باهاش پیش میرم رو به اشتراک بزارم )
+
+نصب package مورد نیاز :
+
+برای این کار شما باید یه package که برای django ساخته شده رو نصب کنید . برای اینکار دستور زیر رو وارد کنید :
+
+$   pip install django-widget-tweaks
+
+و پس از پایان نصب package بالا در settings.py پرو&lt;/p&gt;
+    </summary>
+  </entry>
   
   <entry>
     <title>اضافه کردن google captcha</title>
