@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="Farsi">
+<head>
+  <title>سروش صفری | google captcha اضافه کردن</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="سلام ، این وبلاگ منه">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="google captcha اضافه کردن">
+  <meta property="og:url" content="https://koky.ir/django/">
+  <meta property="og:site_name" content="سروش صفری">
+  <meta property="og:description" content="&lt;p&gt;اضافه کردن google captcha :
+
+امروزتوی پست قصد دارم اموزش اضافه کردن google captcha رو با شما به اشتراک بزارم .
+
+گوگل captcha یکی از معروف ترین راه حل ها برای جلوگیری از bot و spam هست و پیاده سازی خیلی راحتی داره .
+
+ثبت سایت در گوگل :
+
+در اولین گام نیازمند اضافه کردن دامنه خودمون توی سایت google هستیم . برای این کار وارد لینک زیر بشین :
+
+captcha google
+
+و پس از وارد شدن با حساب google خودتون باید صفحه مانند زیر رو ببینید :
+
+دکمه + بالای صفحه رو بزنین و اطلاعات رو مانند عکس زیر پر کنید :
+
+به جای label که من نوشتم test شما یک اسم دلخواه وارد کنید .
+به جای قسمت domains شما باید ادرس دامنه خودتون &lt;/p&gt;">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="google captcha اضافه کردن">
+  <meta name="twitter:description" content="&lt;p&gt;اضافه کردن google captcha :
+
+امروزتوی ...">
+
+  <link rel="alternative" href="/djangoatom.xml" title="سروش صفری" type="application/atom+xml">
+  <link rel="short icon" href="">
+  <link rel="stylesheet" href="/static/theme/sallar/css/style.css" type="text/css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115996537-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-115996537-1');
+	</script>
+
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <section class="container">
+    <nav>
+      <h1>
+        <a href="/" class="logo">سروش صفری</a>
+      </h1>
+      <ul>
+        
+
+          <li><a href="/python/" target="python">آموزش پایتون</a></li>
+          <li><a href="/django" target="django">آموزش جنگو</a></li>
+          <li><a href="/farsi/">فارسی</a></li>
+          <li><a href="/blog">English</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+</header>
+<!-- /Header -->
+
+<section id="content" class="container">
+
+  <article id="add-google-captcha-django" class="article article-type-post" itemscope itemprop="blogPost">
+    <h2 class="title" itemprop="name">google captcha اضافه کردن</h2>
+
+    
+      <h4 class="time">
+    <time datetime="2020-01-22 10:35:34" itemprop="datePublished">چهارشنبه، ۰۲ بهمن ۱۳۹۸</time>
+  </h4>
+    
+
+    <section class="content">
+    <a name="more"></a>
+<h3 id="اضافه_کردن_google_captcha_:">اضافه کردن google captcha :</h3>
+
+<p>امروزتوی پست قصد دارم اموزش اضافه کردن google captcha رو با شما به اشتراک بزارم .</p>
+
+<p>گوگل captcha یکی از معروف ترین راه حل ها برای جلوگیری از bot و spam هست و پیاده سازی خیلی راحتی داره .</p>
+
+<h4 id="ثبت_سایت_در_گوگل_:">ثبت سایت در گوگل :</h4>
+
+<p>در اولین گام نیازمند اضافه کردن دامنه خودمون توی سایت google هستیم . برای این کار وارد لینک زیر بشین :</p>
+
+<p><a href="https://www.google.com/recaptcha/admin">captcha google</a></p>
+
+<p>و پس از وارد شدن با حساب google خودتون باید صفحه مانند زیر رو ببینید :</p>
+
+<p><img src="/django/images/captcha1.jpg" alt="block" id="block"></p>
+
+<p>دکمه + بالای صفحه رو بزنین و اطلاعات رو مانند عکس زیر پر کنید :</p>
+
+<ul>
+<li>به جای label که من نوشتم test شما یک اسم دلخواه وارد کنید .</li>
+<li>به جای قسمت domains شما باید ادرس دامنه خودتون رو وارد کنید .</li>
+</ul>
+
+<p><img src="/django/images/captcha2.jpg" alt="block" id="block"></p>
+
+<p>بعد از اتمام مراحل بالا سایت گوگل یه کدی رو به شما میده که باید اون رو وارد جنگو کنیم . حالا وارد settings.py پروژه بشین و در پایین صفحه کد زیر رو وارد کنید :</p>
+
+<p>( دقت کنید شما در اینجا به جای 6LdRSRYUAAAAAOnk5yom باید کد خودتون رو وارد کنید )</p>
+
+<pre><code>GOOGLE_RECAPTCHA_SECRET_KEY = '6LdRSRYUAAAAAOnk5yom'
+</code></pre>
+
+<p>#### پیاده سازی :</p>
+
+<p>حالا وقتش رسیده google captcha رو به template مورد نظر وارد کنیم . فرض کنید من در این صفحه یک فرم دارم که میخوام هربار کاربر بخواد این فرم رو پر کنه باید google captcha رو تایید کنه .</p>
+
+<ul>
+<li>در کد پایین در جلوی data-sitekey شما باید کد که از گوگل دریافت کردید و داخل settings.py وارد کردید رو در این قسمت هم وارد کنید</li>
+</ul>
+
+<pre><code> #myapp/templates/index.html
+
+ &lt;form method="post"&gt;
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    &lt;script src='https://www.google.com/recaptcha/api.js'&gt;&lt;/script&gt;
+    &lt;div class="g-recaptcha" data-sitekey="6LdRSRYUAAAAAFCqQ1aZnYfRGJIlAUMX3qkUWlcF"&gt;&lt;/div&gt;
+
+    &lt;button type="submit" class="btn btn-primary"&gt;Post&lt;/button&gt;
+  &lt;/form&gt;
+</code></pre>
+
+<p>حالا در views.py مربوط به همین template کدهای زیر رو وارد کنید :</p>
+
+<pre><code>import urllib
+import urllib2
+import json
+
+from django.shortcuts import render, redirect
+from django.conf import settings
+from django.contrib import messages
+
+from .models import Comment
+from .forms import CommentForm
+
+
+def comments(request):
+    comments_list = Comment.objects.order_by('-created_at')
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+
+            ''' Begin reCAPTCHA validation '''
+            recaptcha_response = request.POST.get('g-recaptcha-response')
+            url = 'https://www.google.com/recaptcha/api/siteverify'
+            values = {
+                'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                'response': recaptcha_response
+            }
+            data = urllib.urlencode(values)
+            req = urllib2.Request(url, data)
+            response = urllib2.urlopen(req)
+            result = json.load(response)
+            ''' End reCAPTCHA validation '''
+
+            if result['success']:
+                form.save()
+                messages.success(request, 'New comment added with success!')
+            else:
+                messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+
+            return redirect('comments')
+    else:
+        form = CommentForm()
+
+    return render(request, 'core/comments.html', {'comments': comments_list, 'form': form})
+</code></pre>
+
+<p>کار تمام است . اما یه توضیحی بدم که روند کار به چه شکل هست . در function بالا در مرحله اول اطلاعات رو برای google میفرستیم اگه captcha توسط کاربر به درستی زده شده باشه یه True و اگه اشتباه باشه False به ما برگشت داده میشه . حالا ما با دستور :</p>
+
+<pre><code>if result['success']:
+</code></pre>
+
+<p>میام چک میکنیم که ایا True هست و در صورت True بودن response از سمت گوگل میایم دیتا رو وارد دیتابیس میکنیم و در غیر این صورت به کاربر پیامی مبنی در بر اینکه google captcha رو نزده یا اشتباه وارد کرده میدیم .</p>
+
+<p>موفق باشید .</p>
+  </section>
+
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_twitter"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+    
+      <script>
+var idcomments_acct = 'edab4112dbf8f45d3904228b8f395f7d';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+    
+  </article>
+
+</section>
+
+<!-- Paging -->
+<section class="pagination">
+  <nav class="container">
+    
+      <a></a>
+    
+      <a class="extend next" rel="next" href="/django/how-deploy-django/">
+        <i>-></i>
+        <span>نحوه دیپلوی کردن پروژه جنگو</span>
+      </a>
+  </nav>
+</section>
+<!-- /Paging -->
+
+<!-- /Content -->
+<!-- Footer -->
+<footer>
+    <!--<section class="copyright">
+
+    </section>-->
+    <section class="container">
+      <div class="delimiter">
+        <a href="/" class="logo">
+          <img src="/static/theme/sallar/img/logo.svg">
+        </a>
+      </div>
+      <p>
+        
+          ۱۳۹۸<br>
+          مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+        
+        <br>
+        powered with 💜 by <a href="https://miraxy.github.io">Mira</a>
+      </p>
+    </section>
+</footer>
+<!-- /Footer -->
+
+<!-- Scripts -->
+<script src="/static/theme/sallar/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

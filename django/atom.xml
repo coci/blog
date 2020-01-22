@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-01-21T14:44:57+0330</updated>
+  <updated>2020-01-22T11:05:14+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -14,6 +14,146 @@
     
   <generator>Mira</generator>
 
+  
+  <entry>
+    <title>google captcha اضافه کردن</title>
+    <link href="https://koky.ir/django//add-google-captcha-django/"/>
+    <id>https://koky.ir/django//add-google-captcha-django/</id>
+
+    <published>2020-01-22T10:35:34+0330</published>
+    <updated>2020-01-22T10:35:34+0330</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+<h3 id="اضافه_کردن_google_captcha_:">اضافه کردن google captcha :</h3>
+
+<p>امروزتوی پست قصد دارم اموزش اضافه کردن google captcha رو با شما به اشتراک بزارم .</p>
+
+<p>گوگل captcha یکی از معروف ترین راه حل ها برای جلوگیری از bot و spam هست و پیاده سازی خیلی راحتی داره .</p>
+
+<h4 id="ثبت_سایت_در_گوگل_:">ثبت سایت در گوگل :</h4>
+
+<p>در اولین گام نیازمند اضافه کردن دامنه خودمون توی سایت google هستیم . برای این کار وارد لینک زیر بشین :</p>
+
+<p><a href="https://www.google.com/recaptcha/admin">captcha google</a></p>
+
+<p>و پس از وارد شدن با حساب google خودتون باید صفحه مانند زیر رو ببینید :</p>
+
+<p><img src="/django/images/captcha1.jpg" alt="block" id="block"></p>
+
+<p>دکمه + بالای صفحه رو بزنین و اطلاعات رو مانند عکس زیر پر کنید :</p>
+
+<ul>
+<li>به جای label که من نوشتم test شما یک اسم دلخواه وارد کنید .</li>
+<li>به جای قسمت domains شما باید ادرس دامنه خودتون رو وارد کنید .</li>
+</ul>
+
+<p><img src="/django/images/captcha2.jpg" alt="block" id="block"></p>
+
+<p>بعد از اتمام مراحل بالا سایت گوگل یه کدی رو به شما میده که باید اون رو وارد جنگو کنیم . حالا وارد settings.py پروژه بشین و در پایین صفحه کد زیر رو وارد کنید :</p>
+
+<p>( دقت کنید شما در اینجا به جای 6LdRSRYUAAAAAOnk5yom باید کد خودتون رو وارد کنید )</p>
+
+<pre><code>GOOGLE_RECAPTCHA_SECRET_KEY = '6LdRSRYUAAAAAOnk5yom'
+</code></pre>
+
+<p>#### پیاده سازی :</p>
+
+<p>حالا وقتش رسیده google captcha رو به template مورد نظر وارد کنیم . فرض کنید من در این صفحه یک فرم دارم که میخوام هربار کاربر بخواد این فرم رو پر کنه باید google captcha رو تایید کنه .</p>
+
+<ul>
+<li>در کد پایین در جلوی data-sitekey شما باید کد که از گوگل دریافت کردید و داخل settings.py وارد کردید رو در این قسمت هم وارد کنید</li>
+</ul>
+
+<pre><code> #myapp/templates/index.html
+
+ &lt;form method="post"&gt;
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    &lt;script src='https://www.google.com/recaptcha/api.js'&gt;&lt;/script&gt;
+    &lt;div class="g-recaptcha" data-sitekey="6LdRSRYUAAAAAFCqQ1aZnYfRGJIlAUMX3qkUWlcF"&gt;&lt;/div&gt;
+
+    &lt;button type="submit" class="btn btn-primary"&gt;Post&lt;/button&gt;
+  &lt;/form&gt;
+</code></pre>
+
+<p>حالا در views.py مربوط به همین template کدهای زیر رو وارد کنید :</p>
+
+<pre><code>import urllib
+import urllib2
+import json
+
+from django.shortcuts import render, redirect
+from django.conf import settings
+from django.contrib import messages
+
+from .models import Comment
+from .forms import CommentForm
+
+
+def comments(request):
+    comments_list = Comment.objects.order_by('-created_at')
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+
+            ''' Begin reCAPTCHA validation '''
+            recaptcha_response = request.POST.get('g-recaptcha-response')
+            url = 'https://www.google.com/recaptcha/api/siteverify'
+            values = {
+                'secret': settings.GOOGLE_RECAPTCHA_SECRET_KEY,
+                'response': recaptcha_response
+            }
+            data = urllib.urlencode(values)
+            req = urllib2.Request(url, data)
+            response = urllib2.urlopen(req)
+            result = json.load(response)
+            ''' End reCAPTCHA validation '''
+
+            if result['success']:
+                form.save()
+                messages.success(request, 'New comment added with success!')
+            else:
+                messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+
+            return redirect('comments')
+    else:
+        form = CommentForm()
+
+    return render(request, 'core/comments.html', {'comments': comments_list, 'form': form})
+</code></pre>
+
+<p>کار تمام است . اما یه توضیحی بدم که روند کار به چه شکل هست . در function بالا در مرحله اول اطلاعات رو برای google میفرستیم اگه captcha توسط کاربر به درستی زده شده باشه یه True و اگه اشتباه باشه False به ما برگشت داده میشه . حالا ما با دستور :</p>
+
+<pre><code>if result['success']:
+</code></pre>
+
+<p>میام چک میکنیم که ایا True هست و در صورت True بودن response از سمت گوگل میایم دیتا رو وارد دیتابیس میکنیم و در غیر این صورت به کاربر پیامی مبنی در بر اینکه google captcha رو نزده یا اشتباه وارد کرده میدیم .</p>
+
+<p>موفق باشید .</p>]]></content>
+
+    <summary>
+    &lt;p&gt;اضافه کردن google captcha :
+
+امروزتوی پست قصد دارم اموزش اضافه کردن google captcha رو با شما به اشتراک بزارم .
+
+گوگل captcha یکی از معروف ترین راه حل ها برای جلوگیری از bot و spam هست و پیاده سازی خیلی راحتی داره .
+
+ثبت سایت در گوگل :
+
+در اولین گام نیازمند اضافه کردن دامنه خودمون توی سایت google هستیم . برای این کار وارد لینک زیر بشین :
+
+captcha google
+
+و پس از وارد شدن با حساب google خودتون باید صفحه مانند زیر رو ببینید :
+
+دکمه + بالای صفحه رو بزنین و اطلاعات رو مانند عکس زیر پر کنید :
+
+به جای label که من نوشتم test شما یک اسم دلخواه وارد کنید .
+به جای قسمت domains شما باید ادرس دامنه خودتون &lt;/p&gt;
+    </summary>
+  </entry>
   
   <entry>
     <title>نحوه دیپلوی کردن پروژه جنگو</title>
