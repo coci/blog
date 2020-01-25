@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-01-25T18:48:07+0330</updated>
+  <updated>2020-01-25T19:12:18+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -14,6 +14,22 @@
     
   <generator>Mira</generator>
 
+  
+  <entry>
+    <title>اموزش location در جنگو</title>
+    <link href="https://koky.ir/django//اموزش-location-در-جنگو/"/>
+    <id>https://koky.ir/django//اموزش-location-در-جنگو/</id>
+
+    <published>2020-01-25T19:12:08+0330</published>
+    <updated>2020-01-25T19:12:08+0330</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+]]></content>
+
+    <summary>
+    &lt;p&gt;&lt;/p&gt;
+    </summary>
+  </entry>
   
   <entry>
     <title>اضافه کردن css به فرم جنگو</title>
