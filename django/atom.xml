@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-01-30T18:29:32+0330</updated>
+  <updated>2020-01-30T18:30:48+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -16,7 +16,7 @@
 
   
   <entry>
-    <title>استفاده بهینه تر از enum در جنگو</title>
+    <title>استفاده بهینه تر از enum در مدل django</title>
     <link href="https://koky.ir/django//use-enum-in-model/"/>
     <id>https://koky.ir/django//use-enum-in-model/</id>
 
