@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-01-25T19:12:18+0330</updated>
+  <updated>2020-01-30T14:11:16+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -16,18 +16,102 @@
 
   
   <entry>
-    <title>اموزش location در جنگو</title>
-    <link href="https://koky.ir/django//اموزش-location-در-جنگو/"/>
-    <id>https://koky.ir/django//اموزش-location-در-جنگو/</id>
+    <title>استفاده از enum در مدل</title>
+    <link href="https://koky.ir/django//use-enum-in-model/"/>
+    <id>https://koky.ir/django//use-enum-in-model/</id>
 
-    <published>2020-01-25T19:12:08+0330</published>
-    <updated>2020-01-25T19:12:08+0330</updated>
+    <published>2020-01-30T13:53:37+0330</published>
+    <updated>2020-01-30T13:53:37+0330</updated>
 
     <content type="html"><![CDATA[<a name="more"></a>
-]]></content>
+<p>یکی از قابلیت های مهم اضافه شده به dajngo 3.0 قابلیت استفاده از enum در field choices هست که بهترین راه تعریف choice در مدل هست .</p>
+
+<p>در گذشته خود django برای فیلد هایی که choice داشتن پیشنهاد میکرد چندتا constant توی کلاس مدل بسازیم  ( به شکل زیر) :</p>
+
+<pre><code>from django.db import models
+
+class Book(models.Model):
+    UNPUBLISHED = 'UN'
+    PUBLISHED = 'PB'
+    STATUS_CHOICES = [
+        (UNPUBLISHED, 'Unpublished'),
+        (PUBLISHED, 'Published'),
+    ]
+    status = models.CharField(
+        max_length=2,
+        choices=STATUS_CHOICES,
+        default=UNPUBLISHED,
+    )
+</code></pre>
+
+<p>و بعد شما میتونستین ازین constant ها به شکل زیر استفاده کنید :</p>
+
+<pre><code>unpublished_books = Book.objects.filter(status=Book.UNPUBLISHED)
+</code></pre>
+
+<p>اما پیکیج هایی مثل django-choices و یا django-enumfields ساخته شدن تا کار رو برای ما راحت کنن .</p>
+
+<p>اما حالا در django 3.0 کلاس Choices اضافه شده با ۲ تا subclass که یکیش IntegerChoices هست و دیگری TextChoices هست .</p>
+
+<p>حالا ما با استفاده از این کلاس جدید میتونیم مثال بالا رو به شکل زیر تغییر بدیم :</p>
+
+<pre><code>from django.db import models
+
+
+class Status(models.TextChoices):
+    UNPUBLISHED = 'UN', 'Unpublished'
+    PUBLISHED = 'PB', 'Published'
+
+
+class Book(models.Model):
+    status = models.CharField(
+        max_length=2,
+        choices=Status.choices,
+        default=Status.UNPUBLISHED,
+    )
+</code></pre>
+
+<p>و حالا quryset ما به شکل زیر تغییر پیدا میکنه :</p>
+
+<pre><code>unpublished_books = Book.objects.filter(status=Status.UNPUBLISHED)
+</code></pre>
+
+<p>و به راحتی میتونیم اون رو print کنیم :</p>
+
+<pre><code>In [2]: book = Book.objects.latest('id')
+
+In [3]: Status(book.status)
+Out[3]: &lt;Status.UNPUBLISHED: 'UN'&gt;
+
+In [4]: Status(book.status).label
+Out[4]: 'Unpublished'
+</code></pre>
+
+<p>خیلی ساده و تمیز تر .</p>
+
+<p>در دامیومنت خود سایت django متونین اطلاعات تکمیلی رو در مورد <a href="https://docs.djangoproject.com/en/3.0/ref/models/fields/#enumeration-types">Enumeration types</a>  پیدا کنید .</p>]]></content>
 
     <summary>
-    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;یکی از قابلیت های مهم اضافه شده به dajngo 3.0 قابلیت استفاده از enum در field choices هست که بهترین راه تعریف choice در مدل هست .
+
+در گذشته خود django برای فیلد هایی که choice داشتن پیشنهاد میکرد چندتا constant توی کلاس مدل بسازیم  ( به شکل زیر) :
+
+from django.db import models
+
+class Book(models.Model):
+    UNPUBLISHED = 'UN'
+    PUBLISHED = 'PB'
+    STATUS_CHOICES = [
+        (UNPUBLISHED, 'Unpublished'),
+        (PUBLISHED, 'Published'),
+    ]
+    status = models.CharField(
+        max_length=2,
+        choices=STATUS_CHOICES,
+        default=UNPUBLISHED,
+    )
+
+و بعد شما میتونستین ازین cons&lt;/p&gt;
     </summary>
   </entry>
   
