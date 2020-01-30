@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-01-30T17:48:56+0330</updated>
+  <updated>2020-01-30T17:50:12+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -89,7 +89,7 @@ Out[4]: 'Unpublished'
 
 <p>خیلی ساده و تمیز تر .</p>
 
-<p>در دامیومنت خود سایت django متونین اطلاعات تکمیلی رو در مورد <a href="https://docs.djangoproject.com/en/3.0/ref/models/fields/#enumeration-types">Enumeration types</a>  پیدا کنید .</p>]]></content>
+<p>در داکیومنت خود سایت django متونین اطلاعات تکمیلی رو در مورد <a href="https://docs.djangoproject.com/en/3.0/ref/models/fields/#enumeration-types">Enumeration types</a>  پیدا کنید .</p>]]></content>
 
     <summary>
     &lt;p&gt;یکی از قابلیت های مهم اضافه شده به django 3.0 قابلیت استفاده از enum در field choices هست که بهترین راه تعریف choice در مدل هست .
