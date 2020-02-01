@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="Farsi">
+<head>
+  <title>سروش صفری | نحوه ساخت کوتاه کننده لینک در جنگو</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="سلام ، این وبلاگ منه">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="نحوه ساخت کوتاه کننده لینک در جنگو">
+  <meta property="og:url" content="https://koky.ir/django/">
+  <meta property="og:site_name" content="سروش صفری">
+  <meta property="og:description" content="&lt;p&gt;یکی از چیزهایی که خیلی برام چالش برانگیز و جذاب هست نحوه کار کوتاه کننده های لینک هست و تصمیم گرفتم با جنگو یدونه برای خودم بسازم و دیدم بد نیست مرحل کار و به اصطلاح logic که استفاده کردم توش رو با شما به اشتراک بزارم .
+
+کوتاه کننده های لینک چطور کار میکنند ؟
+
+کوتاه کننده های لینک در اصل یک string با طول زیاد رو تبدیل میکنند به یک سری از کاراکتر ها های فشرده و کوتاه که خیلی کوتاه تر از طول string ورودی هستند و برای این کار از hashing استفاده میکنند . در اصل اگه بخوام به صورت جز به جز توضیح بدم ٬ روال کار به این شکل هست که ما از کاربر link رو میگیریم و hash میکنیم و این hash رو در اصطلاح map می&lt;/p&gt;">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="نحوه ساخت کوتاه کننده لینک در جنگو">
+  <meta name="twitter:description" content="&lt;p&gt;یکی از چیزهایی که خیلی برام چالش برانگ...">
+
+  <link rel="alternative" href="/djangoatom.xml" title="سروش صفری" type="application/atom+xml">
+  <link rel="short icon" href="">
+  <link rel="stylesheet" href="/static/theme/sallar/css/style.css" type="text/css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115996537-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-115996537-1');
+	</script>
+
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <section class="container">
+    <nav>
+      <h1>
+        <a href="/" class="logo">سروش صفری</a>
+      </h1>
+      <ul>
+        
+
+          <li><a href="/python/" target="python">آموزش پایتون</a></li>
+          <li><a href="/django" target="django">آموزش جنگو</a></li>
+          <li><a href="/farsi/">فارسی</a></li>
+          <li><a href="/blog">English</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+</header>
+<!-- /Header -->
+
+<section id="content" class="container">
+
+  <article id="create-link-shortening-in-django" class="article article-type-post" itemscope itemprop="blogPost">
+    <h2 class="title" itemprop="name">نحوه ساخت کوتاه کننده لینک در جنگو</h2>
+
+    
+      <h4 class="time">
+    <time datetime="2020-02-01 12:36:33" itemprop="datePublished">شنبه، ۱۲ بهمن ۱۳۹۸</time>
+  </h4>
+    
+
+    <section class="content">
+    <a name="more"></a>
+<p>یکی از چیزهایی که خیلی برام چالش برانگیز و جذاب هست نحوه کار کوتاه کننده های لینک هست و تصمیم گرفتم با جنگو یدونه برای خودم بسازم و دیدم بد نیست مرحل کار و به اصطلاح logic که استفاده کردم توش رو با شما به اشتراک بزارم .</p>
+
+<h3 id="کوتاه_کننده_های_لینک_چطور_کار_میکنند__">کوتاه کننده های لینک چطور کار میکنند ؟</h3>
+
+<p>کوتاه کننده های لینک در اصل یک string با طول زیاد رو تبدیل میکنند به یک سری از کاراکتر ها های فشرده و کوتاه که خیلی کوتاه تر از طول string ورودی هستند و برای این کار از hashing استفاده میکنند . در اصل اگه بخوام به صورت جز به جز توضیح بدم ٬ روال کار به این شکل هست که ما از کاربر link رو میگیریم و hash میکنیم و این hash رو در اصطلاح map میکنیم به link اصلی ٬ کار تمام است .</p>
+
+<p><img src="/django/images/hash.jpg" alt="block" id="block"></p>
+
+<h4 id="چرا_از_hash_استفاده_میکنیم_در_صورتی_که_میتونیم_از_یه_string_که_random_هست_استفاده_کنیم__">چرا از hash استفاده میکنیم در صورتی که میتونیم از یه string که random هست استفاده کنیم ؟</h4>
+
+<p>خوب در نظر بگیرین به جای اینکه link اصلی رو hash کنیم ٬ بیایم یه string که random هست بسازیم و به link اصلی به اصطلاح map کنیم .</p>
+
+<p>در اینجا اگه دیتابیس ما دچار مشکل بشه دیگه نمیتونیم به string هایی که random ساختیم دسترسی داشته باشیم و در اصل کار پروژه تموم میشه :)</p>
+
+<p>یه نکته ای دیگه ای که هست این که hash ها برای هر ورودی متفاوت هستند و امکان نداری برای ۲ ورودی متفاوت یک مقدار یکسان تولید کنند پس به ما تضمین میدن هیچ وقت ۲ تا لینک متفاوت نمیتونند یه لینک کوتاه شده یکسان داشته باشن .</p>
+
+<h3 id="ساخت_مدل_مورد_نیاز_:">ساخت مدل مورد نیاز :</h3>
+
+<p>اصلی ترین قسمت پروژه نحوه ساخت تابع hash کننده هست . در زیر میتونین مدلی که برای این کار ساختم رو ببینین :</p>
+
+<pre><code>class URL(models.Model):
+    original_url = models.CharField(max_length=300, unique= True)
+    shortened_url = models.CharField(max_length=30, unique =  True)
+
+    def shorten_url(self):
+        self.shortened_url = self.__fnv_hash(self.original_url)
+
+        if(len(self.shortened_url) &gt;= len(self.original_url)):
+            self.shortened_url =  self.original_url
+
+
+    @staticmethod
+    def __fnv_hash(key):
+        h = 2166136261
+
+        for k in key:
+            h = (h*16777619)^ord(k)
+
+        # Return 8 bit URL
+        return base64.encode(h%281474976710656)
+
+    def __str__(self):
+        return models.Model.__str__(self)  
+</code></pre>
+
+<p>خوب میبینین که مدل من ۲ تا فیلد داره :</p>
+
+<ul>
+<li>link اصلی</li>
+<li>لینک کوتاه شده یا در اصل hash لینک اصلی</li>
+</ul>
+
+<p>در اینجا من یه مدلی ساختم و از کاربر لینک اصلی رو میگیرم و بعد با استفاده از تابع shorten_url در اصل hash لینک اصلی رو حساب میکنم و در فیلد  shortened_url میریزم . حال خود تابع shorten_url میاد از یه تابع private دیگه به اسم fnv_hash استفاده میکنه که اصل کار این هست و میاد یه ورودی میگیره و اون رو به hash تبدیل میکنه .</p>
+
+<p>در اینجا کار تمام است و حالا نیاز دارین چند تا view داشته باشین :</p>
+
+<ul>
+<li>یکی برای گرفتن ورودی link اصلی از کاربر و ساخت object از مدل URL</li>
+<li>یه view باید بسازین که مثلا اگه کاربر لینک زیر رو وارد کرد شما بیاین و قسمت sdfj23sdf رو در دیتابیس سرچ کنید ( این یه hash هست مثلا در فیلد shortened_url مدل URL ذخیره شده ) و باهاش به link اصلی برسین و در نهایت کاربران رو به link اصلی redirect کنید .</li>
+</ul>
+
+<pre><code>www.your_domain.com/sdfj23sdf
+</code></pre>
+
+<p>امیدوارم بدرد بخور بوده باشه و اگه مشکلی در پیاده سازی داشتین حتما در قسمت کامنت های این پست بیان کنید تا بتونم کمکی بهتون بکنم .</p>
+  </section>
+
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_twitter"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+    
+      <script>
+var idcomments_acct = 'edab4112dbf8f45d3904228b8f395f7d';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+    
+  </article>
+
+</section>
+
+<!-- Paging -->
+<section class="pagination">
+  <nav class="container">
+    
+      <a></a>
+    
+      <a class="extend next" rel="next" href="/django/use-enum-in-model/">
+        <i>-></i>
+        <span>استفاده بهینه تر از enum در مدل django</span>
+      </a>
+  </nav>
+</section>
+<!-- /Paging -->
+
+<!-- /Content -->
+<!-- Footer -->
+<footer>
+    <!--<section class="copyright">
+
+    </section>-->
+    <section class="container">
+      <div class="delimiter">
+        <a href="/" class="logo">
+          <img src="/static/theme/sallar/img/logo.svg">
+        </a>
+      </div>
+      <p>
+        
+          ۱۳۹۸<br>
+          مطالب تحت لیسانس <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">کریتیو کامنز</a> منتشر می‌شوند.
+        
+        <br>
+        powered with 💜 by <a href="https://miraxy.github.io">Mira</a>
+      </p>
+    </section>
+</footer>
+<!-- /Footer -->
+
+<!-- Scripts -->
+<script src="/static/theme/sallar/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
