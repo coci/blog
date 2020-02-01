@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-02-01T13:41:05+0330</updated>
+  <updated>2020-02-01T13:42:13+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -30,7 +30,7 @@
 
 <p>کوتاه کننده های لینک در اصل یک string با طول زیاد رو تبدیل میکنند به یک سری از کاراکتر ها های فشرده و کوتاه که خیلی کوتاه تر از طول string ورودی هستند و برای این کار از hashing استفاده میکنند . در اصل اگه بخوام به صورت جز به جز توضیح بدم ٬ روال کار به این شکل هست که ما از کاربر link رو میگیریم و hash میکنیم و این hash رو در اصطلاح map میکنیم به link اصلی ٬ کار تمام است .</p>
 
-<p><img src="/django/images/hash.jpg" alt="block" id="block"></p>
+<p><img src="/django/images/hash.jpg" alt="hash" id="hash"></p>
 
 <h4 id="چرا_از_hash_استفاده_میکنیم_در_صورتی_که_میتونیم_از_یه_string_که_random_هست_استفاده_کنیم__">چرا از hash استفاده میکنیم در صورتی که میتونیم از یه string که random هست استفاده کنیم ؟</h4>
 
