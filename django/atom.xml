@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-02-01T13:56:54+0330</updated>
+  <updated>2020-02-16T12:19:04+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -14,6 +14,212 @@
     
   <generator>Mira</generator>
 
+  
+  <entry>
+    <title>استفاده از JWT در جنگو</title>
+    <link href="https://koky.ir/django//use-jwt-in-django-api/"/>
+    <id>https://koky.ir/django//use-jwt-in-django-api/</id>
+
+    <published>2020-02-16T11:14:08+0330</published>
+    <updated>2020-02-16T11:14:08+0330</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+<p>سلام ٬ امروز قصد دارم روش استفاده از JWT در Django رو با شما عزیزان به اشتراک بزارم . به طور خلاصه اگه بخوام بگم JWT چی هست باید بگم که وقتی ما داریم API میسازیم برای اینکه بتونیم سیستم Authentication داشته باشیم از چندین راه میتونیم اینکار رو انجام بدیم مثل :</p>
+
+<ul>
+<li>سیستم Token خود Django Rest Framework</li>
+<li>سیستم JWT  یا همون Json Web Token</li>
+</ul>
+
+<h3 id="اصلا_token_چی_هست_:">اصلا Token چی هست :</h3>
+
+<p>قضیه ازین قرار است که توی سیستم هایی که از API  استفاده میکنند ( مثلا شما Back-end رو با Django میزنین و برای Front-end از فریمورک های java script مثل vue.js یا react استفاده میکنن ) دیگه نمیتونیم از session خود django استفاده کنیم پس اینجا  راه جایگزینی برای اینکار وجود داره و اونم چیزی هست به اسم Token ٬ جادی تو یکی از ویدیو هاش توکن رو اینطوری توضیح داد :</p>
+
+<p>" فرض کنین شما میرین یه کنسرت توی خارج از کشور و بار اول که وارد میشین بلیط رو نشون میدین تا بتونین وارد بشین و اونجا به شما یه دستبند میدن که مخصوص شما هست و هروقت خواستین میتونین از سالن خارج بشین و برای اینکه بتونین دوباره وارد بشین دیگه نیازی نیست بلیط رو نشون بدین و نشون دادن اون دستبند کفایت میکنه . در اصل اینجا اون دستنبد به نیروهای security اون کنسرت این اطمینان رو میده که شما مثلا فلانی هستین و اجازه ورود به سالن رو دارین  و قطعا بلیت هم دارین"</p>
+
+<p>پس Token این شکلی عمل میکنه که شما یه بار username و password رو وارد میکنین و به شما یه Token اختصاص داده میشه و ازین پس هربار بخواین هرکاری رو انجام بدین دیگه نیاز نیست Username و password رو وارد کنین و با نشون دادن اون Token میتونین کاری که میخواستین رو انجام بدین . این کار باعث میشه :</p>
+
+<ul>
+<li>از وارد کردن username و password برای هر کاری که میخواین انجام بدین جلوگیری بشه</li>
+<li>باعث میشه اگه End-point های شما لو رفت کسی نتونه ازش سو استفاده کنه ( چون token نداره)</li>
+</ul>
+
+<p>خوب الان دیگه می دونیم Token چی هست و چه کاربردی داره . من در بالا ۲ تا از چزایی که متونین سیستم Token برای Api های خودمون داشته باشیم رو ذکر کردم ( قطعا روش های دیگری هم وجود داره ) و امروز قصد دارم نحوه کار مورد دوم یا همون JWT رو با شما به اشتراک بزارم . پس در ادامه همراه باشین .</p>
+
+<h3 id="نصب_و_استفاده_از_jwt_در_django_rest_framework_:">نصب و استفاده از JWT در Django Rest Framework :</h3>
+
+<p>خوب در مرحله اول نیاز دارم JWT رو توی پروژه خودمون نصب کنیم که از دستور زیر میتونین برای اینکار استفاده کنین :</p>
+
+<pre><code>pip install djangorestframework-simplejwt
+</code></pre>
+
+<p>پس از پایان نصب دستورات زیر رو در فایل settings.py خود اضافه کنید :</p>
+
+<pre><code>REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        ...
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+
+}
+</code></pre>
+
+<p>حالا ما باید ۲ تا end-point بسازیم :</p>
+
+<ul>
+<li>یکی برای اینکه وقتی username و password کاربر رو بهش بفرستیم و Token مخصوص اون کاربر رو دریافت کنیم </li>
+<li>یکی برای وقتی که Token کاربر Expire شده ( منقضی شده ) و بتونیم دوباره Token جدید برای کاربر دریافت کنیم </li>
+</ul>
+
+<p>برای اینکار path های زیر رو به فایل urls.py اصلی پروژه اضافه کنید :</p>
+
+<pre><code>from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+
+urlpatterns = [
+
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+
+]
+</code></pre>
+
+<p>خوب  حالا فرض کنید ما یه کاربر داریم و میخوایم Token کاربر رو دریافت کنیم . برای اینکار باید username و password کاربر رو به url هایی که در بالا ساختیم با متد POST بفرستیم ( من برای اینکار از Curl استفاده میکنم و در اینجا شما میتونین از Postman یا مستقیم از Front-end این کار رو انجام بدین ) .</p>
+
+<pre><code>curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"username": "test", "password": "test1234"}' \
+  http://localhost:8000/api/token/
+</code></pre>
+
+<p>خوب اگه دقت کنید من به ادرس /http://localhost:8000/api/token مقدار username و password کاربر رو با متد POST ارسال کردم و در جواب باید چیزی شبیه کد زیر رو به عنوان Response دریافت کنین :</p>
+
+<pre><code>{
+  "access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNDU2LCJqdGkiOiJmZDJmOWQ1ZTFhN2M0MmU4OTQ5MzVlMzYyYmNhOGJjYSJ9.NHlztMGER7UADHZJlxNG0WSi22a2KaYSfd1S-AuT7lU",
+  "refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImNvbGRfc3R1ZmYiOiLimIMiLCJleHAiOjIzNDU2NywianRpIjoiZGUxMmY0ZTY3MDY4NDI3ODg5ZjE1YWMyNzcwZGEwNTEifQ.aEoAYkSJjoWH1boshQAaTkf8G3yn0kapko6HFRt7Rh4"
+}
+</code></pre>
+
+<p>در بالا مشاهده میکنین من ۲ تا مقدار دریافت کردم ٬ یکی access و یکی refresh که اینها :</p>
+
+<ul>
+<li>access در اصل توکن اصلی هست که در هربار استفاده از api باید توی header ارسال بشه</li>
+<li>refresh رو وقتی توکن access در اصطلاح expire شده رو به  /http://localhost:8000/api/token/refresh میفرستیم تا توکن جدید رو دریافت کنیم مانند زیر :</li>
+</ul>
+
+<pre><code>curl \
+  -X POST \
+  -H "Content-Type: application/json" \
+  -d '{"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImNvbGRfc3R1ZmYiOiLimIMiLCJleHAiOjIzNDU2NywianRpIjoiZGUxMmY0ZTY3MDY4NDI3ODg5ZjE1YWMyNzcwZGEwNTEifQ.aEoAYkSJjoWH1boshQAaTkf8G3yn0kapko6HFRt7Rh4"}' \
+  http://localhost:8000/api/token/refresh/
+</code></pre>
+
+<p>و چیزی مثل زیر رو دریافت میکنید :</p>
+
+<pre><code>{"access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNDU2LCJqdGkiOiJmZDJmOWQ1ZTFhN2M0MmU4OTQ5MzVlMzYyYmNhOGJjYSJ9.NHlztMGER7UADHZJlxNG0WSi22a2KaYSfd1S-AuT7lU"}
+</code></pre>
+
+<p>که حاوی توکن جدید میباشد . در اینجا باید بگم که Token هر 5 دقیقه منقضی میشه که قابل افزایش هم هست .</p>
+
+<h3 id="استفاده_از_token_در_django_rest_framework_:">استفاده از Token در Django Rest framework :</h3>
+
+<p>فرض کنین یه اپ ساختم به اسم hello و در قسمت View اون اپ کد زیر رو وارد کردم :</p>
+
+<pre><code>from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.permissions import IsAuthenticated
+
+
+class HelloView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request):
+        content = {'message': 'Hello, World!'}
+        return Response(content)
+</code></pre>
+
+<p>در بالا دقت کنید که من بالای فانکشن get یه مقداری رو وارد کردم " (permission_classes = (IsAuthenticated " این به این معنی هست که هرکسی بخواد این ویو رو call کنه باید Token داشته باشه .</p>
+
+<p>حالا من یه url برای این view میسازم :</p>
+
+<pre><code>from django.urls import path
+from myapi.core import views
+
+urlpatterns = [
+    path('hello/', views.HelloView.as_view(), name='hello'),
+]
+</code></pre>
+
+<p>پس اگه بخوام این api رو کال کنم مثلا باید url زیر رو با متد get در اصطلاح call کنم :</p>
+
+<pre><code>http://localhost:8000/api/hello/
+</code></pre>
+
+<p>بیاین باهم امتحان کنیم :</p>
+
+<pre><code>curl \
+  -X POST \
+  http://localhost:8000/api/token/
+</code></pre>
+
+<p>و در اینجا انتظار ما این هست که مقدار زیر به ما برگشت داده بشه :</p>
+
+<pre><code>{'message': 'Hello, World!'}
+</code></pre>
+
+<p>اما مقدار زیر برگشت داده خواهد شد :</p>
+
+<pre><code>{
+    "detail": "Given token not valid for any token type",
+    "code": "token_not_valid",
+    "messages": [
+        {
+            "token_class": "AccessToken",
+            "token_type": "access",
+            "message": "Token is invalid or expired"
+        }
+    ]
+}
+</code></pre>
+
+<p>که داره میگه یا توکن رو در header این request که فرستادین قرار ندادین یا اینکه Token شما expire شده . پس برای اینکار باید مثل زیر عمل کنیم :</p>
+
+<pre><code>curl \
+  -H "Authorization: Bearer                      eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNDU2LCJqdGkiOiJmZDJmOWQ1ZTFhN2M0MmU4OTQ5MzVlMzYyYmNhOGJjYSJ9.NHlztMGER7UADHZJlxNG0WSi22a2KaYSfd1S-AuT7lU" \
+  http://localhost:8000/api/hello/
+</code></pre>
+
+<p>در بالا من توکن access رو در header به صورت زیر قرار دادم :</p>
+
+<pre><code>"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNDU2LCJqdGkiOiJmZDJmOWQ1ZTFhN2M0MmU4OTQ5MzVlMzYyYmNhOGJjYSJ9.NHlztMGER7UADHZJlxNG0WSi22a2KaYSfd1S-AuT7lU"
+</code></pre>
+
+<p>و اگه تمام مراحل رو درست رفته باشین باید چیزی مثل زیر رو دریافت کنین :</p>
+
+<pre><code>{'message': 'Hello, World!'}
+</code></pre>
+
+<p>تبریک ! شما به راحتی از JWT برای ساخت و Authentication استفاده کردین . در صورت داشتن هرگونه مشکل یا سوال حتما در قسمت کامنت های زیر این پست من رو در جریان قرار بدین . در اخر اگه نیاز به اطلاعات بیشتر داشتین میتونین به لینک زیر مراجعه کنید :</p>
+
+<p><a href="https://github.com/davesque/django-rest-framework-simplejwt">JWT</a></p>
+
+<p>خوش و خرم باشین .</p>]]></content>
+
+    <summary>
+    &lt;p&gt;سلام ٬ امروز قصد دارم روش استفاده از JWT در Django رو با شما عزیزان به اشتراک بزارم . به طور خلاصه اگه بخوام بگم JWT چی هست باید بگم که وقتی ما داریم API میسازیم برای اینکه بتونیم سیستم Authentication داشته باشیم از چندین راه میتونیم اینکار رو انجام بدیم مثل :
+
+سیستم Token خود Django Rest Framework
+سیستم JWT  یا همون Json Web Token
+
+اصلا Token چی هست :
+
+قضیه ازین قرار است که توی سیستم هایی که از API  استفاده میکنند ( مثلا شما Back-end رو با Django میزنین و برای Front-end از فریمورک های java script مثل vue.js یا react استفاده میکنن ) دیگه نمیتونیم از session خود django استفاده کنیم پس اینجا  را&lt;/p&gt;
+    </summary>
+  </entry>
   
   <entry>
     <title>نحوه ساخت کوتاه کننده لینک در جنگو</title>
