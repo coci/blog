@@ -5,7 +5,7 @@
   <link href="https://koky.ir/django//feed.xml" rel="self"/>
   <link href="https://koky.ir/django/"/>
 
-  <updated>2020-02-16T12:19:04+0330</updated>
+  <updated>2020-04-27T22:49:07+0330</updated>
   <id>https://koky.ir/django/</id>
   
   <author>
@@ -129,17 +129,17 @@ urlpatterns = [
 
 <p>فرض کنین یه اپ ساختم به اسم hello و در قسمت View اون اپ کد زیر رو وارد کردم :</p>
 
-<pre><code>from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
+<pre><code>  from rest_framework.views import APIView
+  from rest_framework.response import Response
+  from rest_framework.permissions import IsAuthenticated
 
 
-class HelloView(APIView):
-    permission_classes = (IsAuthenticated,)
+  class HelloView(APIView):
+      permission_classes = (IsAuthenticated,)
 
-    def get(self, request):
-        content = {'message': 'Hello, World!'}
-        return Response(content)
+      def get(self, request):
+          content = {'message': 'Hello, World!'}
+          return Response(content)
 </code></pre>
 
 <p>در بالا دقت کنید که من بالای فانکشن get یه مقداری رو وارد کردم " (permission_classes = (IsAuthenticated " این به این معنی هست که هرکسی بخواد این ویو رو call کنه باید Token داشته باشه .</p>
@@ -410,6 +410,154 @@ class Book(models.Model):
     )
 
 و بعد شما میتونستین ازین cons&lt;/p&gt;
+    </summary>
+  </entry>
+  
+  <entry>
+    <title>اموزش location در جنگو</title>
+    <link href="https://koky.ir/django//location-in-django/"/>
+    <id>https://koky.ir/django//location-in-django/</id>
+
+    <published>2020-01-25T19:12:08+0330</published>
+    <updated>2020-01-25T19:12:08+0330</updated>
+
+    <content type="html"><![CDATA[<a name="more"></a>
+<p>یکی از چالش هایی که چند وقت اخیر کلی ذهنم رو درگیر کرد این هست که چطور میتونم location رو به جنگو اضافه کنم و بعد از کلی اینور و اونور کردن تونستم این کار رو انجام بدم و توی این پست قصد دارم اموزش ساخت یه پروژه جنگو مبتنی بر location با شما عزیزان به اشتراک بزارم .</p>
+
+<h3 id="پیش_نیاز_:">پیش نیاز :</h3>
+
+<p><strong>( با دقت این قسمت رو بخونین)</strong></p>
+
+<p>یه توضیحی که در اینجا باید بدم و اون این هست که برای اینکه شما بتونین location رو ذخیره کنین باید به دیتابیس خودتون قابلیت geo رو اضافه کنین . به طور مرسوم من برای این پروژه دیتابیس Postgres رو در نظر گرفتم ٬ پس باید روی Postgres قابلیت geo رو اضافه کنم . برای این کار یک extension برای Postgres هست به اسم PostGis که شما باید این رو روی دیتابیس Postgres خودتون نصب کنید . حالا نکته قضیه اینجاست که این کار خیلی دردسر داشت و در اخرم به هیچ نتیجه ای نتونستم برسم . پس به جای کشیدن این همه دردسر از یه معجزه به نام داکر استفاده کردم ( اگه در مورد داکر اطلاعی ندارین همین جا توصیه میکنم برین و نحوه استفاده از داکر رو یادبگیرین ) . قضیه اینجاست که من از یه image استفاده کردم که روش هم Postgres نصب هست و PostGis هم روش اضافه شده . پس با هیچ کاری قرار نیست بکنین و بدون هیچ اتلاف وقتی میتونین برای نصب و استفاده از Postgres و PostGis از داکر استفاده کنین . </p>
+
+<h3 id="نصب_postgres_و_postgis_با_استفاده_از_داکر_:">نصب Postgres و PostGis با استفاده از داکر :</h3>
+
+<p>خوب من در نظر میگیرم شما قسمت قبل رو خوندین و میدونین چرا قرار از داکر استفاده کنیم و این که داکر الان روی سیستم شما نصب هست . حالا برای نصب  و اجرا image که در بالا در موردش صحبت کردم دستور زیر رو توی ترمینال خودتون وارد کنید :</p>
+
+<p><strong>(دقت کنید باید فیلتر شکن شما برای نصب image فعال باشه )</strong></p>
+
+<p>در دستور زیر :</p>
+
+<ul>
+<li>در جلوی POSTGRES_USER که اسم یوزر دیتابیس هست یک username دلخواه قرار بدین .</li>
+<li>در جلوی POSTGRES_PASSWORD هم یک پسورد انتخابی قرار بدین .</li>
+<li>در جلوی POSTGRES_DB که اسم دیتابیس هست یه اسم دلخواه قرار بدین .</li>
+</ul>
+
+<pre><code>docker run --name postgis \
+            -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=mysecretpassword \
+            -e POSTGRES_DB=location -p 5455:5432 -d mdillon/postgis
+</code></pre>
+
+<p>حال کمی صبر کنین تا مراحل pull کردن image و ساخت container به اتمام برسه . </p>
+
+<p>پس اتمام ساخت container شما یک دیتابیس postgres که روش Postgis نصب شده به ادرس 127.0.0.1:5455 دارین . زیبا نیست ؟ :)</p>
+
+<h3 id="تنظیمات_جنگو__:">تنظیمات جنگو  :</h3>
+
+<p>خوب یه توضیح کلی در مورد پروژه بدم که قرار ما اطلاعات خانه ها رو ذخیره کنیم و بعد مثلا از یه نقطه خاص خانه هایی که ۵ کیلومتری قرار دارن رو نمایش بدیم .</p>
+
+<p>ابتدا 'django.contrib.gis' وارد تنظیمات پروژه میکنیم :</p>
+
+<pre><code>INSTALLED_APPS = [
+    ......
+    'django.contrib.gis',
+    .....
+    ]
+</code></pre>
+
+<p>حال در همون فایل settings.py قسمت DATABASES رو تغییر میدیم :</p>
+
+<p>به چند نکته دقت کنید :</p>
+
+<ul>
+<li>در جلوی NAME باید مقداری که در قسمت اول در مقابل POSTGRES_DB برای نصب  داکر Postgres زدین رو وارد کنید .</li>
+<li>در جلوی USER باید مقداری که در قسمت اول در مقابل POSTGRES_USER برای نصب  داکر Postgres زدین رو وارد کنید .</li>
+<li>در جلوی PASSWORD باید مقداری که در قسمت اول در مقابل POSTGRES_PASSWORD برای نصب  داکر Postgres زدین رو وارد کنید .</li>
+</ul>
+
+<pre><code>DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'location',
+        'USER': 'admin',
+        'PASSWORD': 'mysecretpassword',
+        'HOST': '127.0.0.1',
+        'PORT': '5455'
+    }
+}
+</code></pre>
+
+<h3 id="ساخت_مدل_:">ساخت مدل :</h3>
+
+<p>خوب حالا در نظر بگیرین که ما یک مدل داریم به اسم House که یه فیلد position داره و قرار داخلش مختصات جغرافیایی ذخیره بشه .</p>
+
+<p>برای مختصات جغرافیایی ما باید از PointField استفاده کنیم :</p>
+
+<pre><code>from django.db import models
+from django.contrib.gis.db import models as gm
+
+class House(models.Model):
+        ...
+    position = gm.PointField(null=True, blank=True)
+    ...
+</code></pre>
+
+<h3 id="ساخت_یک_object_:">ساخت یک object :</h3>
+
+<p>حالا که مدل رو ساختیم وقت اون رسیده که مختصات داده شده به ما که به صورت lat و long هست رو به عنوان مختصات خونه ذخیره کنیم :</p>
+
+<pre><code>from django.contrib.gis.geos import GEOSGeometry
+from decimal import Decimal
+
+latitude = Decimal(59.32932)
+longitude = Decimal(18.06858)
+
+point = GEOSGeometry("POINT({0} {1})".format(longitde, latitude))
+
+house = House()
+house.position = point
+house.save()
+</code></pre>
+
+<p>به شکلی که در بالا اشاره شد ما تونستیم مختصات رو ذخیره کنیم . حال در ادامه همراه باشین تا بتونیم بروی مدل query بر اساس فاصله بزنیم .</p>
+
+<h3 id="نشان_دادن_خانه_های_بر_اساس_فاصله_:">نشان دادن خانه های بر اساس فاصله :</h3>
+
+<p>خوب حالا در این مرحله میخوایم از یه نقطه خاص بگیم که تمام خانه های ۵ کیلومتری رو نشون بده :</p>
+
+<pre><code>from django.contrib.gis.measure import Distance
+from decimal import Decimal
+
+
+latitude = Decimal(LATITUDE_FROM_REQUEST)
+longitude = Decimal(LONGITUDE_FROM_REQUEST)
+
+
+point_of_user = GEOSGeometry("POINT({} {})".format(longitude, latitude))
+max_distance = 5
+
+
+houses_in_range = House.objects.filter(
+            position__distance_lte=(
+                point_of_user,
+                Distance(km=max_distance)
+            )
+        )
+</code></pre>
+
+<p>قرار نبود که این پست اموزش مو به مو مراحل باشه ٬ در عوض من سعی کردم به صورت خلاصه بگم چطور میشه پروژه location base با جنگو داشته باشیم .</p>
+
+<p>امیدوارم مفید واقع شده باشه . </p>]]></content>
+
+    <summary>
+    &lt;p&gt;یکی از چالش هایی که چند وقت اخیر کلی ذهنم رو درگیر کرد این هست که چطور میتونم location رو به جنگو اضافه کنم و بعد از کلی اینور و اونور کردن تونستم این کار رو انجام بدم و توی این پست قصد دارم اموزش ساخت یه پروژه جنگو مبتنی بر location با شما عزیزان به اشتراک بزارم .
+
+پیش نیاز :
+
+( با دقت این قسمت رو بخونین)
+
+یه توضیحی که در اینجا باید بدم و اون این هست که برای اینکه شما بتونین location رو ذخیره کنین باید به دیتابیس خودتون قابلیت geo رو اضافه کنین . به طور مرسوم من برای این پروژه دیتابیس Postgres رو در نظر گرفتم ٬ پس باید روی Postgres قابلیت geo رو اضافه کنم . برای این کار یک extension برای Post&lt;/p&gt;
     </summary>
   </entry>
   

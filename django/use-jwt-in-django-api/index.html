@@ -179,17 +179,17 @@ urlpatterns = [
 
 <p>فرض کنین یه اپ ساختم به اسم hello و در قسمت View اون اپ کد زیر رو وارد کردم :</p>
 
-<pre><code>from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework.permissions import IsAuthenticated
+<pre><code>  from rest_framework.views import APIView
+  from rest_framework.response import Response
+  from rest_framework.permissions import IsAuthenticated
 
 
-class HelloView(APIView):
-    permission_classes = (IsAuthenticated,)
+  class HelloView(APIView):
+      permission_classes = (IsAuthenticated,)
 
-    def get(self, request):
-        content = {'message': 'Hello, World!'}
-        return Response(content)
+      def get(self, request):
+          content = {'message': 'Hello, World!'}
+          return Response(content)
 </code></pre>
 
 <p>در بالا دقت کنید که من بالای فانکشن get یه مقداری رو وارد کردم " (permission_classes = (IsAuthenticated " این به این معنی هست که هرکسی بخواد این ویو رو call کنه باید Token داشته باشه .</p>
