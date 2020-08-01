@@ -221,18 +221,18 @@ $  docker-compose up -d
 
 If everything is done correctly , you must see this dashboard after you open [localhost:5601](http://localhost:5601) in browser:
 
-![gitea](/en/images/1.jpg)
+![block](/blog/images/blockchain.jpg)
 
 now navigate to Kibana→discover :
 
-![gitea](/en/images/2.jpg)
+![gitea](/blog/images/2.jpg)
 
 then go to index patterns → create index pattern
 
-![gitea](/en/images/3.jpg)
+![gitea](/blog/images/3.jpg)
 
 and then :
 
-![gitea](/en/images/4.jpg)
+![gitea](/blog/images/4.jpg)
 
 now everything done and you can see logs , just navigate to menu → observability → logs .
