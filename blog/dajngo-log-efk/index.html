@@ -1,29 +1,80 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>soroush safari</title>
+<!DOCTYPE html>
+<html lang="English">
+<head>
+  <title>soroush safari | Django log management with Elastic and Kibana</title>
 
-  <link href="https://koky.ir/blog/feed.xml" rel="self"/>
-  <link href="https://koky.ir/blog"/>
+  <meta charset="utf-8">
+  <meta name="description" content="soroush safari's Blog. Exploring python & Things.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Django log management with Elastic and Kibana">
+  <meta property="og:url" content="https://koky.ir/blog">
+  <meta property="og:site_name" content="soroush safari">
+  <meta property="og:description" content="&lt;p&gt;log management play the most crucial role in any system. logs can tell us where bugs happened and also can determine useful information about system.
 
-  <updated>2020-08-01T10:42:45+0330</updated>
-  <id>https://koky.ir/blog</id>
-  
-  <author>
-    <name>soroush safari</name>
-  </author>
+In this guide, I’m going to teach you how to create log management with EFK stack and then connect it to your python application. If you don’t have enough information about EFK, it abbreviated from Elasticsearch, Filebeat, and Kibana that I'll explain them in more detail.
+
+Elasticsearch :
+
+Elasticsearch is an open source, full-text search and analysis engine.
+
+Filebeat :
+
+Filebeat is an open source tool that collect data and ship them to Elastic&lt;/p&gt;">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Django log management with Elastic and Kibana">
+  <meta name="twitter:description" content="&lt;p&gt;log management play the most crucial r...">
+
+  <link rel="alternative" href="/blogatom.xml" title="soroush safari" type="application/atom+xml">
+  <link rel="short icon" href="">
+  <link rel="stylesheet" href="/static/theme/sallar/css/style.css" type="text/css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115996537-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-115996537-1');
+	</script>
+
+
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <section class="container">
+    <nav>
+      <h1>
+        <a href="/" class="logo">soroush safari</a>
+      </h1>
+      <ul>
+        
+          <li><a href="/blog">Index</a></li>
+          <li><a href="https://github.com/coci" target="_blank">github</a></li>
+          <li><a href="/farsi/">persian</a></li>
+        
+      </ul>
+    </nav>
+  </section>
+</header>
+<!-- /Header -->
+
+<section id="content" class="container">
+
+  <article id="dajngo-log-efk" class="article article-type-post" itemscope itemprop="blogPost">
+    <h2 class="title" itemprop="name">Django log management with Elastic and Kibana</h2>
+
     
-  <generator>Mira</generator>
+      <h4 class="time">
+    <time datetime="2020-08-01 10:11:42" itemprop="datePublished">Saturday, August 01, 2020</time>
+  </h4>
+    
 
-  
-  <entry>
-    <title>Django log management with Elastic and Kibana</title>
-    <link href="https://koky.ir/blog/dajngo-log-efk/"/>
-    <id>https://koky.ir/blog/dajngo-log-efk/</id>
-
-    <published>2020-08-01T10:11:42+0330</published>
-    <updated>2020-08-01T10:11:42+0330</updated>
-
-    <content type="html"><![CDATA[<a name="more"></a>
+    <section class="content">
+    <a name="more"></a>
 <p>log management play the most crucial role in any system. logs can tell us where bugs happened and also can determine useful information about system.</p>
 
 <p>In this guide, I’m going to teach you how to create log management with EFK stack and then connect it to your python application. If you don’t have enough information about EFK, it abbreviated from Elasticsearch, Filebeat, and Kibana that I'll explain them in more detail.</p>
@@ -237,45 +288,70 @@ output.elasticsearch:
 
 <p>and then :</p>
 
-<p>now everything done and you can see logs , just navigate to menu → observability → logs</p>]]></content>
+<p>now everything done and you can see logs , just navigate to menu → observability → logs</p>
+  </section>
 
-    <summary>
-    &lt;p&gt;log management play the most crucial role in any system. logs can tell us where bugs happened and also can determine useful information about system.
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_twitter"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
 
-In this guide, I’m going to teach you how to create log management with EFK stack and then connect it to your python application. If you don’t have enough information about EFK, it abbreviated from Elasticsearch, Filebeat, and Kibana that I'll explain them in more detail.
+    
+      <script>
+var idcomments_acct = 'edab4112dbf8f45d3904228b8f395f7d';
+var idcomments_post_id;
+var idcomments_post_url;
+</script>
+<span id="IDCommentsPostTitle" style="display:none"></span>
+<script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+    
+  </article>
 
-Elasticsearch :
+</section>
 
-Elasticsearch is an open source, full-text search and analysis engine.
+<!-- Paging -->
+<section class="pagination">
+  <nav class="container">
+    
+      <a></a>
+    
+      <a class="extend next" rel="next" href="/blog/helloworld/">
+        <i>-></i>
+        <span>hello world</span>
+      </a>
+  </nav>
+</section>
+<!-- /Paging -->
 
-Filebeat :
+<!-- /Content -->
+<!-- Footer -->
+<footer>
+    <!--<section class="copyright">
 
-Filebeat is an open source tool that collect data and ship them to Elastic&lt;/p&gt;
-    </summary>
-  </entry>
-  
-  <entry>
-    <title>hello world</title>
-    <link href="https://koky.ir/blog/helloworld/"/>
-    <id>https://koky.ir/blog/helloworld/</id>
+    </section>-->
+    <section class="container">
+      <div class="delimiter">
+        <a href="/" class="logo">
+          <img src="/static/theme/sallar/img/logo.svg">
+        </a>
+      </div>
+      <p>
+        
+        2020<br>
+          Content is licensed under <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="license" target="_blank">Creative Commons</a>.
+        
+        <br>
+        powered with 💜 by <a href="https://miraxy.github.io">Mira</a>
+      </p>
+    </section>
+</footer>
+<!-- /Footer -->
 
-    <published>2018-01-22T17:58:51+0330</published>
-    <updated>2018-01-22T17:58:51+0330</updated>
-
-    <content type="html"><![CDATA[<a name="more"></a>
-<h4 id="hello_world__">Hello World !</h4>
-
-<p>hello guy , how's it going ?</p>
-
-<p>I'm very excited because This is my first english post and we can communicate toghter through this blog and share our experiance , please feel  free to comment out your idea about that .</p>]]></content>
-
-    <summary>
-    &lt;p&gt;Hello World !
-
-hello guy , how's it going ?
-
-I'm very excited because This is my first english post and we can communicate toghter through this blog and share our experiance , please feel  free to comment out your idea about that .&lt;/p&gt;
-    </summary>
-  </entry>
-  
-</feed>
+<!-- Scripts -->
+<script src="/static/theme/sallar/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
