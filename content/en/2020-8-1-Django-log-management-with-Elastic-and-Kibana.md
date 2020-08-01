@@ -11,7 +11,7 @@ tags:
 
 log management play the most crucial role in any system. logs can tell us where bugs happened and also can determine useful information about system.
 
-In this guide, I’m going to teach you how to create log management with EFK stack and then connect it to your python application. If you don’t have enough information about EFK, it abbreviated from Elasticsearch, Filebeat, and Kibana that I'll explain them in more detail.
+In this guide, I’m going to teach you how to create log management with EFK stack and then connect it to your python application. If you don’t have enough information about EFK, it stands for Elasticsearch, Filebeat, and Kibana that I'll explain them in more detail.
 
 ### Elasticsearch :
 
@@ -133,7 +133,7 @@ ok we've done with Django . let's dive right into creating EFK stack .
 
 ## Elastic , Filebeat and Kibana :
 
-As well I mentioned earlier, we use docker to cuts off troubling with installation and configurations.
+As well I mentioned earlier, we use docker to cut off troubling with installation and configurations.
 
 In other words, to manage three different tools ( Elastic, Filebeat, Kibana ), we must use docker-compose.
 
@@ -184,11 +184,11 @@ networks:
     driver: bridge
 ```
 
-keep in mind that just modify these lines : ( red part only )
+keep in mind that just modify these lines : 
 
 ```python
-- /path-to-filebeat.yml/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
-- /path-to-logs-directory/logs:/usr/share/filebeat/logs
+- /path-to-filebeat.yml/filebeat.yml: ....
+- /path-to-logs-directory/logs: ....
 ```
 
 we have our docker-compose configuration, now as you see we need to create filebeat.yml configuration, well, create filebeat.yml file in your project directory and add these lines :
@@ -235,4 +235,4 @@ and then :
 
 ![gitea](/blog/images/4.jpg)
 
-now everything done and you can see logs , just navigate to menu → observability → logs .
+now everything is done and you can see logs , just navigate to menu → observability → logs .
