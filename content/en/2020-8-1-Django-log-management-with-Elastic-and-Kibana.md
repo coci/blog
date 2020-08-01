@@ -139,7 +139,7 @@ In other words, to manage three different tools ( Elastic, Filebeat, Kibana ), w
 
 now create docker-compose.yml in your project directory and add these lines :
 
-```yaml
+```python
 version: '2'
 
 services:
@@ -186,14 +186,14 @@ networks:
 
 keep in mind that just modify these lines : ( red part only )
 
-```yaml
+```python
 - /path-to-filebeat.yml/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
 - /path-to-logs-directory/logs:/usr/share/filebeat/logs
 ```
 
 we have our docker-compose configuration, now as you see we need to create filebeat.yml configuration, well, create filebeat.yml file in your project directory and add these lines :
 
-```yaml
+```python
 filebeat.inputs:
 
 - type: log
@@ -211,7 +211,7 @@ output.elasticsearch:
 
 well, it's time to fire up our work, open terminal and enter :
 
-```yaml
+```python
 $  docker-compose up -d
 ```
 
