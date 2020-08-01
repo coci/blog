@@ -5,7 +5,7 @@
   <link href="https://koky.ir/blog/feed.xml" rel="self"/>
   <link href="https://koky.ir/blog"/>
 
-  <updated>2020-08-01T10:47:21+0330</updated>
+  <updated>2020-08-01T10:53:06+0330</updated>
   <id>https://koky.ir/blog</id>
   
   <author>
@@ -225,19 +225,19 @@ output.elasticsearch:
 
 <p>If everything is done correctly , you must see this dashboard after you open <a href="http://localhost:5601">localhost:5601</a> in browser:</p>
 
-<p><img src="/en/images/1.jpg" alt="gitea" id="gitea"></p>
+<p><img src="/blog/images/blockchain.jpg" alt="block" id="block"></p>
 
 <p>now navigate to Kibana→discover :</p>
 
-<p><img src="/en/images/2.jpg" alt="gitea" id="gitea"></p>
+<p><img src="/blog/images/2.jpg" alt="gitea" id="gitea"></p>
 
 <p>then go to index patterns → create index pattern</p>
 
-<p><img src="/en/images/3.jpg" alt="gitea" id="gitea"></p>
+<p><img src="/blog/images/3.jpg" alt="gitea" id="gitea"></p>
 
 <p>and then :</p>
 
-<p><img src="/en/images/4.jpg" alt="gitea" id="gitea"></p>
+<p><img src="/blog/images/4.jpg" alt="gitea" id="gitea"></p>
 
 <p>now everything done and you can see logs , just navigate to menu → observability → logs .</p>]]></content>
 
