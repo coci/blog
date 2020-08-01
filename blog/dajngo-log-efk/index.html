@@ -12,7 +12,7 @@
   <meta property="og:site_name" content="soroush safari">
   <meta property="og:description" content="&lt;p&gt;log management play the most crucial role in any system. logs can tell us where bugs happened and also can determine useful information about system.
 
-In this guide, I’m going to teach you how to create log management with EFK stack and then connect it to your python application. If you don’t have enough information about EFK, it abbreviated from Elasticsearch, Filebeat, and Kibana that I'll explain them in more detail.
+In this guide, I’m going to teach you how to create log management with EFK stack and then connect it to your python application. If you don’t have enough information about EFK, it stands for Elasticsearch, Filebeat, and Kibana that I'll explain them in more detail.
 
 Elasticsearch :
 
@@ -20,7 +20,7 @@ Elasticsearch is an open source, full-text search and analysis engine.
 
 Filebeat :
 
-Filebeat is an open source tool that collect data and ship them to Elastic&lt;/p&gt;">
+Filebeat is an open source tool that collect data and ship them to Elasticsearch&lt;/p&gt;">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Django log management with Elastic and Kibana">
   <meta name="twitter:description" content="&lt;p&gt;log management play the most crucial r...">
@@ -77,7 +77,7 @@ Filebeat is an open source tool that collect data and ship them to Elastic&lt;/p
     <a name="more"></a>
 <p>log management play the most crucial role in any system. logs can tell us where bugs happened and also can determine useful information about system.</p>
 
-<p>In this guide, I’m going to teach you how to create log management with EFK stack and then connect it to your python application. If you don’t have enough information about EFK, it abbreviated from Elasticsearch, Filebeat, and Kibana that I'll explain them in more detail.</p>
+<p>In this guide, I’m going to teach you how to create log management with EFK stack and then connect it to your python application. If you don’t have enough information about EFK, it stands for Elasticsearch, Filebeat, and Kibana that I'll explain them in more detail.</p>
 
 <h3 id="elasticsearch_:">Elasticsearch :</h3>
 
@@ -192,7 +192,7 @@ def index(request):
 
 <h2 id="elastic___filebeat_and_kibana_:">Elastic , Filebeat and Kibana :</h2>
 
-<p>As well I mentioned earlier, we use docker to cuts off troubling with installation and configurations.</p>
+<p>As well I mentioned earlier, we use docker to cut off troubling with installation and configurations.</p>
 
 <p>In other words, to manage three different tools ( Elastic, Filebeat, Kibana ), we must use docker-compose.</p>
 
@@ -242,10 +242,10 @@ networks:
     driver: bridge
 </code></pre>
 
-<p>keep in mind that just modify these lines : ( red part only )</p>
+<p>keep in mind that just modify these lines : </p>
 
-<pre><code class="language-python">- /path-to-filebeat.yml/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
-- /path-to-logs-directory/logs:/usr/share/filebeat/logs
+<pre><code class="language-python">- /path-to-filebeat.yml/filebeat.yml: ....
+- /path-to-logs-directory/logs: ....
 </code></pre>
 
 <p>we have our docker-compose configuration, now as you see we need to create filebeat.yml configuration, well, create filebeat.yml file in your project directory and add these lines :</p>
@@ -290,7 +290,7 @@ output.elasticsearch:
 
 <p><img src="/blog/images/4.jpg" alt="gitea" id="gitea"></p>
 
-<p>now everything done and you can see logs , just navigate to menu → observability → logs .</p>
+<p>now everything is done and you can see logs , just navigate to menu → observability → logs .</p>
   </section>
 
 <!-- AddToAny BEGIN -->
