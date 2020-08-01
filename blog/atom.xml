@@ -5,7 +5,7 @@
   <link href="https://koky.ir/blog/feed.xml" rel="self"/>
   <link href="https://koky.ir/blog"/>
 
-  <updated>2020-08-01T11:07:29+0330</updated>
+  <updated>2020-08-01T12:34:08+0330</updated>
   <id>https://koky.ir/blog</id>
   
   <author>
@@ -225,7 +225,7 @@ output.elasticsearch:
 
 <p>If everything is done correctly , you must see this dashboard after you open <a href="http://localhost:5601">localhost:5601</a> in browser:</p>
 
-<p><img src="/blog/images/blockchain.jpg" alt="block" id="block"></p>
+<p><img src="/blog/images/1.jpg" alt="block" id="block"></p>
 
 <p>now navigate to Kibana→discover :</p>
 
