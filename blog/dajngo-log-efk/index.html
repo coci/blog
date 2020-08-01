@@ -198,7 +198,7 @@ def index(request):
 
 <p>now create docker-compose.yml in your project directory and add these lines :</p>
 
-<pre><code class="language-yaml">version: '2'
+<pre><code class="language-python">version: '2'
 
 services:
   elasticsearch:
@@ -244,13 +244,13 @@ networks:
 
 <p>keep in mind that just modify these lines : ( red part only )</p>
 
-<pre><code class="language-yaml">- /path-to-filebeat.yml/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+<pre><code class="language-python">- /path-to-filebeat.yml/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
 - /path-to-logs-directory/logs:/usr/share/filebeat/logs
 </code></pre>
 
 <p>we have our docker-compose configuration, now as you see we need to create filebeat.yml configuration, well, create filebeat.yml file in your project directory and add these lines :</p>
 
-<pre><code class="language-yaml">filebeat.inputs:
+<pre><code class="language-python">filebeat.inputs:
 
 - type: log
   enabled: true
@@ -267,7 +267,7 @@ output.elasticsearch:
 
 <p>well, it's time to fire up our work, open terminal and enter :</p>
 
-<pre><code class="language-yaml">$  docker-compose up -d
+<pre><code class="language-python">$  docker-compose up -d
 </code></pre>
 
 <p>( it just takes minutes )</p>
