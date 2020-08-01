@@ -221,7 +221,7 @@ $  docker-compose up -d
 
 If everything is done correctly , you must see this dashboard after you open [localhost:5601](http://localhost:5601) in browser:
 
-![block](/blog/images/blockchain.jpg)
+![block](/blog/images/1.jpg)
 
 now navigate to Kibana→discover :
 
