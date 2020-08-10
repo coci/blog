@@ -5,7 +5,7 @@
   <link href="https://koky.ir/blog/feed.xml" rel="self"/>
   <link href="https://koky.ir/blog"/>
 
-  <updated>2020-08-01T12:34:08+0330</updated>
+  <updated>2020-08-10T17:10:49+0330</updated>
   <id>https://koky.ir/blog</id>
   
   <author>
@@ -30,7 +30,7 @@
 
 <h3 id="elasticsearch_:">Elasticsearch :</h3>
 
-<p>Elasticsearch is an open source, full-text search and analysis engine.</p>
+<p>Elasticsearch is an open source, full-text search and analysis engine .</p>
 
 <h3 id="filebeat_:">Filebeat :</h3>
 
@@ -178,7 +178,7 @@ services:
       - /path-to-filebeat.yml/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - /path-to-logs-directory/logs:/usr/share/filebeat/logs
     environment:
-      ELASTICSEARCH_URL: &lt;http://elasticsearch:9200&gt;
+      ELASTICSEARCH_URL: http://elasticsearch:9200
     networks:
       - efk
     links:
@@ -206,12 +206,12 @@ networks:
   paths:
     - /usr/share/filebeat/logs/*.log
 
-  multiline.pattern: '^\\['
+  multiline.pattern: '^\['
   multiline.negate: true
   multiline.match: after
 
 output.elasticsearch:
-  hosts: ["&lt;http://elasticsearch:9200&gt;"]
+  hosts: ["http://elasticsearch:9200"]
 </code></pre>
 
 <p>well, it's time to fire up our work, open terminal and enter :</p>
@@ -248,11 +248,11 @@ In this guide, I’m going to teach you how to create log management with EFK st
 
 Elasticsearch :
 
-Elasticsearch is an open source, full-text search and analysis engine.
+Elasticsearch is an open source, full-text search and analysis engine .
 
 Filebeat :
 
-Filebeat is an open source tool that collect data and ship them to Elasticsearch&lt;/p&gt;
+Filebeat is an open source tool that collect data and ship them to Elasticsearc&lt;/p&gt;
     </summary>
   </entry>
   
