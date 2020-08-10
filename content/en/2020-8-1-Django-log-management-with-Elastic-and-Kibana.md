@@ -15,7 +15,7 @@ In this guide, I’m going to teach you how to create log management with EFK st
 
 ### Elasticsearch :
 
-Elasticsearch is an open source, full-text search and analysis engine.
+Elasticsearch is an open source, full-text search and analysis engine .
 
 ### Filebeat :
 
@@ -171,7 +171,7 @@ services:
       - /path-to-filebeat.yml/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
       - /path-to-logs-directory/logs:/usr/share/filebeat/logs
     environment:
-      ELASTICSEARCH_URL: <http://elasticsearch:9200>
+      ELASTICSEARCH_URL: http://elasticsearch:9200
     networks:
       - efk
     links:
@@ -201,12 +201,12 @@ filebeat.inputs:
   paths:
     - /usr/share/filebeat/logs/*.log
     
-  multiline.pattern: '^\\['
+  multiline.pattern: '^\['
   multiline.negate: true
   multiline.match: after
 
 output.elasticsearch:
-  hosts: ["<http://elasticsearch:9200>"]
+  hosts: ["http://elasticsearch:9200"]
 ```
 
 well, it's time to fire up our work, open terminal and enter :
